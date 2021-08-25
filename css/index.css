@@ -68,15 +68,13 @@ svg {
 	align-items: center;
 }
 
-.accordion:first-of-type .summary {
+.accordion .summary {
 	border-radius: 15px 15px 0px 0px;
 }
 
-.accordion[closed]:last-of-type .summary {
-	border-radius: 0px 0px 15px 15px;
-}
+.accordion[closed] .summary {border-radius: 15px;}
 
-.accordion:last-of-type p {
+.accordion p {
 	border-radius: 0px 0px 15px 15px;
 }
 
