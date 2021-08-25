@@ -15,7 +15,6 @@
 	</head>
 	<body>
 		<header>
-			<!-- <img src="images/metal&glass.jpg" width="140px" height="140px"> -->
 			<h1>C²</h1>
 			<nav>
 				<a href="docs/commands">Commands</a>
@@ -42,19 +41,22 @@
 						<br>
 					</p>
 					<br>
-					<div class="flex row">
+					<div class="flex row" id="external_links">
 						<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
 							<img src="images/logo_steam.png" width="60" height="60" class="steamLogo">
+							<br>
 							<div class="third_party_link">Subscribe</div>
 						</a>
 						<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
 							<svg viewBox="0 0 16 16" version="1.1" width="60" height="60" data-view-component="true" class="githubLogo">
 								<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
 							</svg>
+							<br>
 							<div class="third_party_link">View GitHub</div>
 						</a>
 						<a title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank">
 							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path d="M7.074 1.408c0-.778.641-1.408 1.431-1.408.942 0 1.626.883 1.38 1.776-.093.336-.042.695.138.995.401.664 1.084 1.073 1.977 1.078.88-.004 1.572-.408 1.977-1.078.181-.299.23-.658.139-.995-.247-.892.435-1.776 1.379-1.776.79 0 1.431.63 1.431 1.408 0 .675-.482 1.234-1.117 1.375-.322.071-.6.269-.77.548-.613 1.017.193 1.917.931 2.823-1.211.562-2.525.846-3.97.846-1.468 0-2.771-.277-3.975-.84.748-.92 1.555-1.803.935-2.83-.168-.279-.446-.477-.768-.548-.636-.14-1.118-.699-1.118-1.374zm3.926 7.531c-1.709-.135-3.271-.599-4.703-1.435-.217.359-.421.738-.601 1.146-.227.514-.646.552-.941.437l-2.295-.89c-.542-.21-1.153.051-1.367.584-.213.533.053 1.136.594 1.346l2.231.866c.496.192.854.694.773 1.274-.106.758-.683 1.111-1.235 1.111h-2.402c-.582 0-1.054.464-1.054 1.037s.472 1.037 1.054 1.037h2.387c.573 0 1.159.372 1.265 1.057.112.728-.228 1.229-.751 1.462l-2.42 1.078c-.53.236-.766.851-.526 1.373s.865.753 1.395.518l2.561-1.14c.307-.137.688-.106.901.259.922 1.587 2.674 3.361 5.134 3.941v-15.061zm9.559 6.513h2.387c.583 0 1.055-.464 1.055-1.037s-.472-1.037-1.055-1.037h-2.402c-.574 0-1.137-.393-1.227-1.052-.092-.677.286-1.147.766-1.333l2.23-.866c.541-.21.808-.813.594-1.346-.213-.533-.825-.795-1.367-.584l-2.294.891c-.329.127-.734.036-.926-.401-.185-.423-.396-.816-.62-1.188-1.433.829-3.008 1.3-4.699 1.439v15.062c2.406-.567 4.134-2.284 5.072-3.837.262-.432.629-.514.964-.364l2.561 1.14c.528.236 1.154.005 1.395-.518.239-.522.005-1.137-.526-1.373l-2.42-1.078c-.494-.221-.867-.738-.764-1.383.128-.803.717-1.135 1.276-1.135z"/></svg>
+							<br>
 							<div class="third_party_link">Report Issue</div>
 						</a>
 					</div>
@@ -78,158 +80,160 @@
 			<section>
 				<a class="anchor" name="new"></a>
 				<h1>What's New?</h1>
-				<h2>v2.0</h2>
-				<p>
-					This latest version adds plenty of features that I have been wanting to add
-					for a long while. There are quite a few changes to already existing commands
-					as well. For example, the <span class="command">?tp</span> command was
-					seperated into multiple different commands. I recommend viewing the full
-					<a href="changelog/#v2" target="_blank">change log</a>.
-				</p>
-				<div class="grid">
-					<div>
-						<h3>✨Features✨</h3>
-						<div class="accordions">
-							<div class="accordion" closed>
-								<div class="summary"><div>Role system to manage player permissions</div></div>
-								<div class="content">
-									<p>
-										Managing what permissions players have is now much more in-depth.
-										You can add/remove roles, edit their in-game permissions, and
-										change which commands a role has permission to use.
-									</p>
+				<div class="content">
+					<h2>v2.0</h2>
+					<p>
+						This latest version adds plenty of features that I have been wanting to add
+						for a long while. There are quite a few changes to already existing commands
+						as well. For example, the <span class="command">?tp</span> command was
+						seperated into multiple different commands. I recommend viewing the full
+						<a href="changelog/#v2" target="_blank">change log</a>.
+					</p>
+					<div class="grid">
+						<div>
+							<h3>✨Features✨</h3>
+							<div class="accordions">
+								<div class="accordion" closed>
+									<div class="summary"><div>Role system to manage player permissions</div></div>
+									<div class="content">
+										<p>
+											Managing what permissions players have is now much more in-depth.
+											You can add/remove roles, edit their in-game permissions, and
+											change which commands a role has permission to use.
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Call commands using buttons</div></div>
-								<div class="content">
-									<p>
-										You can now call commands using buttons! Just name the button
-										<span class="command">?cc&lt;command name&gt;</span> - for
-										example, <span class="command">?ccHeal</span>. So long as the
-										player pressing the button has access to the command, they will
-										be healed!
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div>Call commands using buttons</div></div>
+									<div class="content">
+										<p>
+											You can now call commands using buttons! Just name the button
+											<span class="command">?cc&lt;command name&gt;</span> - for
+											example, <span class="command">?ccHeal</span>. So long as the
+											player pressing the button has access to the command, they will
+											be healed!
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Server autosaves persistent data</div></div>
-								<div class="content">
-									<p>
-										<code>server.save()</code> is called after changes are made to the
-										persistent data (change preferences, ban player, etc.). The autosaves
-										are saved as "cc-autosave" in the saves folder. As of the release of
-										this version, <code>server.save()</code> still only applies to
-										dedicated servers for some reason, so this feature will only work
-										with dedicated servers.
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div>Server autosaves persistent data</div></div>
+									<div class="content">
+										<p>
+											<code>server.save()</code> is called after changes are made to the
+											persistent data (change preferences, ban player, etc.). The autosaves
+											are saved as "cc-autosave" in the saves folder. As of the release of
+											this version, <code>server.save()</code> still only applies to
+											dedicated servers for some reason, so this feature will only work
+											with dedicated servers.
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Teleport to vehicle command</div></div>
-								<div class="content">
-									<p>
-										There is now a new <span class="command">?tp2v</span> command that
-										teleports the player to the requested vehicle.
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div>Teleport to vehicle command</div></div>
+									<div class="content">
+										<p>
+											There is now a new <span class="command">?tp2v</span> command that
+											teleports the player to the requested vehicle.
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div><span class="command">?clearRadiation</span> command</div></div>
-								<div class="content">
-									<p>
-										It is easier than ever to clean the nuclear apocolypse from your server.
-										Simply call <span class="command">?clearRadiation</span>!
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div><span class="command">?clearRadiation</span> command</div></div>
+									<div class="content">
+										<p>
+											It is easier than ever to clean the nuclear apocolypse from your server.
+											Simply call <span class="command">?clearRadiation</span>!
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Limit the max weight of vehicles</div></div>
-								<div class="content">
-									<p>
-										Are you tired of creations the size of Jupiter spawning on your server,
-										slowing everything to a crawl? Well here is a setting to help combat that.
-										You can now set the max <a title="mcro.org" href="http://mcro.org/issues/view_issue/21635#editor_reply_19390" target="_blank" class="third_party_link">mass</a> for vehicles! If a vehicle is being spawned
-										that is over this set limit, it will be removed from the world before it
-										can cause too much damage. The player spawning it will also be notified
-										that your server doesn't deserve to be abused ❤.
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div>Limit the max weight of vehicles</div></div>
+									<div class="content">
+										<p>
+											Are you tired of creations the size of Jupiter spawning on your server,
+											slowing everything to a crawl? Well here is a setting to help combat that.
+											You can now set the max <a title="mcro.org" href="http://mcro.org/issues/view_issue/21635#editor_reply_19390" target="_blank" class="third_party_link">mass</a> for vehicles! If a vehicle is being spawned
+											that is over this set limit, it will be removed from the world before it
+											can cause too much damage. The player spawning it will also be notified
+											that your server doesn't deserve to be abused ❤.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<h3>🔧Fixes🔧</h3>
-						<div class="accordions">
-							<div class="accordion" closed>
-								<div class="summary"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
-								<div class="content">
-									<p>
-										v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem</code> works.
-										The function now allows the user to define some data for the item such as
-										durability/ammo or radio frequency. By default, this function would now give
-										characters the items with 0 durability/ammo - for some reason. This has been
-										fixed in v2.0.
-									</p>
-								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Easier ways to target players for commands</div></div>
-								<div class="content">
-									<p>
-										Previously, you would have to know the peer id of the player you are using a command
-										on. Now you can enter the player's name instead - or in the case of using a command on
-										yourself, you can use "me". More commands will also automatically target the player
-										calling it if no other player is defined.
-									</p>
-								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
+						<div>
+							<h3>🔧Fixes🔧</h3>
+							<div class="accordions">
+								<div class="accordion" closed>
+									<div class="summary"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
 									<div class="content">
 										<p>
-											In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
-											has been renamed to <span class="command">?ccHelp</span class="command">. This makes things a little nicer
-											if you have multiple add-ons all trying to use the <span class="command">?help</span class="command"> command.
+											v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem</code> works.
+											The function now allows the user to define some data for the item such as
+											durability/ammo or radio frequency. By default, this function would now give
+											characters the items with 0 durability/ammo - for some reason. This has been
+											fixed in v2.0.
 										</p>
 									</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Greatly improved alogithm for closest string</div></div>
-								<div class="content">
-									<p>
-										Previously, when using <span class="command">?tp</span> to teleport to a location,
-										there was a less than desireable algorithm in place that would estimate which
-										location you <i>really</i> meant. This was okay at dealing with misspellings of a
-										character or two, but it was really bad at "autocomplete". If you tried to just enter
-										a few characters of a location, it was a gamble as to where you would really end up.
-										<br>
-										<br>								
-										I am happy to announce that a much better algorithm is in place now that is vastly
-										superior at autocompleting strings, given options to pick from. Expect
-										<span class="command">?tpl</span> (the new teleport to location command) to work a lot
-										better than the previous <span class="command">?tp</span> command.
-									</p>
 								</div>
-							</div>
-							<div class="accordion" closed>
-								<div class="summary"><div>Telport commands better prevent clipping</div></div>
-								<div class="content">
-									<p>
-										One of the most frustrating parts of developing this addon originally was discovering
-										that there is no loading screen when teleporting a player to an unloaded location. The
-										player will just be telported instantly before collisions are loaded, and often, the
-										player will just fall through the ground. The loading times of the collision meshes
-										appear to have gotten even worse lately, causing people to fall through the terrain
-										even more now. My previous fix of teleporting players multiple times when teleporting
-										far away was no longer sufficient.
-										<br>
-										<br>
-										Now the script will teleport the player, then "hold"
-										them stationary for a short while (like a loading screen) while things load in.
-										Unfortunately, there is no way to tell if the collisions have loaded in, so it is just
-										an estimated time delay. This seems to be sufficient for now though.
-									</p>
+								<div class="accordion" closed>
+									<div class="summary"><div>Easier ways to target players for commands</div></div>
+									<div class="content">
+										<p>
+											Previously, you would have to know the peer id of the player you are using a command
+											on. Now you can enter the player's name instead - or in the case of using a command on
+											yourself, you can use "me". More commands will also automatically target the player
+											calling it if no other player is defined.
+										</p>
+									</div>
+								</div>
+								<div class="accordion" closed>
+									<div class="summary"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
+										<div class="content">
+											<p>
+												In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
+												has been renamed to <span class="command">?ccHelp</span class="command">. This makes things a little nicer
+												if you have multiple add-ons all trying to use the <span class="command">?help</span class="command"> command.
+											</p>
+										</div>
+								</div>
+								<div class="accordion" closed>
+									<div class="summary"><div>Greatly improved alogithm for closest string</div></div>
+									<div class="content">
+										<p>
+											Previously, when using <span class="command">?tp</span> to teleport to a location,
+											there was a less than desireable algorithm in place that would estimate which
+											location you <i>really</i> meant. This was okay at dealing with misspellings of a
+											character or two, but it was really bad at "autocomplete". If you tried to just enter
+											a few characters of a location, it was a gamble as to where you would really end up.
+											<br>
+											<br>								
+											I am happy to announce that a much better algorithm is in place now that is vastly
+											superior at autocompleting strings, given options to pick from. Expect
+											<span class="command">?tpl</span> (the new teleport to location command) to work a lot
+											better than the previous <span class="command">?tp</span> command.
+										</p>
+									</div>
+								</div>
+								<div class="accordion" closed>
+									<div class="summary"><div>Telport commands better prevent clipping</div></div>
+									<div class="content">
+										<p>
+											One of the most frustrating parts of developing this addon originally was discovering
+											that there is no loading screen when teleporting a player to an unloaded location. The
+											player will just be telported instantly before collisions are loaded, and often, the
+											player will just fall through the ground. The loading times of the collision meshes
+											appear to have gotten even worse lately, causing people to fall through the terrain
+											even more now. My previous fix of teleporting players multiple times when teleporting
+											far away was no longer sufficient.
+											<br>
+											<br>
+											Now the script will teleport the player, then "hold"
+											them stationary for a short while (like a loading screen) while things load in.
+											Unfortunately, there is no way to tell if the collisions have loaded in, so it is just
+											an estimated time delay. This seems to be sufficient for now though.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -271,10 +275,6 @@
 			</section>
 		</main>
 		<footer>
-			<nav>
-				<a href="docs/commands">Commands</a>
-				<a href="docs/code">Documentation</a>
-			</nav>
 			<div id="external">
 				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
 					<img src="images/logo_steam.png" width="45" height="45" class="steamLogo">

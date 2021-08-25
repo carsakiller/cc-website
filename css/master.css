@@ -158,6 +158,7 @@ main > section {
 .accordion > .summary {
 	position: relative;
 	list-style: none;
+	cursor: pointer;
 }
 
 .accordion > .summary > div {
@@ -174,7 +175,7 @@ main > section {
 	content: ' ▸';
 	white-space: nowrap;
 	font-size: 1.6em;
-	transition: transform 0.25s ease-in-out;
+	transition: transform 0.3s cubic-bezier(0.57, 0.01, 0.46, 1.77);
 }
 
 .accordion[open] .summary:after {
@@ -249,7 +250,28 @@ blockquote::after {
 	justify-items: center;
 }
 
+.third_party_link {
+	position: relative;
+	display: inline;
+	width: fit-content;
+	margin: auto;
+}
+
 .third_party_link::after {
+	content: '';
+	display: inline-block;
+	cursor: alias;
+	position: absolute;
+	top: 0.1em;
+	right: -0.7em;
+	height: 0.6em;
+	width: 0.6em;
+	background: url(../images/external.png) top right no-repeat;
+	background-size: 100%;
+	z-index: 1;
+}
+
+/* .third_party_link::after {
 	content: '';
 	display: inline-block;
 	cursor: alias;
@@ -261,7 +283,7 @@ blockquote::after {
 	background: url(../images/external.png) top right no-repeat;
 	background-size: 100%;
 	z-index: 1;
-}
+} */
 
 @media only screen and (max-width: 1400px) {
 	main > section {
@@ -283,6 +305,6 @@ blockquote::after {
 	}
 
 	.grid {
-		grid-template-columns: 80%;
+		grid-template-columns: 100%;
 	}
 }
