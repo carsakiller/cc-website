@@ -43,8 +43,12 @@ svg {
 	width: 100%;
 }
 
-.accordion:not(:last-of-type):not(:first-of-type) {
+.accordion {
 	max-width: 800px;
+}
+
+.accordion:not(:first-of-type) {
+	border-top: #031b3d solid 2px;
 }
 
 .accordion .summary {
