@@ -51,10 +51,6 @@ svg {
 	max-width: 800px;
 }
 
-.accordion:not(:first-of-type) {
-	border-top: #031b3d solid 2px;
-}
-
 .accordion .summary {
 	padding: 15px;
 }
@@ -73,15 +69,14 @@ svg {
 	border-radius: 15px 15px 0px 0px;
 }
 
-.accordion[closed] .summary {border-radius: 15px;}
-
-.accordion p {
-	border-radius: 0px 0px 15px 15px;
+.accordion[closed] .summary {
+	border-radius: 15px;
 }
 
 .accordion .content {
 	width: 100%;
 	background: #031b3d;
+	border-radius: 0px 0px 15px 15px;
 }
 
 .accordion .content p {
