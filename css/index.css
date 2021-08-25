@@ -1,0 +1,121 @@
+section {
+	margin: 20px auto;
+	text-align: center;
+	max-width: 1500px;
+	background-color: #103b77;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#banner {
+	text-align: center;
+	background: #083b9b;
+	margin: 20px auto;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+#introduction .content {
+	width: 85%;
+	margin: auto;
+}
+
+#introduction .content ul {
+	text-align: left;
+	width: fit-content;
+}
+
+#introduction .content ul li {
+	margin: 5px auto;
+}
+
+#introduction .content ul li::marker{
+	content: attr(bullet) ' ';
+	font-size: 1.2em;
+}
+
+svg {
+	fill: white;
+}
+
+
+.grid > div {
+	width: 100%;
+}
+
+.accordion {
+	max-width: 800px;
+}
+
+.accordion .summary {
+	padding: 15px;
+}
+
+.accordion p {
+	background: #031b3d;
+	padding: 15px 20px;
+	margin: 0;
+	text-align: left;
+}
+
+.accordion .summary{
+	background: #0a264d;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.accordion:first-of-type .summary {
+	border-radius: 15px 15px 0px 0px;
+}
+
+.accordion[closed]:last-of-type .summary {
+	border-radius: 0px 0px 15px 15px;
+}
+
+.accordion:last-of-type p {
+	border-radius: 0px 0px 15px 15px;
+}
+
+.profile {
+	width: 40%;
+	background: #0a264d;
+	padding: 10px 20px;
+	display: flex;
+	border-radius: 12px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+
+.profile img {
+	border-radius: 50%;
+}
+
+.profile h2 {
+	font-size: 1.5em;
+}
+
+.profile h3 {
+	font-size: 1.8em;
+	margin: 10px auto;
+}
+
+.profile p {
+	margin-top: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+	#introduction > div {
+		display: block;
+	}
+
+	.profile {
+		width: 90%;
+	}
+}

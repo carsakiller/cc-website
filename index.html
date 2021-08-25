@@ -1,0 +1,290 @@
+<html>
+	<head>
+		<title>Carsa's Commands - Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#103b77">
+		<link rel="stylesheet" href="css/master.css">
+		<link rel="stylesheet" href="css/index.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		<script src="js/accordion.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<!-- <img src="images/metal&glass.jpg" width="140px" height="140px"> -->
+			<h1>C²</h1>
+			<nav>
+				<a href="docs/commands">Commands</a>
+				<a href="docs/code">Documentation</a>
+			</nav>
+			<div id="filler"></div>
+		</header>
+		<div id="header_spacer"><br></div>
+		<div id="banner">
+			<h1>🎉 New v2.0 Update! 🎉</h1>
+			<p>Adds roles, support for new equipment, the ability to call commands with buttons, fixes, and more!</p>
+			<a href="#new">Learn More</a>
+		</div>
+		<main>
+			<section id="introduction">
+				<h1>An Addon for <a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" class="third_party_link">Stormworks</a></h1>
+				<div class="content">
+					<p>
+						Carsa's Commands adds many features to Stormworks. Some are for fun,
+						some are for adding to the sandbox experience, and some I feel should
+						have been included in the base game. You can subscribe to the addon
+						through the Steam Workshop below. For reporting bugs, please use the
+						GitHub repository.
+						<br>
+					</p>
+					<br>
+					<div class="flex row">
+						<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+							<img src="images/logo_steam.png" width="60" height="60" class="steamLogo">
+							<div class="third_party_link">Subscribe</div>
+						</a>
+						<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+							<svg viewBox="0 0 16 16" version="1.1" width="60" height="60" data-view-component="true" class="githubLogo">
+								<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+							</svg>
+							<div class="third_party_link">View GitHub</div>
+						</a>
+						<a title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path d="M7.074 1.408c0-.778.641-1.408 1.431-1.408.942 0 1.626.883 1.38 1.776-.093.336-.042.695.138.995.401.664 1.084 1.073 1.977 1.078.88-.004 1.572-.408 1.977-1.078.181-.299.23-.658.139-.995-.247-.892.435-1.776 1.379-1.776.79 0 1.431.63 1.431 1.408 0 .675-.482 1.234-1.117 1.375-.322.071-.6.269-.77.548-.613 1.017.193 1.917.931 2.823-1.211.562-2.525.846-3.97.846-1.468 0-2.771-.277-3.975-.84.748-.92 1.555-1.803.935-2.83-.168-.279-.446-.477-.768-.548-.636-.14-1.118-.699-1.118-1.374zm3.926 7.531c-1.709-.135-3.271-.599-4.703-1.435-.217.359-.421.738-.601 1.146-.227.514-.646.552-.941.437l-2.295-.89c-.542-.21-1.153.051-1.367.584-.213.533.053 1.136.594 1.346l2.231.866c.496.192.854.694.773 1.274-.106.758-.683 1.111-1.235 1.111h-2.402c-.582 0-1.054.464-1.054 1.037s.472 1.037 1.054 1.037h2.387c.573 0 1.159.372 1.265 1.057.112.728-.228 1.229-.751 1.462l-2.42 1.078c-.53.236-.766.851-.526 1.373s.865.753 1.395.518l2.561-1.14c.307-.137.688-.106.901.259.922 1.587 2.674 3.361 5.134 3.941v-15.061zm9.559 6.513h2.387c.583 0 1.055-.464 1.055-1.037s-.472-1.037-1.055-1.037h-2.402c-.574 0-1.137-.393-1.227-1.052-.092-.677.286-1.147.766-1.333l2.23-.866c.541-.21.808-.813.594-1.346-.213-.533-.825-.795-1.367-.584l-2.294.891c-.329.127-.734.036-.926-.401-.185-.423-.396-.816-.62-1.188-1.433.829-3.008 1.3-4.699 1.439v15.062c2.406-.567 4.134-2.284 5.072-3.837.262-.432.629-.514.964-.364l2.561 1.14c.528.236 1.154.005 1.395-.518.239-.522.005-1.137-.526-1.373l-2.42-1.078c-.494-.221-.867-.738-.764-1.383.128-.803.717-1.135 1.276-1.135z"/></svg>
+							<div class="third_party_link">Report Issue</div>
+						</a>
+					</div>
+
+					<h2>Features:</h2>
+					<ul>
+						<li bullet="💼">Roles system that allows the host to give players certain permissions</li>
+						<li bullet="👮‍♀️"><span class="command">?ban</span> as well as <span class="command">?unban</span> (stormworks does not have an unban)</li>
+						<li bullet="🧯">Equip players with specific equipment</li>
+						<li bullet="🚗">View and manage vehicles in the world</li>
+						<li bullet="👻">Teleport to coordinates, named locations, and players - or teleport them to you</li>
+						<li bullet="🚁">Teleport vehicles to your current location</li>
+						<li bullet="📜">Manage and display rules to players</li>
+						<li bullet="📝">Customize preferences</li>
+						<li bullet="🙊">Whisper to other players</li>
+						<li bullet="🙋‍♂️">Help command that explains each command in-game</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<a class="anchor" name="new"></a>
+				<h1>What's New?</h1>
+				<h2>v2.0</h2>
+				<p>
+					This latest version adds plenty of features that I have been wanting to add
+					for a long while. There are quite a few changes to already existing commands
+					as well. For example, the <span class="command">?tp</span> command was
+					seperated into multiple different commands. I recommend viewing the full
+					<a href="changelog/#v2" target="_blank">change log</a>.
+				</p>
+				<div class="grid">
+					<div>
+						<h3>✨Features✨</h3>
+						<div class="accordions">
+							<div class="accordion" closed>
+								<div class="summary"><div>Role system to manage player permissions</div></div>
+								<div class="content">
+									<p>
+										Managing what permissions players have is now much more in-depth.
+										You can add/remove roles, edit their in-game permissions, and
+										change which commands a role has permission to use.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Call commands using buttons</div></div>
+								<div class="content">
+									<p>
+										You can now call commands using buttons! Just name the button
+										<span class="command">?cc&lt;command name&gt;</span> - for
+										example, <span class="command">?ccHeal</span>. So long as the
+										player pressing the button has access to the command, they will
+										be healed!
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Server autosaves persistent data</div></div>
+								<div class="content">
+									<p>
+										<code>server.save()</code> is called after changes are made to the
+										persistent data (change preferences, ban player, etc.). The autosaves
+										are saved as "cc-autosave" in the saves folder. As of the release of
+										this version, <code>server.save()</code> still only applies to
+										dedicated servers for some reason, so this feature will only work
+										with dedicated servers.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Teleport to vehicle command</div></div>
+								<div class="content">
+									<p>
+										There is now a new <span class="command">?tp2v</span> command that
+										teleports the player to the requested vehicle.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div><span class="command">?clearRadiation</span> command</div></div>
+								<div class="content">
+									<p>
+										It is easier than ever to clean the nuclear apocolypse from your server.
+										Simply call <span class="command">?clearRadiation</span>!
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Limit the max weight of vehicles</div></div>
+								<div class="content">
+									<p>
+										Are you tired of creations the size of Jupiter spawning on your server,
+										slowing everything to a crawl? Well here is a setting to help combat that.
+										You can now set the max <a title="mcro.org" href="http://mcro.org/issues/view_issue/21635#editor_reply_19390" target="_blank" class="third_party_link">mass</a> for vehicles! If a vehicle is being spawned
+										that is over this set limit, it will be removed from the world before it
+										can cause too much damage. The player spawning it will also be notified
+										that your server doesn't deserve to be abused ❤.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<h3>🔧Fixes🔧</h3>
+						<div class="accordions">
+							<div class="accordion" closed>
+								<div class="summary"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
+								<div class="content">
+									<p>
+										v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem</code> works.
+										The function now allows the user to define some data for the item such as
+										durability/ammo or radio frequency. By default, this function would now give
+										characters the items with 0 durability/ammo - for some reason. This has been
+										fixed in v2.0.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Easier ways to target players for commands</div></div>
+								<div class="content">
+									<p>
+										Previously, you would have to know the peer id of the player you are using a command
+										on. Now you can enter the player's name instead - or in the case of using a command on
+										yourself, you can use "me". More commands will also automatically target the player
+										calling it if no other player is defined.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
+									<div class="content">
+										<p>
+											In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
+											has been renamed to <span class="command">?ccHelp</span class="command">. This makes things a little nicer
+											if you have multiple add-ons all trying to use the <span class="command">?help</span class="command"> command.
+										</p>
+									</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Greatly improved alogithm for closest string</div></div>
+								<div class="content">
+									<p>
+										Previously, when using <span class="command">?tp</span> to teleport to a location,
+										there was a less than desireable algorithm in place that would estimate which
+										location you <i>really</i> meant. This was okay at dealing with misspellings of a
+										character or two, but it was really bad at "autocomplete". If you tried to just enter
+										a few characters of a location, it was a gamble as to where you would really end up.
+										<br>
+										<br>								
+										I am happy to announce that a much better algorithm is in place now that is vastly
+										superior at autocompleting strings, given options to pick from. Expect
+										<span class="command">?tpl</span> (the new teleport to location command) to work a lot
+										better than the previous <span class="command">?tp</span> command.
+									</p>
+								</div>
+							</div>
+							<div class="accordion" closed>
+								<div class="summary"><div>Telport commands better prevent clipping</div></div>
+								<div class="content">
+									<p>
+										One of the most frustrating parts of developing this addon originally was discovering
+										that there is no loading screen when teleporting a player to an unloaded location. The
+										player will just be telported instantly before collisions are loaded, and often, the
+										player will just fall through the ground. The loading times of the collision meshes
+										appear to have gotten even worse lately, causing people to fall through the terrain
+										even more now. My previous fix of teleporting players multiple times when teleporting
+										far away was no longer sufficient.
+										<br>
+										<br>
+										Now the script will teleport the player, then "hold"
+										them stationary for a short while (like a loading screen) while things load in.
+										Unfortunately, there is no way to tell if the collisions have loaded in, so it is just
+										an estimated time delay. This seems to be sufficient for now though.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Contributors</h1>
+				<div id="contributors" class="flex">
+					<div class="profile">
+						<h2>Project Lead</h2>
+						<img src="images/carsa.webp" width="150" height="150">
+						<h3>Carsa</h3>
+						<blockquote>Stormworks Lua is missing all the things that let you write good code</blockquote>
+						<p>
+							Carsa began work on Carsa's Commands at the end of 2020 and then published the
+							add-on on January 9th, 2021. Shortly after, he stopped playing Stormworks for
+							<a href="https://steamcommunity.com/profiles/76561198048154493/recommended/573090/" target="_blank" class="third_party_link">many reasons</a>.
+							After the v1.2.5-6 update broke the <span class="command">?equip</span> command,
+							he returned to Carsa's Commands to fix and improve with the help of Leopard.
+						</p>
+					</div>
+					<div class="profile">
+						<h2>Developer</h2>
+						<img src="images/leopard.webp" width="150" height="150">
+						<h3>Leopard</h3>
+						<blockquote>
+							<svg width="50px" height="50px" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve" version="1.1"><defs id="defs6"><clipPath id="clipPath16" clipPathUnits="userSpaceOnUse"><path id="path18" d="M 0,36 36,36 36,0 0,0 0,36 Z"/></clipPath></defs><g transform="matrix(1.25,0,0,-1.25,0,45)" id="g10"><g id="g12"><g clip-path="url(#clipPath16)" id="g14"><g transform="translate(2,20)" id="g20"><path id="path22" style="fill:#ffcc4d;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-8.837 7.164,-16 16,-16 8.837,0 16,7.163 16,16 C 32,8.836 24.837,16 16,16 7.164,16 0,8.836 0,0"/></g><g transform="translate(15.4063,25.5)" id="g24"><path id="path26" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.381 -0.896,-2.5 -2,-2.5 -1.104,0 -2,1.119 -2,2.5 0,1.38 0.896,2.5 2,2.5 1.104,0 2,-1.12 2,-2.5"/></g><g transform="translate(26,24.5)" id="g28"><path id="path30" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.381 -0.895,-2.5 -2,-2.5 -1.104,0 -2,1.119 -2,2.5 0,1.38 0.896,2.5 2,2.5 1.105,0 2,-1.12 2,-2.5"/></g><g transform="translate(9.6709,29.667)" id="g32"><path id="path34" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.164,0.087 -0.303,0.223 -0.391,0.398 -0.607,0.827 -0.431,1.325 0.002,1.511 4.268,3.341 7.701,1.554 7.845,1.477 8.278,1.246 8.453,0.729 8.236,0.323 8.02,-0.082 7.496,-0.223 7.063,0.005 6.94,0.069 4.231,1.437 0.785,-0.042 0.528,-0.151 0.238,-0.127 0,0"/></g><g transform="translate(14.7427,16.4277)" id="g36"><path id="path38" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.136,0.127 -0.236,0.293 -0.276,0.486 -0.375,0.955 -0.078,1.392 0.389,1.46 4.981,2.138 7.841,-0.469 7.962,-0.58 8.322,-0.914 8.357,-1.457 8.044,-1.795 7.732,-2.131 7.189,-2.133 6.83,-1.801 6.726,-1.709 4.458,0.307 0.748,-0.24 0.471,-0.281 0.197,-0.184 0,0"/></g><g transform="translate(20.4307,25.917)" id="g40"><path id="path42" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.156,0.098 -0.286,0.243 -0.362,0.424 -0.549,0.866 -0.339,1.352 0.105,1.508 4.486,3.044 7.79,1.028 7.929,0.941 8.344,0.681 8.483,0.154 8.24,-0.237 7.998,-0.627 7.464,-0.732 7.049,-0.475 6.929,-0.402 4.321,1.146 0.782,-0.095 0.518,-0.187 0.23,-0.143 0,0"/></g><g transform="translate(17.2764,0.8682)" id="g44"><path id="path46" style="fill:#f4900c;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,0 1.265,0.411 1.429,1.352 0.173,0.971 -0.624,1.167 -0.624,1.167 0,0 1.041,0.208 1.172,1.376 0.123,1.1 -0.862,1.363 -0.862,1.363 0,0 0.97,0.4 1.016,1.539 0.038,0.959 -0.995,1.428 -0.995,1.428 0,0 5.038,1.22 5.555,1.34 0.516,0.121 1.321,0.616 1.07,1.695 -0.249,1.08 -1.204,1.118 -1.698,1.003 -0.494,-0.116 -6.744,-1.567 -8.9,-2.069 -0.23,-0.053 -1.308,-0.302 -1.439,-0.334 -0.54,-0.127 -0.785,0.111 -0.405,0.512 0.509,0.536 0.833,1.129 0.947,2.113 0.119,1.036 -0.232,2.314 -0.433,2.809 -0.374,0.921 -1.005,1.649 -1.734,1.899 -1.138,0.39 -1.946,-0.321 -1.542,-1.561 0.604,-1.855 0.209,-3.375 -0.833,-4.293 -2.449,-2.157 -3.589,-3.695 -2.83,-6.973 0.827,-3.575 4.377,-5.876 7.952,-5.048 C -2.965,-0.64 0,0 0,0"/></g></g></g></g></svg>
+						</blockquote>
+						<p>
+							Leopard is the brain behind all things that require more than a handful of
+							braincells. He helped push Carsa to update the addon and then helped fix
+							all the bugs that Carsa introduced. Leopard also did all of the in-game
+							testing and made sure things were actually usable.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<nav>
+				<a href="docs/commands">Commands</a>
+				<a href="docs/code">Documentation</a>
+			</nav>
+			<div id="external">
+				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+					<img src="images/logo_steam.png" width="45" height="45" class="steamLogo">
+				</a>
+				<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+					<svg viewBox="0 0 16 16" version="1.1" width="45" height="45" data-view-component="true" class="githubLogo">
+						<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>
