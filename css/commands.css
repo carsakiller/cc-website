@@ -1,0 +1,206 @@
+#sidenav {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+    position: fixed;
+    top: 78px;
+}
+
+div#sidenav[open] {
+    transform: translateX(0px) !important;
+}
+
+#sidenav div#openButton {
+    background: white;
+    color: #103b77;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    padding: 10px 4px;
+    align-self: center;
+}
+
+#sidenav #openButton > svg {
+    margin: 0;
+    fill: #103b77;
+    transform: rotateZ(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidenav[open] #openButton > svg {
+    transform: rotateY(180deg);
+}
+
+#sidenav > div.content {
+    background: #031b3d;
+    padding: 10px 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#sidenav div.content > div {
+	margin: 0px 10px;
+	width: calc(100% - 20px);
+}
+
+#sidenav .content .accordion .content div {
+    margin: 5px 10px;
+	display: block;
+}
+
+#sidenav .content .accordion .content .command {
+	display: block;
+}
+
+
+main section {
+	margin: 20px auto;
+	max-width: 1500px;
+	background-color: #103b77;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+main section h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+}
+
+main section code {
+	font-family: 'Source Code Pro', monospace;
+}
+
+main section div.content {
+	width: 90%;
+	margin: auto;
+}
+
+.accordion .summary {
+	background: #0a264d;
+	border-radius: 15px 15px 0px 0px;
+	padding: 10px 10px;
+}
+
+.accordion[closed] .summary {
+	background: #0a264d;
+	border-radius: 15px;
+}
+
+.accordion .summary::after {
+	margin-left: auto;
+}
+
+.accordion .summary span.name {
+	margin-left: auto;
+	flex-shrink: 0;
+}
+
+.accordion .summary span.description {
+	font-size: 0.9em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.accordion .summary span.description::before {
+	content: ' - ';
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+.accordion .content {
+	width: 100%;
+	background: #031b3d;
+	border-radius: 0px 0px 15px 15px;
+}
+
+.accordion .content > div {
+	padding: 10px 15px;
+}
+
+.commandDefinition .args {
+	overflow-x: auto;
+}
+
+.commandDefinition .args table {
+	font-size: 0.8em;
+	border-collapse: collapse;
+	border-spacing: 5px 5px;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	min-width: 500px;
+}
+
+.commandDefinition .args table td {
+	word-break: break-word;
+	vertical-align: middle;
+	border: white solid 2px;
+	padding: 4px;
+}
+
+.commandDefinition .args table th {
+	border: white solid 2px;
+	padding: 8px;
+}
+
+.commandDefinition .args table .description {
+	width: 500px;
+}
+
+.commandDefinition table.access {
+	font-size: 0.8em;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 5px 8px;
+}
+
+.commandDefinition .examples h1 {
+	font-size: 1.4em;
+}
+
+.commandDefinition .examples code {
+	display: block;
+	margin: 4px auto;
+	border-radius: 6px;
+	padding: 3px;
+}
+
+main section .true,.false {
+	border-radius: 15px;
+	text-align: center;
+	width: 60px;
+	padding: 1px 3px;
+	margin: auto;
+}
+
+main section .true {
+	background: green;
+}
+
+main section .false {
+	background: #dd0000;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	main section div.content {
+		width: 98%;
+	}
+}
+
+
+/* Only allow hover on clients with pointers (no touch screens) */
+@media(hover: hover) and (pointer: fine) {
+	#sidenav .content .accordion .content .command:hover{
+		background: #dddddd;
+	}
+}

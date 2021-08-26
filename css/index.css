@@ -16,8 +16,8 @@ section div.content {
 	text-align: center;
 	background: #083b9b;
 	margin: 20px auto;
-	width: 100%;
-	padding-bottom: 15px;
+	width: calc(100% - 20px);
+	padding: 0px 10px 15px 10px;
 }
 
 #introduction .content ul {
@@ -39,10 +39,6 @@ section div.content {
 	flex: 1 1 0px
 }
 
-svg {
-	fill: white;
-}
-
 .grid > div {
 	width: 100%;
 }
@@ -57,15 +53,6 @@ svg {
 
 .accordion .summary{
 	background: #0a264d;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: center;
-	align-items: center;
-}
-
-.accordion .summary {
 	border-radius: 15px 15px 0px 0px;
 }
 
@@ -122,5 +109,9 @@ svg {
 
 	.profile {
 		width: 90%;
+	}
+
+	section div.content {
+		width: 98%;
 	}
 }

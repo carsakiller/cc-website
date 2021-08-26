@@ -1,3 +1,4 @@
+const animationDuration = 250;
 var accordions = [];
 
 /** Class for folding down accordion. Similar to HTML details but with animations */
@@ -20,7 +21,12 @@ class Accordion {
 		this.closed = true;
 
 		// add event listener to the accordion
-		this.element.addEventListener('click', (event) => this.click(event));
+		this.summary.addEventListener('click', (event) => this.click(event));
+		window.addEventListener('resize', (event) => {
+			if (!this.closed) {
+				this.content.style.height = this.content.scrollHeight;
+			}
+		});
 	}
 
 	/**
@@ -28,7 +34,7 @@ class Accordion {
 	 * @param {object} event - The pointer event passed from the event listener
 	 */
 	click(event) {
-		event.stopPropagation();
+		if (event) event.stopPropagation();
 
 		// toggle the state of the accordion
 		if (this.closed) {
@@ -49,7 +55,7 @@ class Accordion {
 		// set state of accordion when animation is complete
 		setTimeout(() => {
 			this.closed = false;
-		}, 250);
+		}, animationDuration);
 
 		// close all other accorions that are open in this accordions group
 		accordions[this.groupIndex].forEach((instance) => {
@@ -70,7 +76,7 @@ class Accordion {
 		setTimeout(() => {
 			this.element.setAttribute('closed', '');
 			this.closed = true;
-		}, 250);
+		}, animationDuration);
 	}
 }
 

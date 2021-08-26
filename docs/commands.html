@@ -1,0 +1,404 @@
+<html>
+	<head>
+		<title>Carsa's Commands - Commands</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#103b77">
+		<link rel="stylesheet" href="../css/master.css">
+		<link rel="stylesheet" href="../css/commands.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		<script src="../js/accordion.js" defer></script>
+		<script src="../js/sidenav.js" defer></script>
+		<script defer>
+			document.querySelectorAll('#sidebar .content .accordion .content .command').forEach((element) => {
+				element.addEventListener('click', (event) => {
+					event.preventDefault();
+					document.querySelector(element.href).scrollIntoView();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>C²</h1>
+			<nav>
+				<a href="docs/commands">Commands</a>
+				<a href="docs/code">Documentation</a>
+			</nav>
+		</header>
+		<div id="header_spacer"><br></div>
+		
+		<div id="sidenav" style="transform: translateX(-270px)">
+			<div class="content">
+				<div class="accordions">
+					<div class="accordion">
+						<div class="summary"><div>Moderation</div></div>
+						<div class="content">
+							<div><a class="command" href="#banned">?banned</a></div>
+							<div><a class="command" href="#banPlayer">?banPlayer</a></div>
+							<div><a class="command" href="#clearRadiation">?clearRadiation</a></div>
+							<div><a class="command" href="#unban">?unban</a></div>
+						</div>
+					</div>
+					<div class="accordion">
+						<div class="summary"><div>Rules</div></div>
+						<div class="content">
+							<div><a class="command" href="#addRule">?addRule</a></div>
+							<div><a class="command" href="#removeRule">?removeRule</a></div>
+							<div><a class="command" href="#rules">?rules</a></div>
+						</div>
+					</div>
+					<div class="accordion">
+						<div class="summary"><div>Roles</div></div>
+						<div class="content">
+							<div><a class="command" href="#addRole">?addRole</a></div>
+							<div><a class="command" href="#giveRole">?giveRole</a></div>
+							<div><a class="command" href="#removeRole">?removeRole</a></div>
+							<div><a class="command" href="#revokeRole">?revokeRole</a></div>
+							<div><a class="command" href="#roleAccess">?roleAccess</a></div>
+							<div><a class="command" href="#rolePerms">?rolePerms</a></div>
+							<div><a class="command" href="#roles">?roles</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="openButton"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg></div>
+		</div>
+
+		<main>
+			<section>
+				<h1>Commands Documentation</h1>
+				<div class="content">
+					<p>
+						Some generic info
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h1>Moderation</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="banned" closed>
+							<div class="summary"><span class="name">?banned</span><span class="description">Lists the banned players</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Shows the list of <span class="virtualType">steam_id</span>s of banned players</div>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">page number</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">False</div></td>
+												<td><div class="true">False</div></td>
+												<td class="description">The page index to display</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td class="true">True</td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td class="true">True</td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td class="true">True</td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td class="false">False</td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td class="false">False</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="banPlayer" closed>
+							<div class="summary"><span class="name">?banPlayer</span><span class="description">Bans the requested player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Bans the requested player using their <span class="virtualType">peer_id</span> or <span class="virtualType">steam_id</span></div>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">peer_id/steam_id</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="true">True</div></td>
+												<td class="description">The <span class="virtualType">peer_id</span> or <span class="virtualType">steam_id</span> of the player to unban</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?banPlayer 3</code>
+											<code language="command">?banPlayer 76561197976988654</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="clearRadiation" closed>
+							<div class="summary"><span class="name">?clearRadiation</span><span class="description">Clears radiation zones</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Clears radiation zones from the world</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="unban" closed>
+							<div class="summary"><span class="name">?unban</span><span class="description">Unbans the requested player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Unbans the requested player using their <span class="virtualType">steam_id</span></div>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">steam_id</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="true">True</div></td>
+												<td class="description">The <span class="virtualType">steam_id</span> of the player to unban</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?unban 76561197976988654</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Rules</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="addRule" closed>
+							<div class="summary"><span class="name">?addRule</span><span class="description">Adds a server rule</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Adds a rule to the server's rulebook</div>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">position</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The position in the rulebook to add this rule. By default the rule will be appended to the
+													end unless a position is specified. You can use <span span="command">?rules</span> to see
+													the current rules to see what position you want to add to.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">text</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">The text of the rule to add.</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<table class="access">
+										<tr>
+											<th>Role</th>
+											<th>Default Access</th>
+										</tr>
+										<tr>
+											<td>Owner</td>
+											<td><div class="true">True</div></td>
+										</tr>
+										<tr>
+											<td>Admin</td>
+											<td><div class="true">True</div></td>
+										</tr>
+										<tr>
+											<td>Moderator</td>
+											<td><div class="false">False</div></td>
+										</tr>
+										<tr>
+											<td>Auth</td>
+											<td><div class="false">False</div></td>
+										</tr>
+										<tr>
+											<td>Everyone</td>
+											<td><div class="false">False</div></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div id="external">
+				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="45" height="45" viewBox="0 0 233 233" class="steamLogo">
+						<defs>
+							<linearGradient id="a" x2="50%" x1="50%" y2="100%">
+							<stop stop-color="#FFFFFF" offset="0"/>
+							<stop stop-color="#FFFFFF" offset=".21248"/>
+							<stop stop-color="#0A1B48" offset=".40695"/>
+							<stop stop-color="#132E62" offset=".58110"/>
+							<stop stop-color="#144B7E" offset=".73760"/>
+							<stop stop-color="#136497" offset=".87279"/>
+							<stop stop-color="#1387B8" offset="1"/>
+							</linearGradient>
+						</defs>
+						<path fill="#ffffff" d="m4.8911 150.01c14.393 48.01 58.916 82.99 111.61 82.99 64.34 0 116.5-52.16 116.5-116.5 0-64.341-52.16-116.5-116.5-116.5-61.741 0-112.26 48.029-116.25 108.76 7.5391 12.66 10.481 20.49 4.6411 41.25z"/>
+						<path fill="#103b77" d="m110.5 87.322c0 0.196 0 0.392 0.01 0.576l-28.508 41.412c-4.618-0.21-9.252 0.6-13.646 2.41-1.937 0.79-3.752 1.76-5.455 2.88l-62.599-25.77c0.00049 0-1.4485 23.83 4.588 41.59l44.254 18.26c2.222 9.93 9.034 18.64 19.084 22.83 16.443 6.87 35.402-0.96 42.242-17.41 1.78-4.3 2.61-8.81 2.49-13.31l40.79-29.15c0.33 0.01 0.67 0.02 1 0.02 24.41 0 44.25-19.9 44.25-44.338 0-24.44-19.84-44.322-44.25-44.322-24.4 0-44.25 19.882-44.25 44.322zm-6.84 83.918c-5.294 12.71-19.9 18.74-32.596 13.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405 5.97c9.363 3.9 20.105-0.54 23.997-9.9 3.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18 12.278-2.26 18.381 0.28 6.153 2.56 10.927 7.38 13.457 13.54s2.52 12.96-0.04 19.1m51.09-54.38c-16.25 0-29.48-13.25-29.48-29.538 0-16.275 13.23-29.529 29.48-29.529 16.26 0 29.49 13.254 29.49 29.529 0 16.288-13.23 29.538-29.49 29.538m-22.09-29.583c0-12.253 9.92-22.191 22.14-22.191 12.23 0 22.15 9.938 22.15 22.191 0 12.254-9.92 22.183-22.15 22.183-12.22 0-22.14-9.929-22.14-22.183z"/>
+					</svg>
+				</a>
+				<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+					<svg viewBox="0 0 16 16" version="1.1" width="45" height="45" data-view-component="true" class="githubLogo">
+						<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>
