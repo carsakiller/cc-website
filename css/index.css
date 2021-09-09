@@ -53,17 +53,17 @@ section div.content {
 
 .accordion .summary{
 	background: #0a264d;
-	border-radius: 15px 15px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 }
 
-.accordion[closed] .summary {
-	border-radius: 15px;
+.accordion:not([closing]):not([open]) .summary {
+	border-radius: 10px;
 }
 
 .accordion .content {
 	width: 100%;
 	background: #031b3d;
-	border-radius: 0px 0px 15px 15px;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .accordion .content p {

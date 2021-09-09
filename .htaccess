@@ -2,15 +2,15 @@ RewriteEngine On
 
 DirectoryIndex index.html
 
-# Rewrite file extentions
-  # HTML
-    # internal rewrite
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.html -f
-    RewriteRule ^(.*)$ $1.html
 
-    # 301 redirect
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.html -f
-    RewriteCond %{THE_REQUEST} ^[A-Z]+\ (/[^\ ]*)\.html[?\ ]
-    RewriteRule (.*)\.html$ /$1 [R=301,L]
+# Rewrite file extentions
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+
+# Redirects domain.com/file.html to domain.com/file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_URI} ^(.+)\.html$
+RewriteRule (.*)\.html$ /$1 [R=301,L]

@@ -1,21 +1,24 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Carsa's Commands - Home</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#103b77">
-		<link rel="stylesheet" href="css/master.css">
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="./css/master.css">
+		<link rel="stylesheet" href="./css/index.css">
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-		<script src="js/accordion.js" defer></script>
+		<script src="./js/accordion.js" defer></script>
 	</head>
 	<body>
 		<header>
-			<h1>C²</h1>
+			<div id="gradient">
+				<h1 class="logo">C²</h1>
+			</div>
 			<nav>
 				<a href="docs/commands">Commands</a>
 				<a href="docs/code">Documentation</a>
@@ -106,8 +109,8 @@
 						<div>
 							<h3>✨Features✨</h3>
 							<div class="accordions">
-								<div class="accordion" closed>
-									<div class="summary"><div>Role system to manage player permissions</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Role system to manage player permissions</div></div>
 									<div class="content">
 										<p>
 											Managing what permissions players have is now much more in-depth.
@@ -116,8 +119,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Call commands using buttons</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Call commands using buttons</div></div>
 									<div class="content">
 										<p>
 											You can now call commands using buttons! Just name the button
@@ -128,21 +131,21 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Server autosaves persistent data</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Server autosaves persistent data</div></div>
 									<div class="content">
 										<p>
 											<code>server.save()</code> is called after changes are made to the
 											persistent data (change preferences, ban player, etc.). The autosaves
-											are saved as "cc-autosave" in the saves folder. As of the release of
+											are saved as "CC_Autosave" in the saves folder. As of the release of
 											this version, <code>server.save()</code> still only applies to
 											dedicated servers for some reason, so this feature will only work
 											with dedicated servers.
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Teleport to vehicle command</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Teleport to vehicle command</div></div>
 									<div class="content">
 										<p>
 											There is now a new <span class="command">?tp2v</span> command that
@@ -150,8 +153,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div><span class="command">?clearRadiation</span> command</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div><span class="command">?clearRadiation</span> command</div></div>
 									<div class="content">
 										<p>
 											It is easier than ever to clean the nuclear apocolypse from your server.
@@ -159,8 +162,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Limit the max weight of vehicles</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Limit the max weight of vehicles</div></div>
 									<div class="content">
 										<p>
 											Are you tired of creations the size of Jupiter spawning on your server,
@@ -177,8 +180,8 @@
 						<div>
 							<h3>🔧Fixes🔧</h3>
 							<div class="accordions">
-								<div class="accordion" closed>
-									<div class="summary"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
 									<div class="content">
 										<p>
 											v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem</code> works.
@@ -189,8 +192,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Easier ways to target players for commands</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Easier ways to target players for commands</div></div>
 									<div class="content">
 										<p>
 											Previously, you would have to know the peer id of the player you are using a command
@@ -200,8 +203,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
 										<div class="content">
 											<p>
 												In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
@@ -210,8 +213,8 @@
 											</p>
 										</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Greatly improved alogithm for closest string</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Greatly improved alogithm for closest string</div></div>
 									<div class="content">
 										<p>
 											Previously, when using <span class="command">?tp</span> to teleport to a location,
@@ -228,8 +231,8 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion" closed>
-									<div class="summary"><div>Telport commands better prevent clipping</div></div>
+								<div class="accordion">
+									<div class="summary" tabindex="0"><div>Telport commands better prevent clipping</div></div>
 									<div class="content">
 										<p>
 											One of the most frustrating parts of developing this addon originally was discovering

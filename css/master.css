@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-track {
-	background: #2d64ae;
+	background: #24201b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -56,14 +56,15 @@ a.anchor {
 }
 
 html,body {
+	scroll-behavior: smooth;
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	scrollbar-color: #103b77 #2d64ae; /* Firefox */
+	scrollbar-color: #164b94 #24201b; /* Firefox */
 }
 
 body {
 	background: #2d64ae;
-	height: 100%;
 	font-family: 'IBM Plex Sans Thai', monospace;
 	font-size: 20px;
 	line-height: 1.4em;
@@ -74,47 +75,67 @@ body {
 }
 
 header {
+	background: url(../images/headerBanner.jpg);
 	display: flex;
-	height: 64px;
+	height: 70px;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-content: center;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 30px;
-	background: #103b77;
 	color: white;
 	text-align: center;
 	position: fixed;
-	width: calc(100% - 60px);
+	width: 100%;
 	top: 0;
 	z-index: 5;
 	line-height: 2em;
 }
 
-div#header_spacer {
-	width: 100%;
-	flex: 0 0 82px;
-	display: block;
+header nav {
+	height: 100%;
+	background: #103b77;
+	display: flex;
+	align-items: center;
 }
 
-header h1 {
-	font-size: 2.6em;
+header .logo {
+	font-size: 2.9em;
 	align-self: center;
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 700;
-	margin: 0;
+	margin: auto auto auto 10px;
+	width: fit-content;
 }
 
-header #filler {
-	display: none;
-	width: 65px;
-	height: 65px;
+header .logo a{
+	text-decoration: none;
+	color: white;
 }
 
-nav a {
+header #gradient {
+	flex: 1;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, #103b77);
+	display: flex;
+	align-items: center;
+}
+
+header nav {
+	background: #103b77;
+}
+
+div#header_spacer {
+	width: 100%;
+	flex: 0 0 70px;
+	display: block;
+}
+
+nav a, nav h1 {
 	color: white;
 	margin: 0px 10px;
+	font-size: 1em;
+	font-weight: normal;
 }
 
 nav a:hover {
@@ -155,7 +176,7 @@ svg {
 
 .accordion > .content {
 	overflow: hidden;
-	transition: max-height 1s ease-in-out;
+	transition: max-height 0.5s ease-in-out;
 }
 
 .accordion > .summary {
@@ -166,7 +187,7 @@ svg {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-content: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
@@ -182,15 +203,14 @@ svg {
 }
 
 .summary::after {
-	content: ' ▸';
+	content: ' +';
 	display: inline-block;
 	white-space: nowrap;
 	font-size: 1.6em;
-	transition: transform 0.3s cubic-bezier(0.57, 0.01, 0.46, 1.77);
 }
 
 .accordion[open] .summary::after {
-	transform: rotateZ(90deg);
+	content: ' –';
 }
 
 .accordion .summary {
@@ -244,7 +264,7 @@ blockquote::after {
 }
 
 .dataType {
-	background: #000000;
+	background: #240028;
 	color: #00ffdc;
 }
 
@@ -308,19 +328,6 @@ blockquote::after {
 @media only screen and (max-width: 1000px) {
 	body {
 		font-size: 14px;
-	}
-
-	header #filler {
-		display: block;
-	}
-
-	header {
-		padding: 7px 10px;
-		width: calc(100% - 20px);
-	}
-
-	div#header_spacer {
-		flex: 0 0 78px;
 	}
 
 	.grid {

@@ -1,4 +1,4 @@
-const animationDuration = 250;
+const ANIMATION_DURATION = 250;
 var accordions = [];
 
 /** Class for folding down accordion. Similar to HTML details but with animations */
@@ -7,8 +7,9 @@ class Accordion {
 	 * Creates an accordion
 	 * @param {object} element - The accordion element from the HTML document
 	 * @param {number} groupIndex - The index of the accordion group that this accordion falls under
-	 */
-	constructor(element, groupIndex) {
+	 * @param {number} index - The index of this accordion within it's accordion group
+	*/
+	constructor(element, groupIndex, index) {
 		// the accordion element
 		this.element = element;
 		// the index of the group this accoridon belongs to
@@ -20,11 +21,28 @@ class Accordion {
 		// if the accordion is closed or not
 		this.closed = true;
 
+		this.element.setAttribute('group', groupIndex);
+		this.content.setAttribute('index', index);
+
 		// add event listener to the accordion
-		this.summary.addEventListener('click', (event) => this.click(event));
+		this.element.addEventListener('click', (event) => this.click(event));
+
+		// add keyboard listeners for keyboard accessibility
+		this.element.addEventListener('keydown', (event) => {
+			if (event.code === 'Space' || event.code === 'Enter') {
+			  this.click(event);
+			}
+		  });
+		// expand accordion when content is given focus
+		this.content.addEventListener('focusin', event => {
+			if (this.closed) {
+				this.click(event);
+			}
+		})
+		// resize accordion on window resize
 		window.addEventListener('resize', (event) => {
 			if (!this.closed) {
-				this.content.style.height = this.content.scrollHeight;
+				this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
 			}
 		});
 	}
@@ -50,12 +68,12 @@ class Accordion {
 	open() {
 		this.element.setAttribute('open', '');
 		this.element.removeAttribute('closed');
-		this.content.style.height = this.content.scrollHeight;
+		this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
 
 		// set state of accordion when animation is complete
 		setTimeout(() => {
 			this.closed = false;
-		}, animationDuration);
+		}, ANIMATION_DURATION);
 
 		// close all other accorions that are open in this accordions group
 		accordions[this.groupIndex].forEach((instance) => {
@@ -71,12 +89,13 @@ class Accordion {
 	close() {
 		this.element.removeAttribute('open');
 		this.content.style.removeProperty('height');
+		this.element.setAttribute('closing', '')
 
 		// set state of accordion when animation is complete
 		setTimeout(() => {
-			this.element.setAttribute('closed', '');
+			this.element.removeAttribute('closing');
 			this.closed = true;
-		}, animationDuration);
+		}, ANIMATION_DURATION);
 	}
 }
 
@@ -85,7 +104,7 @@ class Accordion {
 // create a new accordion for each accordion element in the document
 document.querySelectorAll('.accordions').forEach((group) => {
 	let groupIndex = accordions.push([]) - 1;
-	group.querySelectorAll('.accordion').forEach((accordion) => {
-		accordions[groupIndex].push(new Accordion(accordion, groupIndex));
+	group.querySelectorAll('.accordion').forEach((accordion, n) => {
+		accordions[groupIndex].push(new Accordion(accordion, groupIndex, n));
 	});
 });

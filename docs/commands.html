@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Carsa's Commands - Commands</title>
@@ -11,32 +12,31 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
+		<script src="../js/scrollToTarget.js" defer></script>
 		<script src="../js/accordion.js" defer></script>
 		<script src="../js/sidenav.js" defer></script>
-		<script defer>
-			document.querySelectorAll('#sidebar .content .accordion .content .command').forEach((element) => {
-				element.addEventListener('click', (event) => {
-					event.preventDefault();
-					document.querySelector(element.href).scrollIntoView();
-				})
-			})
-		</script>
+		<script src="../js/typeStyling.js" defer></script>
+
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
 	</head>
 	<body>
 		<header>
-			<h1>C²</h1>
+			<div id="gradient">
+				<h1 class="logo"><a href="../">C²</a></h1>
+			</div>
 			<nav>
-				<a href="docs/commands">Commands</a>
-				<a href="docs/code">Documentation</a>
+				<h1>Commands</h1>
+				<a href="code">Documentation</a>
 			</nav>
 		</header>
 		<div id="header_spacer"><br></div>
 		
-		<div id="sidenav" style="transform: translateX(-270px)">
+		<div id="sidenav">
 			<div class="content">
 				<div class="accordions">
 					<div class="accordion">
-						<div class="summary"><div>Moderation</div></div>
+						<div class="summary" tabindex="0"><div>Moderation</div></div>
 						<div class="content">
 							<div><a class="command" href="#banned">?banned</a></div>
 							<div><a class="command" href="#banPlayer">?banPlayer</a></div>
@@ -44,16 +44,18 @@
 							<div><a class="command" href="#unban">?unban</a></div>
 						</div>
 					</div>
+
 					<div class="accordion">
-						<div class="summary"><div>Rules</div></div>
+						<div class="summary" tabindex="0"><div>Rules</div></div>
 						<div class="content">
 							<div><a class="command" href="#addRule">?addRule</a></div>
 							<div><a class="command" href="#removeRule">?removeRule</a></div>
 							<div><a class="command" href="#rules">?rules</a></div>
 						</div>
 					</div>
+
 					<div class="accordion">
-						<div class="summary"><div>Roles</div></div>
+						<div class="summary" tabindex="0"><div>Roles</div></div>
 						<div class="content">
 							<div><a class="command" href="#addRole">?addRole</a></div>
 							<div><a class="command" href="#giveRole">?giveRole</a></div>
@@ -64,6 +66,73 @@
 							<div><a class="command" href="#roles">?roles</a></div>
 						</div>
 					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>Vehicles</div></div>
+						<div class="content">
+							<div><a class="command" href="#clearVehicle">?clearVehicle</a></div>
+							<div><a class="command" href="#setEditable">?setEditable</a></div>
+							<div><a class="command" href="#vehicleIDs">?vehicleIDs</a></div>
+							<div><a class="command" href="#vehicleList">?vehicleList</a></div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>Player</div></div>
+						<div class="content">
+							<div><a class="command" href="#equip">?equip</a></div>
+							<div><a class="command" href="#equipp">?equipp</a></div>
+							<div><a class="command" href="#equipmentIDs">?equipmentIDs</a></div>
+							<div><a class="command" href="#heal">?heal</a></div>
+							<div><a class="command" href="#kill">?kill</a></div>
+							<div><a class="command" href="#respawn">?respawn</a></div>
+							<div><a class="command" href="#playerPerms">?playerPerms</a></div>
+							<div><a class="command" href="#playerRoles">?playerRoles</a></div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>Teleporting</div></div>
+						<div class="content">
+							<div><a class="command" href="#tp2me">?tp2me</a></div>
+							<div><a class="command" href="#tp2v">?tp2v</a></div>
+							<div><a class="command" href="#tpLocations">?tpLocations</a></div>
+							<div><a class="command" href="#tpb">?tpb</a></div>
+							<div><a class="command" href="#tpc">?tpc</a></div>
+							<div><a class="command" href="#tpl">?tpl</a></div>
+							<div><a class="command" href="#tpp">?tpp</a></div>
+							<div><a class="command" href="#tps">?tps</a></div>
+							<div><a class="command" href="#tpv">?tpv</a></div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>General</div></div>
+						<div class="content">
+							<div><a class="command" href="#bailout">?bailout</a></div>
+							<div><a class="command" href="#cc">?cc</a></div>
+							<div><a class="command" href="#ccHelp">?ccHelp</a></div>
+							<div><a class="command" href="#whisper">?whisper</a></div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>Preferences</div></div>
+						<div class="content">
+							<div><a class="command" href="#preferences">?preferences</a></div>
+							<div><a class="command" href="#resetPref">?resetPref</a></div>
+							<div><a class="command" href="#setPref">?setPref</a></div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<div class="summary" tabindex="0"><div>Game Settings</div></div>
+						<div class="content">
+							<div><a class="command" href="#gameSettings">?gameSettings</a></div>
+							<div><a class="command" href="#setGameSetting">?setGameSetting</a></div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div id="openButton"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg></div>
@@ -74,7 +143,16 @@
 				<h1>Commands Documentation</h1>
 				<div class="content">
 					<p>
-						Some generic info
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at nulla sit amet ante vestibulum varius. Aenean feugiat orci
+						velit, et dignissim lorem pellentesque vitae. Maecenas pellentesque rhoncus lorem eget vulputate. Curabitur malesuada ornare
+						magna non auctor. Aliquam fermentum, lorem non sodales placerat, dui erat fringilla sem, vitae scelerisque dolor enim ac urna.
+						Suspendisse potenti. Suspendisse ut venenatis lacus.
+
+						Nam vestibulum id sapien nec pharetra. Nam blandit neque id viverra sollicitudin. Donec tortor urna, eleifend iaculis
+						hendrerit sit amet, dignissim ac est. Vestibulum sodales massa pretium enim dignissim ultricies. Sed iaculis hendrerit tortor.
+						Phasellus molestie dui vitae blandit placerat. Nulla ac felis suscipit, ullamcorper velit vel, luctus mauris. Nam turpis
+						sapien, aliquam id sem in, gravida condimentum nibh. Duis est turpis, gravida quis maximus ac, condimentum vitae justo. In
+						fermentum quis libero et maximus.
 					</p>
 				</div>
 			</section>
@@ -83,12 +161,12 @@
 				<h1>Moderation</h1>
 				<div class="content">
 					<div class="accordions">
-						<div class="accordion" name="banned" closed>
-							<div class="summary"><span class="name">?banned</span><span class="description">Lists the banned players</span></div>
+						<div class="accordion" name="banned">
+							<div class="summary" tabindex="0"><span class="name">?banned</span><span class="description">Lists the banned players</span></div>
 							<div class="content commandDefinition">
 								<div>
-									<div class="description">Shows the list of <span class="virtualType">steam_id</span>s of banned players</div>
-									<br>
+									<div class="description">Shows the list of <span class="virtualType">steam_id</span>s of banned players.</div>
+									<code language="command" class="syntax">?banned [page_number]</code>
 									<div class="args">
 										<table>
 											<tr>
@@ -101,8 +179,8 @@
 											<tr>
 												<td class="name">page number</td>
 												<td><span class="dataType">Number</span></td>
-												<td><div class="true">False</div></td>
-												<td><div class="true">False</div></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
 												<td class="description">The page index to display</td>
 											</tr>
 										</table>
@@ -116,35 +194,35 @@
 											</tr>
 											<tr>
 												<td>Owner</td>
-												<td class="true">True</td>
+												<td><div class="true">True</div></td>
 											</tr>
 											<tr>
 												<td>Admin</td>
-												<td class="true">True</td>
+												<td><div class="true">True</div></td>
 											</tr>
 											<tr>
 												<td>Moderator</td>
-												<td class="true">True</td>
+												<td><div class="true">True</div></td>
 											</tr>
 											<tr>
 												<td>Auth</td>
-												<td class="false">False</td>
+												<td><div class="false">False</div></td>
 											</tr>
 											<tr>
 												<td>Everyone</td>
-												<td class="false">False</td>
+												<td><div class="false">False</div></td>
 											</tr>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="accordion" name="banPlayer" closed>
-							<div class="summary"><span class="name">?banPlayer</span><span class="description">Bans the requested player</span></div>
+						<div class="accordion" name="banPlayer">
+							<div class="summary" tabindex="0"><span class="name">?banPlayer</span><span class="description">Bans the requested player</span></div>
 							<div class="content commandDefinition">
 								<div>
-									<div class="description">Bans the requested player using their <span class="virtualType">peer_id</span> or <span class="virtualType">steam_id</span></div>
-									<br>
+									<div class="description">Bans the requested player using their <span class="virtualType">peer_id</span> or <span class="virtualType">steam_id</span>.</div>
+									<code language="command" class="syntax">?banPlayer peer_id/steam_id ...</code>
 									<div class="args">
 										<table>
 											<tr>
@@ -195,17 +273,18 @@
 											<h1>Examples</h1>
 											<code language="command">?banPlayer 3</code>
 											<code language="command">?banPlayer 76561197976988654</code>
+											<code language="command">?banPlayer 2 6</code>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="accordion" name="clearRadiation" closed>
-							<div class="summary"><span class="name">?clearRadiation</span><span class="description">Clears radiation zones</span></div>
+						<div class="accordion" name="clearRadiation">
+							<div class="summary" tabindex="0"><span class="name">?clearRadiation</span><span class="description">Clears radiation zones</span></div>
 							<div class="content commandDefinition">
 								<div>
-									<div class="description">Clears radiation zones from the world</div>
-									<br>
+									<div class="description">Clears radiation zones from the world.</div>
+									<code language="command" class="syntax">?clearRadiation</code>
 									<div class="flex row">
 										<table class="access">
 											<tr>
@@ -237,12 +316,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="accordion" name="unban" closed>
-							<div class="summary"><span class="name">?unban</span><span class="description">Unbans the requested player</span></div>
+						<div class="accordion" name="unban">
+							<div class="summary" tabindex="0"><span class="name">?unban</span><span class="description">Unbans the requested player</span></div>
 							<div class="content commandDefinition">
 								<div>
-									<div class="description">Unbans the requested player using their <span class="virtualType">steam_id</span></div>
-									<br>
+									<div class="description">Unbans the requested player using their <span class="virtualType">steam_id</span>.</div>
+									<code language="command" class="syntax">?unban steam_id ...</code>
 									<div class="args">
 										<table>
 											<tr>
@@ -292,6 +371,7 @@
 										<div class="examples">
 											<h1>Examples</h1>
 											<code language="command">?unban 76561197976988654</code>
+											<code language="command">?unban 76561197991344551 76561198080294966</code>
 										</div>
 									</div>
 								</div>
@@ -300,17 +380,17 @@
 					</div>
 				</div>
 			</section>
-
+			
 			<section>
 				<h1>Rules</h1>
 				<div class="content">
 					<div class="accordions">
-						<div class="accordion" name="addRule" closed>
-							<div class="summary"><span class="name">?addRule</span><span class="description">Adds a server rule</span></div>
+						<div class="accordion" name="addRule">
+							<div class="summary" tabindex="0"><span class="name">?addRule</span><span class="description">Adds a server rule</span></div>
 							<div class="content commandDefinition">
 								<div>
-									<div class="description">Adds a rule to the server's rulebook</div>
-									<br>
+									<div class="description">Adds a rule to the server's rulebook.</div>
+									<code language="command" class="syntax">?addRule [position] text</code>
 									<div class="args">
 										<table>
 											<tr>
@@ -327,7 +407,7 @@
 												<td><div class="false">False</div></td>
 												<td class="description">
 													The position in the rulebook to add this rule. By default the rule will be appended to the
-													end unless a position is specified. You can use <span span="command">?rules</span> to see
+													end unless a position is specified. You can use <span class="command">?rules</span> to see
 													the current rules to see what position you want to add to.
 												</td>
 											</tr>
@@ -336,43 +416,3864 @@
 												<td><span class="dataType">String</span></td>
 												<td><div class="true">True</div></td>
 												<td><div class="false">False</div></td>
-												<td class="description">The text of the rule to add.</td>
+												<td class="description">
+													The text of the rule to add. This text cannot start with a number if the position is
+													not specified.
+												</td>
 											</tr>
 										</table>
 									</div>
 									<br>
-									<table class="access">
-										<tr>
-											<th>Role</th>
-											<th>Default Access</th>
-										</tr>
-										<tr>
-											<td>Owner</td>
-											<td><div class="true">True</div></td>
-										</tr>
-										<tr>
-											<td>Admin</td>
-											<td><div class="true">True</div></td>
-										</tr>
-										<tr>
-											<td>Moderator</td>
-											<td><div class="false">False</div></td>
-										</tr>
-										<tr>
-											<td>Auth</td>
-											<td><div class="false">False</div></td>
-										</tr>
-										<tr>
-											<td>Everyone</td>
-											<td><div class="false">False</div></td>
-										</tr>
-									</table>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?addRule Be kind</code>
+											<code language="command">?addRule 2 No chat spam</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="removeRule">
+							<div class="summary" tabindex="0"><span class="name">?removeRule</span><span class="description">Removes a server rule</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Removes a rule from the server's rulebook.</div>
+									<code language="command" class="syntax">?removeRule rule_number</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">rule_number</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The rule to remove from the rulebook. You can use <span class="command">?rules</span>
+													to view the current rules and their numbers.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?removeRule 1</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="rules">
+							<div class="summary" tabindex="0"><span class="name">?rules</span><span class="description">Displays the server rules</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Displays the server's rules.</div>
+									<code language="command" class="syntax">?rules</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<section>
+				<h1>Roles</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="addRole">
+							<div class="summary" tabindex="0"><span class="name">?addRole</span><span class="description">Adds a role</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Adds a role with no permissions.</div>
+									<code language="command" class="syntax">?addRole role_name</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">role_name</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to add.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?addRole Captain</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="giveRole">
+							<div class="summary" tabindex="0"><span class="name">?giveRole</span><span class="description">Gives a player a role</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Gives the specified player the specified role.</div>
+									<code language="command" class="syntax">?giveRole playerID role</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">role</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to give the player.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?giveRole 2 Moderator</code>
+											<code language="command">?giveRole Leopard Admin</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="removeRole">
+							<div class="summary" tabindex="0"><span class="name">?removeRole</span><span class="description">Deletes a role</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Deletes a role and removes it from all players.</div>
+									<code language="command" class="syntax">?removeRole role</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">role</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to remove
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?removeRole Captain</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="revokeRole">
+							<div class="summary" tabindex="0"><span class="name">?revokeRole</span><span class="description">Removes a player's role</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Removes a role from a player.</div>
+									<code language="command" class="syntax">?revokeRole playerID role</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">role</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to remove.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?revokeRole Leopard Captain</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="roleAccess">
+							<div class="summary" tabindex="0"><span class="name">?roleAccess</span><span class="description">Sets a role's access to a command</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Set if a role has access to a command or not.</div>
+									<code language="command" class="syntax">?roleAccess role command value</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">role</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to edit.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">command</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the command to give/remove access to.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">value</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													If the role has access to the command or not.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?roleAccess heal Captain false</code>
+											<code language="command">?roleAccess ban Peacekeeper true</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="rolePerms">
+							<div class="summary" tabindex="0"><span class="name">?rolePerms</span><span class="description">Sets a role's permissions</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Sets a role's permissions. This affects if a player is able to spawn vehicles
+										(auth), if they are able to use the vanilla moderation commands such as ?kick 
+										(admin), and if they are allowed to use cheat commands.
+									</div>
+									<code language="command" class="syntax">?rolePerms role is_admin is_auth can_cheat</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">role</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the role to edit.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">is_admin</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													If this role has access to admin commands like ?kick and ?ban (the vanilla one).
+												</td>
+											</tr>
+											<tr>
+												<td class="name">is_auth</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													If this role has access to spawn vehicles.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">can_cheat</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													If this role has access to cheat commands. This will overpower the global cheats preference.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?rolePerms Captain false true false</code>
+											<code language="command">?rolePerms Peacekeeper true true false</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="roles">
+							<div class="summary" tabindex="0"><span class="name">?roles</span><span class="description">Display all roles</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Will display all of the roles available in the chat. Will display in pages in order to stay neat.
+										If you would like more info on a specific role, you can instead enter the name of the role.
+									</div>
+									<code language="command" class="syntax">?roles [page_number/role]</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">page/role</td>
+												<td><span class="dataType">Number</span>/<span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													Either the page number or the name of the role to get more info on.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Vehicles</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="clearVehicle">
+							<div class="summary" tabindex="0"><span class="name">?clearVehicle</span><span class="description">Despawns a vehicle</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Removes a vehicle from the world.</div>
+									<code language="command" class="syntax">?clearVehicle vehicleID</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">vehicleID</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="true">True</div></td>
+												<td class="description">
+													Removes vehicle(s) by their ids. If no ids are given, the nearest vehicle will be cleared.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?clearVehicle</code>
+											<code language="command">?clearVehicle 24</code>
+											<code language="command">?clearVehicle 32 35 40</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="setEditable">
+							<div class="summary" tabindex="0"><span class="name">?setEditable</span><span class="description">Sets if a vehicle is editable</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Can be used to prevent a vehicle from being edited / brought to the workbench.</div>
+									<code language="command" class="syntax">?setEditable vehicleID editable</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">vehicleID</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the vehicle to edit.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">editable</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													If the vehicle is editable or not.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?setEditable 24 false</code>
+											<code language="command">?setEditable 30 true</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="vehicleIDs">
+							<div class="summary" tabindex="0"><span class="name">?vehicleIDs</span><span class="description">Toggles visibility of vehicle ids</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Toggles the on-screen popups displaying vehicle ids.</div>
+									<code language="command" class="syntax">?vehicleIDs</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="vehicleList">
+							<div class="summary" tabindex="0"><span class="name">?vehicleList</span><span class="description">Lists all vehicles</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Lists all of the vehicles in the world.</div>
+									<code language="command" class="syntax">?vehicleList</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Player</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="equip">
+							<div class="summary" tabindex="0"><span class="name">?equip <span class="cheat">Cheat</span></span><span class="description">Gives you equipment</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Gives you handheld equipment like flashlights and medkits. You can view the
+										equipment ids in-game by using <span class="command">?equipmentIDs</span>.
+									</div>
+									<code language="command" class="syntax">?equip item_id [slot] [data1] [data2]</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">item_id</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the equipment to give.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">slot</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The slot to place the item in. The slots are A, B, C, D, E, F. If no slot is specified, 
+													an open slot will be used. If no slot is open, you will have to specify a slot to replace.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">data1</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The first data slot of the item, if it has one.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">data2</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The second data slot of the item, if it has one.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="data slots">
+											<table>
+												<tr>
+													<th>Slot</th>
+													<th>Size</th>
+												</tr>
+												<tr>
+													<td>A</td>
+													<td>Large</td>
+												</tr>
+												<tr>
+													<td>B</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>C</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>D</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>E</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>F</td>
+													<td>Outfit</td>
+												</tr>
+											</table>
+										</div>
+										<div class="data equipment">
+											<table>
+												<tr>
+													<th>ID</th>
+													<th>Name</th>
+													<th>Size</th>
+													<th>Data1</th>
+													<th>Data2</th>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>Diving Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Firefighter</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Scuba Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Parachute</td>
+													<td>Outfit</td>
+													<td>Deployed (1 or 0)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Parka</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>Binoculars</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>Cable</td>
+													<td>Large</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>Compass</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Defibrillator</td>
+													<td>Large</td>
+													<td>Charges (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>Fire Extinguisher</td>
+													<td>Large</td>
+													<td>% Filled (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>11</td>
+													<td>First aid</td>
+													<td>Small</td>
+													<td>Uses (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>12</td>
+													<td>Flare</td>
+													<td>Small</td>
+													<td>Uses (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>13</td>
+													<td>Flaregun</td>
+													<td>Small</td>
+													<td>Ammo (Default 1)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>14</td>
+													<td>Flaregun Ammo</td>
+													<td>Small</td>
+													<td>Refills (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>15</td>
+													<td>Flashlight</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>16</td>
+													<td>Hose</td>
+													<td>Large</td>
+													<td>On/Off (1 or 0)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>17</td>
+													<td>Night Vision Binoculars</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>18</td>
+													<td>Oxygen Mask</td>
+													<td>Small</td>
+													<td>% Filled (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>19</td>
+													<td>Radio</td>
+													<td>Small</td>
+													<td>Channel (1 - 9)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>20</td>
+													<td>Radio Signal Locator</td>
+													<td>Large</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>21</td>
+													<td>Remote Control</td>
+													<td>Small</td>
+													<td>Channel (1 - 9)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>22</td>
+													<td>Rope</td>
+													<td>Large</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>23</td>
+													<td>Strobe Light</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>24</td>
+													<td>Strobe Light Infared</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>25</td>
+													<td>Transponder</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>26</td>
+													<td>Underwater Welding Torch</td>
+													<td>Large</td>
+													<td>Fuel % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>27</td>
+													<td>Welding Torch</td>
+													<td>Large</td>
+													<td>Fuel % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>28</td>
+													<td>Coal</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>29</td>
+													<td>Hazmat Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>30</td>
+													<td>Radiation Detector</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Equip first aid kit in open slot</p>
+											<code language="command">?equip 11</code>
+											<p>Equip flashlight in slot B</p>
+											<code language="command">?equip 15 B</code>
+											<p>Equip radio in open slot with 100% battery set to channel 4</p>
+											<code language="command">?equip 19 100 4</code>
+											<p>Equip remote control in slot C with 60% battery set to channel 2</p>
+											<code language="command">?equip 21 C 60 2</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="equipp">
+							<div class="summary" tabindex="0"><span class="name">?equipp <span class="cheat">Cheat</span></span><span class="description">Gives another player equipment</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Gives the specified player handheld equipment like flashlights and medkits. You can view the
+										equipment ids in-game by using <span class="command">?equipmentIDs</span>.
+									</div>
+									<code language="command" class="syntax">?equipp playerID item_id [slot] [data1] [data2]</code>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player.
+												</td>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">item_id</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the equipment to give.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">slot</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The slot to place the item in. The slots are A, B, C, D, E, F. If no slot is specified, 
+													an open slot will be used. If no slot is open, you will have to specify a slot to replace.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">data1</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The first data slot of the item, if it has one.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">data2</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The second data slot of the item, if it has one.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="data slots">
+											<table>
+												<tr>
+													<th>Slot</th>
+													<th>Size</th>
+												</tr>
+												<tr>
+													<td>A</td>
+													<td>Large</td>
+												</tr>
+												<tr>
+													<td>B</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>C</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>D</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>E</td>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>F</td>
+													<td>Outfit</td>
+												</tr>
+											</table>
+										</div>
+										<div class="data equipment">
+											<table>
+												<tr>
+													<th>ID</th>
+													<th>Name</th>
+													<th>Size</th>
+													<th>Data1</th>
+													<th>Data2</th>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>Diving Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Firefighter</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Scuba Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Parachute</td>
+													<td>Outfit</td>
+													<td>Deployed (1 or 0)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Parka</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>Binoculars</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>Cable</td>
+													<td>Large</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>Compass</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Defibrillator</td>
+													<td>Large</td>
+													<td>Charges (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>Fire Extinguisher</td>
+													<td>Large</td>
+													<td>% Filled (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>11</td>
+													<td>First aid</td>
+													<td>Small</td>
+													<td>Uses (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>12</td>
+													<td>Flare</td>
+													<td>Small</td>
+													<td>Uses (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>13</td>
+													<td>Flaregun</td>
+													<td>Small</td>
+													<td>Ammo (Default 1)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>14</td>
+													<td>Flaregun Ammo</td>
+													<td>Small</td>
+													<td>Refills (Default 3)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>15</td>
+													<td>Flashlight</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>16</td>
+													<td>Hose</td>
+													<td>Large</td>
+													<td>On/Off (1 or 0)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>17</td>
+													<td>Night Vision Binoculars</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>18</td>
+													<td>Oxygen Mask</td>
+													<td>Small</td>
+													<td>% Filled (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>19</td>
+													<td>Radio</td>
+													<td>Small</td>
+													<td>Channel (1 - 9)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>20</td>
+													<td>Radio Signal Locator</td>
+													<td>Large</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>21</td>
+													<td>Remote Control</td>
+													<td>Small</td>
+													<td>Channel (1 - 9)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>22</td>
+													<td>Rope</td>
+													<td>Large</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>23</td>
+													<td>Strobe Light</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>24</td>
+													<td>Strobe Light Infared</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>25</td>
+													<td>Transponder</td>
+													<td>Small</td>
+													<td>On/Off (1 or 0)</td>
+													<td>Battery % (Default 100)</td>
+												</tr>
+												<tr>
+													<td>26</td>
+													<td>Underwater Welding Torch</td>
+													<td>Large</td>
+													<td>Fuel % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>27</td>
+													<td>Welding Torch</td>
+													<td>Large</td>
+													<td>Fuel % (Default 100)</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>28</td>
+													<td>Coal</td>
+													<td>Small</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>29</td>
+													<td>Hazmat Suit</td>
+													<td>Outfit</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>30</td>
+													<td>Radiation Detector</td>
+													<td>Small</td>
+													<td>Battery % (Default 100)</td>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Equip first aid kit in Leopard's open slot</p>
+											<code language="command">?equipp Leopard 11</code>
+											<p>Equip flashlight in peer 2's slot B</p>
+											<code language="command">?equipp 2 15 B</code>
+											<p>Equip radio in Carsa's open slot with 100% battery set to channel 4</p>
+											<code language="command">?equipp Carsa 19 100 4</code>
+											<p>Equip remote control in Leopard's slot C with 60% battery set to channel 2</p>
+											<code language="command">?equipp Leopard 21 C 60 2</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="equipmentIDs">
+							<div class="summary" tabindex="0"><span class="name">?equipmentIDs <span class="cheat">Cheat</span></span><span class="description">View the equipment IDs</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Display the IDs of the various equipment in-game. Equipment types are: small, large, outfit. If the type is
+										omitted, all IDs will be listed.
+									</div>
+									<code language="command" class="syntax">?equipmentIDs [type]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">type</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The type of equipment to list, if you want to shorten the list. Otherwise,
+													all equipment IDs will be listed. Equipment types are: small, large, outfit.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="data equipmentTypes">
+											<table>
+												<tr>
+													<th>Type</th>
+												</tr>
+												<tr>
+													<td>Small</td>
+												</tr>
+												<tr>
+													<td>Large</td>
+												</tr>
+												<tr>
+													<td>Outfit</td>
+												</tr>
+											</table>
+										</div>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>List all equipment IDs</p>
+											<code language="command">?equipmentIDs</code>
+											<p>List all outfits</p>
+											<code language="command">?equipmentIDs outfit</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="heal">
+							<div class="summary" tabindex="0"><span class="name">?heal <span class="cheat">Cheat</span></span><span class="description">Heals a player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Heals either you or another player.</div>
+									<code language="command" class="syntax">?heal [playerID] [amount%]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player. If this argument is 
+													not provided, you will be healed.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">amount</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The percentage of health to give the player. This argument <b>MUST</b> end in a percent(%) sign.
+													If no amount is specified, the target will be healed to full.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Heal self to 100%</p>
+											<code language="command">?heal</code>
+											<p>Heal self by 50%</p>
+											<code language="command">?heal 50%</code>
+											<p>Heal Leopard by 100%</p>
+											<code language="command">?heal Leopard</code>
+											<p>Heal peer 3 by 23%</p>
+											<code language="command">?heal 3 23%</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="kill">
+							<div class="summary" tabindex="0"><span class="name">?kill</span><span class="description">Kills the target player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">Kills the specified player.</div>
+									<code language="command" class="syntax">?kill playerID</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?kill Leopard</code>
+											<code language="command">?kill 4</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="respawn">
+							<div class="summary" tabindex="0"><span class="name">?respawn</span><span class="description">Kills and respawns you</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Kills you and respawns you at the nearest respawn location. If the preference for keeping inventory is on, you
+										will keep your items from your inventory. Otherwise, you will lose your inventory.
+									</div>
+									<code language="command" class="syntax">?respawn</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="playerPerms">
+							<div class="summary" tabindex="0"><span class="name">?playerPerms</span><span class="description">View a player's permissions</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Lists the permissions of the player. If no player is specified, your own permissions are shown.
+									</div>
+									<code language="command" class="syntax">?playerPerms [playerID]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player. If no player is specified,
+													your permissions will be shown.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?playerPerms Leopard</code>
+											<code language="command">?playerPerms 4</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="playerRoles">
+							<div class="summary" tabindex="0"><span class="name">?playerRoles</span><span class="description">View a player's roles</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Lists the roles of the player. If no player is specified, your own roles are shown.
+									</div>
+									<code language="command" class="syntax">?playerPerms [playerID]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player. If no player is specified,
+													your roles will be shown.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<code language="command">?playerRoles Leopard</code>
+											<code language="command">?playerRoles 2</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Teleporting</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="tp2me">
+							<div class="summary" tabindex="0"><span class="name">?tp2me <span class="cheat">Cheat</span></span><span class="description">Teleports a player to you</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports a player to you. Using * will teleport all players. This command also overrides tp blocking.
+									</div>
+									<code language="command" class="syntax">?tp2me playerID...</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player. Using * instead
+													will teleport all players to you.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports Leopard to you</p>
+											<code language="command">?tp2me Leopard</code>
+											<p>Teleports Leopard and peer 3 to you</p>
+											<code language="command">?tp2me Leopard 3</code>
+											<p>Teleports all players to you</p>
+											<code language="command">?tp2me *</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tp2v">
+							<div class="summary" tabindex="0"><span class="name">?tp2v <span class="cheat">Cheat</span></span><span class="description">Teleports you to a vehicle</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports you to a vehicle.
+									</div>
+									<code language="command" class="syntax">?tp2v vehicleID</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">vehicleID</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the vehicle you want to teleport to.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to vehicle 8</p>
+											<code language="command">?tpv 8</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpLocations">
+							<div class="summary" tabindex="0"><span class="name">?tpLocations <span class="cheat">Cheat</span></span><span class="description">Lists the named tp locations</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Lists all of the named teleport locations that can be used with <span class="command">?tpl</span>.
+									</div>
+									<code language="command" class="syntax">?tpLocations</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="data locations">
+											<table>
+												<tr>
+													<th>Name</th>
+												</tr>
+												<tr>
+													<td>Airport</td>
+												</tr>
+												
+												<tr>
+													<td>Airstrip Base</td>
+												</tr>
+												
+												<tr>
+													<td>Beginner</td>
+												</tr>
+												
+												<tr>
+													<td>Camodo</td>
+												</tr>
+												
+												<tr>
+													<td>Camodo Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Creative</td>
+												</tr>
+												
+												<tr>
+													<td>Creative Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Custom Boat</td>
+												</tr>
+												
+												<tr>
+													<td>Custom Oil Rig</td>
+												</tr>
+												
+												<tr>
+													<td>Donkk Strip</td>
+												</tr>
+												
+												<tr>
+													<td>Endo</td>
+												</tr>
+												
+												<tr>
+													<td>Fishing Village</td>
+												</tr>
+												
+												<tr>
+													<td>Harbour Base</td>
+												</tr>
+												
+												<tr>
+													<td>Harrison</td>
+												</tr>
+												
+												<tr>
+													<td>Helicopter</td>
+												</tr>
+												
+												<tr>
+													<td>Helicopter2</td>
+												</tr>
+												
+												<tr>
+													<td>Holt Town</td>
+												</tr>
+												
+												<tr>
+													<td>Hospital</td>
+												</tr>
+												
+												<tr>
+													<td>Leopards Base</td>
+												</tr>
+												
+												<tr>
+													<td>Lighthouse Frantic</td>
+												</tr>
+												
+												<tr>
+													<td>Military</td>
+												</tr>
+												
+												<tr>
+													<td>Multiplayer</td>
+												</tr>
+												
+												<tr>
+													<td>North Harbour</td>
+												</tr>
+												
+												<tr>
+													<td>North Harbour Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Nuclear</td>
+												</tr>
+												
+												<tr>
+													<td>Observatory</td>
+												</tr>
+												
+												<tr>
+													<td>Olsen</td>
+												</tr>
+												
+												<tr>
+													<td>Oneill</td>
+												</tr>
+												
+												<tr>
+													<td>Oneill Train</td>
+												</tr>
+												
+												<tr>
+													<td>Police</td>
+												</tr>
+												
+												<tr>
+													<td>Sawyer Fishing Village</td>
+												</tr>
+												
+												<tr>
+													<td>Sawyer Quarry</td>
+												</tr>
+												
+												<tr>
+													<td>Science</td>
+												</tr>
+												
+												<tr>
+													<td>Sea Fort</td>
+												</tr>
+												
+												<tr>
+													<td>Spycakes</td>
+												</tr>
+												
+												<tr>
+													<td>Spycakes Docks</td>
+												</tr>
+												
+												<tr>
+													<td>Tajin</td>
+												</tr>
+												
+												<tr>
+													<td>Tajin Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Underwater Caves</td>
+												</tr>
+												
+												<tr>
+													<td>Volcano</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpb">
+							<div class="summary" tabindex="0"><span class="name">?tpb <span class="cheat">Cheat</span></span><span class="description">Prevents people teleporting to you</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Prevents players from teleporting to you.
+									</div>
+									<code language="command" class="syntax">?tpb</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpc">
+							<div class="summary" tabindex="0"><span class="name">?tpc <span class="cheat">Cheat</span></span><span class="description">Teleports you to coordinates</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports you to the specified coordinates.
+									</div>
+									<code language="command" class="syntax">?tpc x y z</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">x</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The x coordinate you would like to teleport to.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">y</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The y coordinate you would like to teleport to.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">z</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The z coordinate you would like to teleport to.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to 0,0,0</p>
+											<code language="command">?tpc 0 0 0</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpl">
+							<div class="summary" tabindex="0"><span class="name">?tpl <span class="cheat">Cheat</span></span><span class="description">Teleports you to a named location</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports you to a named location on the map. You can use <span class="command">?tpLocations</span> to view the
+										names of the locations in-game.
+									</div>
+									<code language="command" class="syntax">?tpl [location]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">location</span></td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the location. It can be just part of the name as an algorithm is used to guess which
+													location you meant.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="data locations">
+											<table>
+												<tr>
+													<th>Name</th>
+												</tr>
+												<tr>
+													<td>Airport</td>
+												</tr>
+												
+												<tr>
+													<td>Airstrip Base</td>
+												</tr>
+												
+												<tr>
+													<td>Beginner</td>
+												</tr>
+												
+												<tr>
+													<td>Camodo</td>
+												</tr>
+												
+												<tr>
+													<td>Camodo Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Creative</td>
+												</tr>
+												
+												<tr>
+													<td>Creative Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Custom Boat</td>
+												</tr>
+												
+												<tr>
+													<td>Custom Oil Rig</td>
+												</tr>
+												
+												<tr>
+													<td>Donkk Strip</td>
+												</tr>
+												
+												<tr>
+													<td>Endo</td>
+												</tr>
+												
+												<tr>
+													<td>Fishing Village</td>
+												</tr>
+												
+												<tr>
+													<td>Harbour Base</td>
+												</tr>
+												
+												<tr>
+													<td>Harrison</td>
+												</tr>
+												
+												<tr>
+													<td>Helicopter</td>
+												</tr>
+												
+												<tr>
+													<td>Helicopter2</td>
+												</tr>
+												
+												<tr>
+													<td>Holt Town</td>
+												</tr>
+												
+												<tr>
+													<td>Hospital</td>
+												</tr>
+												
+												<tr>
+													<td>Leopards Base</td>
+												</tr>
+												
+												<tr>
+													<td>Lighthouse Frantic</td>
+												</tr>
+												
+												<tr>
+													<td>Military</td>
+												</tr>
+												
+												<tr>
+													<td>Multiplayer</td>
+												</tr>
+												
+												<tr>
+													<td>North Harbour</td>
+												</tr>
+												
+												<tr>
+													<td>North Harbour Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Nuclear</td>
+												</tr>
+												
+												<tr>
+													<td>Observatory</td>
+												</tr>
+												
+												<tr>
+													<td>Olsen</td>
+												</tr>
+												
+												<tr>
+													<td>Oneill</td>
+												</tr>
+												
+												<tr>
+													<td>Oneill Train</td>
+												</tr>
+												
+												<tr>
+													<td>Police</td>
+												</tr>
+												
+												<tr>
+													<td>Sawyer Fishing Village</td>
+												</tr>
+												
+												<tr>
+													<td>Sawyer Quarry</td>
+												</tr>
+												
+												<tr>
+													<td>Science</td>
+												</tr>
+												
+												<tr>
+													<td>Sea Fort</td>
+												</tr>
+												
+												<tr>
+													<td>Spycakes</td>
+												</tr>
+												
+												<tr>
+													<td>Spycakes Docks</td>
+												</tr>
+												
+												<tr>
+													<td>Tajin</td>
+												</tr>
+												
+												<tr>
+													<td>Tajin Dock</td>
+												</tr>
+												
+												<tr>
+													<td>Underwater Caves</td>
+												</tr>
+												
+												<tr>
+													<td>Volcano</td>
+												</tr>
+											</table>
+										</div>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to Oneill Airport</p>
+											<code language="command">?tpl oneill</code>
+											<p>Teleports you to the Creative Island</p>
+											<code language="command">?tpl creative</code>
+											<p>Teleports you to multiplayer island</p>
+											<code language="command">?tpl multi</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpp">
+							<div class="summary" tabindex="0"><span class="name">?tpp <span class="cheat">Cheat</span></span><span class="description">Teleports to a player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports you to the specified player.
+									</div>
+									<code language="command" class="syntax">?tpp playerID</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player to teleport to.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to Leopard</p>
+											<code language="command">?tpp Leopard</code>
+											<p>Teleports you to peer 1</p>
+											<code language="command">?tpp 1</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tps">
+							<div class="summary" tabindex="0"><span class="name">?tps <span class="cheat">Cheat</span></span><span class="description">Teleports you to a seat</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned)
+										or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is
+										specified, you will be teleported to the nearest seat.
+									</div>
+									<code language="command" class="syntax">?tps [vehicleID] [seat_name]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">vehicleID</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the vehicle you want to teleport to. You can use "r"
+													(vehicle you last spawned) or "n" (nearest vehicle).
+												</td>
+											</tr>
+											<tr>
+												<td class="name">seat_name</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the seat you would like to teleport to. A
+													<span class="virtualType">vehicleID</span> must be specified.
+													If no seat is specified, you will be teleported to the first
+													seat found on the vehicle.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to the nearest seat</p>
+											<code language="command">?tps</code>
+											<p>Teleports you to a seat on vehicle 34</p>
+											<code language="command">?tps 34</code>
+											<p>Teleports you to the pilot seat on vehicle 16</p>
+											<code language="command">?tps 16 pilot</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="tpv">
+							<div class="summary" tabindex="0"><span class="name">?tpv <span class="cheat">Cheat</span></span><span class="description">Teleports a vehicle to you</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Teleports a vehicle to you. The way telporting vehicles is implemented in the game
+										is very odd, so the vehicle is removed from the world, then reloaded. This results
+										in equipment going missing and logic states being lost.
+									</div>
+									<code language="command" class="syntax">?tpv vehicleID</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">vehicleID</span></td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The id of the vehicle you want to teleport to you.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Teleports you to vehicle 12</p>
+											<code language="command">?tpv 12</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>General</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="bailout">
+							<div class="summary" tabindex="0"><span class="name">?bailout <span class="cheat">Cheat</span></span><span class="description">Gives money</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Gives the "player" the specified amount of money.
+									</div>
+									<code language="command" class="syntax">?bailout amount</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">amount</td>
+												<td><span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The amount of money you want to give to the server.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Gives 2000 money</p>
+											<code language="command">?bailout 2000</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="cc">
+							<div class="summary" tabindex="0"><span class="name">?cc</span><span class="description">Displays info about the addon</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Displays info about the addon such as the version.
+									</div>
+									<code language="command" class="syntax">?cc</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="ccHelp">
+							<div class="summary" tabindex="0"><span class="name">?ccHelp</span><span class="description">Shows help for commands</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Shows help on the various commands. Can also be used to get more info on a specific command.
+									</div>
+									<code language="command" class="syntax">?ccHelp [page_number/command_name]</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">page_number/command_name</td>
+												<td><span class="dataType">Number</span>/<span class="dataType">String</span></td>
+												<td><div class="false">False</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The page number of the help manual that you would like to view. You can also enter
+													a command name to get more info on a specific command.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="whisper">
+							<div class="summary" tabindex="0"><span class="name">?whisper</span><span class="description">Privately message a player</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Sends a private message to a player. No other player can see the message you send.
+									</div>
+									<code language="command" class="syntax">?whisper playerID message</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name"><span class="virtualType">playerID</span></td>
+												<td><span class="dataType">String</span>/<span class="dataType">Number</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The <span class="virtualType">peer_id</span> or name of the player to whisper to.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">message</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The message to send the player.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Send a nice message to Leopard</p>
+											<code language="command">?whisper Leopard I love your work :)</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Preference</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="preferences">
+							<div class="summary" tabindex="0"><span class="name">?preferences</span><span class="description">Lists the preferences</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Lists the addon preferences and their states.
+									</div>
+									<code language="command" class="syntax">?preferences</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="data preferences">
+											<table>
+												<tr>
+													<th>Name</th>
+													<th>Data Type</th>
+													<th>Default Value</th>
+													<th>Description</th>
+												</tr>
+												<tr>
+													<td>Cheats</td>
+													<td><span class="dataType">Bool</span></td>
+													<td><span class="false">False</span></td>
+													<td>
+														Enables cheats globally for all roles.
+													</td>
+												</tr>
+												<tr>
+													<td>equipOnRespawn</td>
+													<td><span class="dataType">Bool</span></td>
+													<td><span class="true">True</span></td>
+													<td>
+														Equips players with the equipment specified by the startEquipment preference
+														when they spawn.
+													</td>
+												</tr>
+												<tr>
+													<td>keepInventory</td>
+													<td><span class="dataType">Bool</span></td>
+													<td><span class="false">False</span></td>
+													<td>
+														When a player dies, they will spawn with their inventory.
+													</td>
+												</tr>
+												<tr>
+													<td>maxMass</td>
+													<td><span class="dataType">Number</span></td>
+													<td>0</td>
+													<td>
+														The max allowed mass for vehicles. Any vehicle over this number will be
+														despawned and the owner will be alerted. If this value is 0 then the limit
+														will be disabled.
+													</td>
+												</tr>
+												<tr>
+													<td>removeVehicleOnLeave</td>
+													<td><span class="dataType">Bool</span></td>
+													<td><span class="true">True</span></td>
+													<td>
+														Removes a player's vehicles when they leave after the vehicles are unloaded from
+														the world.
+													</td>
+												</tr>
+												<tr>
+													<td>startEquipment</td>
+													<td>Mixed</td>
+													<td>15 B 1, 6 C, 11 E 3</td>
+													<td>
+														If equipOnRespawn is enabled, when a player spawns they will be equipped with
+														the equipment specifed here. Refer to <span class="command">?equipmentIDs</span>
+														for the IDs of the equipment.
+													</td>
+												</tr>
+												<tr>
+													<td>welcomeNew</td>
+													<td><span class="dataType">String</span></td>
+													<td>" "</td>
+													<td>
+														The welcome message for new players. By default, it is just a space, which means
+														that no message will be sent for new players.
+													</td>
+												</tr>
+												<tr>
+													<td>welcomeReturning</td>
+													<td><span class="dataType">String</span></td>
+													<td>" "</td>
+													<td>
+														The welcome message for returning players. By default, it is just a space, which means
+														that no message will be sent for returning players.
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="resetPref">
+							<div class="summary" tabindex="0"><span class="name">?resetPref</span><span class="description">Resets all preferences</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Resets all of the addon's preferences. Be very careful with this command as it can drastically change
+										how the server behaves if you have edited the preferences.
+									</div>
+									<code language="command" class="syntax">?resetPref confirm</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">confirm</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													You must enter "true" as a safeguard from accidental resets.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Reset all preferencees to their defaults</p>
+											<code language="command">?resetPref true</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="setPref">
+							<div class="summary" tabindex="0"><span class="name">?setPref</span><span class="description">Sets a preference</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Sets an addon preference value. Use <span class="command">?preferences</span> to
+										see the names of all the preferences and what values are acceptable.
+									</div>
+									<code language="command" class="syntax">?setPref preference_name value</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">preference_name</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the preference to edit.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">value</td>
+												<td>Various</td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The new value of the preference.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Enable cheat commands for all players</p>
+											<code language="command">?setPref cheats true</code>
+											<p>Set the max mass for vehicles to 20000</p>
+											<code language="command">?setPref maxMass 20000</code>
+											<p>Set the start equipment to be a medkit with 2 uses in slot B and a parachute in slot F</p>
+											<code language="command">?setPref startEquipment 11 B 2, 4 F</code>
+											<p>Set the welcome message for new players to "hi"</p>
+											<code language="command">?setPref welcomeNew hi</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>Game Settings</h1>
+				<div class="content">
+					<div class="accordions">
+						<div class="accordion" name="gameSettings">
+							<div class="summary" tabindex="0"><span class="name">?gameSettings</span><span class="description">Lists all game settings</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Lists all of the game settings and their states.
+									</div>
+									<code language="command" class="syntax">?gameSettings</code>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="true">True</div></td>
+											</tr>
+										</table>
+										<div class="data gameSettings">
+											<table>
+												<tr>
+													<th>Name</th>
+												</tr>
+												<tr>
+													<td>third_person</td>
+												</tr>
+												
+												<tr>
+													<td>third_person_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>vehicle_damage</td>
+												</tr>
+												
+												<tr>
+													<td>player_damage</td>
+												</tr>
+												
+												<tr>
+													<td>npc_damage</td>
+												</tr>
+												
+												<tr>
+													<td>sharks</td>
+												</tr>
+												
+												<tr>
+													<td>fast_travel</td>
+												</tr>
+												
+												<tr>
+													<td>teleport_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>rogue_mode</td>
+												</tr>
+												
+												<tr>
+													<td>auto_refuel</td>
+												</tr>
+												
+												<tr>
+													<td>megalodon</td>
+												</tr>
+												
+												<tr>
+													<td>map_show_players</td>
+												</tr>
+												
+												<tr>
+													<td>map_show_vehicles</td>
+												</tr>
+												
+												<tr>
+													<td>show_3d_waypoints</td>
+												</tr>
+												
+												<tr>
+													<td>show_name_plates</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_money</td>
+												</tr>
+												
+												<tr>
+													<td>settings_menu</td>
+												</tr>
+												
+												<tr>
+													<td>unlock_all_islands</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_batteries</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_fuel</td>
+												</tr>
+												
+												<tr>
+													<td>engine_overheating</td>
+												</tr>
+												
+												<tr>
+													<td>no_clip</td>
+												</tr>
+												
+												<tr>
+													<td>map_teleport</td>
+												</tr>
+												
+												<tr>
+													<td>cleanup_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>clear_fow</td>
+												</tr>
+												
+												<tr>
+													<td>vehicle_spawning</td>
+												</tr>
+												
+												<tr>
+													<td>photo_mode</td>
+												</tr>
+												
+												<tr>
+													<td>respawning</td>
+												</tr>
+												
+												<tr>
+													<td>settings_menu_lock</td>
+												</tr>
+												
+												<tr>
+													<td>despawn_on_leave</td>
+												</tr>
+												
+												<tr>
+													<td>unlock_all_components</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion" name="setGameSetting">
+							<div class="summary" tabindex="0"><span class="name">?setGameSetting</span><span class="description">Sets a game setting</span></div>
+							<div class="content commandDefinition">
+								<div>
+									<div class="description">
+										Sets the specified game setting to the specified value. Use <span class="command">?gameSettings</span>
+										to view all of the settings and their current values.
+									</div>
+									<code language="command" class="syntax">?setGameSetting setting value</code>
+									<br>
+									<div class="args">
+										<table>
+											<tr>
+												<th>Argument</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Repeatable</th>
+												<th>Description</th>
+											</tr>
+											<tr>
+												<td class="name">setting</td>
+												<td><span class="dataType">String</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The name of the setting to edit.
+												</td>
+											</tr>
+											<tr>
+												<td class="name">value</td>
+												<td><span class="dataType">Bool</span></td>
+												<td><div class="true">True</div></td>
+												<td><div class="false">False</div></td>
+												<td class="description">
+													The new value of the setting.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<br>
+									<div class="flex row">
+										<table class="access">
+											<tr>
+												<th>Role</th>
+												<th>Default Access</th>
+											</tr>
+											<tr>
+												<td>Owner</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td><div class="true">True</div></td>
+											</tr>
+											<tr>
+												<td>Moderator</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Auth</td>
+												<td><div class="false">False</div></td>
+											</tr>
+											<tr>
+												<td>Everyone</td>
+												<td><div class="false">False</div></td>
+											</tr>
+										</table>
+										<div class="data gameSettings">
+											<table>
+												<tr>
+													<th>Name</th>
+												</tr>
+												<tr>
+													<td>third_person</td>
+												</tr>
+												
+												<tr>
+													<td>third_person_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>vehicle_damage</td>
+												</tr>
+												
+												<tr>
+													<td>player_damage</td>
+												</tr>
+												
+												<tr>
+													<td>npc_damage</td>
+												</tr>
+												
+												<tr>
+													<td>sharks</td>
+												</tr>
+												
+												<tr>
+													<td>fast_travel</td>
+												</tr>
+												
+												<tr>
+													<td>teleport_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>rogue_mode</td>
+												</tr>
+												
+												<tr>
+													<td>auto_refuel</td>
+												</tr>
+												
+												<tr>
+													<td>megalodon</td>
+												</tr>
+												
+												<tr>
+													<td>map_show_players</td>
+												</tr>
+												
+												<tr>
+													<td>map_show_vehicles</td>
+												</tr>
+												
+												<tr>
+													<td>show_3d_waypoints</td>
+												</tr>
+												
+												<tr>
+													<td>show_name_plates</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_money</td>
+												</tr>
+												
+												<tr>
+													<td>settings_menu</td>
+												</tr>
+												
+												<tr>
+													<td>unlock_all_islands</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_batteries</td>
+												</tr>
+												
+												<tr>
+													<td>infinite_fuel</td>
+												</tr>
+												
+												<tr>
+													<td>engine_overheating</td>
+												</tr>
+												
+												<tr>
+													<td>no_clip</td>
+												</tr>
+												
+												<tr>
+													<td>map_teleport</td>
+												</tr>
+												
+												<tr>
+													<td>cleanup_vehicle</td>
+												</tr>
+												
+												<tr>
+													<td>clear_fow</td>
+												</tr>
+												
+												<tr>
+													<td>vehicle_spawning</td>
+												</tr>
+												
+												<tr>
+													<td>photo_mode</td>
+												</tr>
+												
+												<tr>
+													<td>respawning</td>
+												</tr>
+												
+												<tr>
+													<td>settings_menu_lock</td>
+												</tr>
+												
+												<tr>
+													<td>despawn_on_leave</td>
+												</tr>
+												
+												<tr>
+													<td>unlock_all_components</td>
+												</tr>
+											</table>
+										</div>
+										<div class="examples">
+											<h1>Examples</h1>
+											<p>Turn off infinite money</p>
+											<code language="command">?setGameSetting infinite_money false</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			</div>
 		</main>
 		<footer>
 			<div id="external">
