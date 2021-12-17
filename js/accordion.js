@@ -25,10 +25,10 @@ class Accordion {
 		this.content.setAttribute('index', index);
 
 		// add event listener to the accordion
-		this.element.addEventListener('click', (event) => this.click(event));
+		this.summary.addEventListener('click', (event) => this.click(event));
 
 		// add keyboard listeners for keyboard accessibility
-		this.element.addEventListener('keydown', (event) => {
+		this.summary.addEventListener('keydown', (event) => {
 			if (event.code === 'Space' || event.code === 'Enter') {
 			  this.click(event);
 			}

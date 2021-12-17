@@ -93,6 +93,8 @@ main section .accordion .content > div {
 	background: #0a264d;
 	border-radius: 10px 10px 0px 0px;
 	padding: 10px 10px;
+	display: flex;
+	align-items: center;
 }
 
 .accordion:not([closing]):not([open]) .summary {
@@ -102,7 +104,6 @@ main section .accordion .content > div {
 
 .accordion .summary span.name {
 	text-align: left;
-	flex: 2 0;
 	white-space: nowrap;
 }
 
@@ -111,10 +112,6 @@ main section .accordion .content > div {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	text-align: left;
-	margin-left: auto;
-	width: fit-content;
-	flex: 3;
 }
 
 .accordion .summary span.description::before {

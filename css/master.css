@@ -74,6 +74,10 @@ body {
 	letter-spacing: 1px;
 }
 
+body * {
+	box-sizing: border-box;
+}
+
 header {
 	background: url(../images/headerBanner.jpg);
 	display: flex;
@@ -183,12 +187,6 @@ svg {
 	text-align: center;
 	position: relative;
 	cursor: pointer;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: space-evenly;
-	align-items: center;
 }
 
 .accordion > .summary > div {
@@ -202,20 +200,35 @@ svg {
 	height: 0px;
 }
 
-.summary::after {
-	content: ' +';
-	display: inline-block;
-	white-space: nowrap;
-	font-size: 1.6em;
-}
-
-.accordion[open] .summary::after {
-	content: ' –';
-}
-
 .accordion .summary {
 	font-size: 1.1em;
 	font-weight: bold;
+}
+
+.accordion .summary .name {
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+}
+
+.accordion .summary .description {
+	width: 100%;
+	padding: 0 5em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.accordion .summary .icon {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 1.7em;
+	transition: transform 0.3s cubic-bezier(0.46, -0.4, 0.57, 1.41);
+}
+
+.accordion[open] .summary .icon {
+	transform: rotate(90deg);
 }
 
 code {
