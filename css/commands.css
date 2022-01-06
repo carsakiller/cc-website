@@ -1,5 +1,5 @@
 #sidenav {
-  width: max(300px, 25%);
+  width: max(300px, 20%);
   height: 100%;
   margin: 0;
   display: flex;
@@ -130,7 +130,7 @@ main section .accordions .accordion .content table.args {
 
 @media (min-width: 1000px) {
   main {
-    margin-left: max(300px, 25%);
+    margin-left: max(300px, 20%);
   }
 
   #sidenav #openButton {

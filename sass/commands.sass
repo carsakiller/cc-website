@@ -1,9 +1,10 @@
 @use 'colors'
 
 $sidenavTransitionLength : 0.2s
+$sidenavWidth : max(300px, 20%)
 
 #sidenav
-    width: max(300px, 25%)
+    width: $sidenavWidth
     height: 100%
     margin: 0
     display: flex
@@ -135,7 +136,7 @@ main
 
 @media (min-width: 1000px)
     main
-        margin-left: max(300px, 25%)
+        margin-left: $sidenavWidth
     #sidenav
         #openButton
             display: none

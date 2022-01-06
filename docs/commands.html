@@ -9,19 +9,11 @@
 	<link rel="stylesheet" href="/css/master.css">
 	<link rel="stylesheet" href="/css/commands.css">
 
-	<script src="/js/accordion.js" defer=""></script>
-	<script src="/js/sidenav.js" defer=""></script>
-	<script src="/js/typeStyling.js" defer=""></script>
-
 	<!-- fonts -->
 	<link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
-
-	<!-- tooltips from tippy.js -->
-	<script src="https://unpkg.com/@popperjs/core@2"></script>
-	<script src="https://unpkg.com/tippy.js@6"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">>
 </head>
 
 <body>
@@ -181,7 +173,8 @@
 			<div class="content">
 				<div class="accordions">
 					<div class="accordion" id="addAlias">
-						<div class="summary" tabindex="0"><span class="name">?addAlias</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?addAlias</div>
 							<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -253,7 +246,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="addRole">
-						<div class="summary" tabindex="0"><span class="name">?addRole</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?addRole</div>
 							<div class="description">Adds a role to the server that can be assigned to players.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -316,7 +310,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="addRule">
-						<div class="summary" tabindex="0"><span class="name">?addRule</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?addRule</div>
 							<div class="description">Adds a rule to the rulebook.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -388,7 +383,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="aliases">
-						<div class="summary" tabindex="0"><span class="name">?aliases</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?aliases</div>
 							<div class="description">Lists the aliases that can be used instead of the full command names</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -451,7 +447,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="bailout">
-						<div class="summary" tabindex="0"><span class="name">?bailout</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?bailout</div>
 							<div class="description">Gives the "player" the specified amount of money.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -514,7 +511,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="banPlayer">
-						<div class="summary" tabindex="0"><span class="name">?banPlayer</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?banPlayer</div>
 							<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (?ban).</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -577,7 +575,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="banned">
-						<div class="summary" tabindex="0"><span class="name">?banned</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?banned</div>
 							<div class="description">Shows the list of banned players.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -640,7 +639,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="cc">
-						<div class="summary" tabindex="0"><span class="name">?cc</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?cc</div>
 							<div class="description">Displays info about Carsa's Commands.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -681,7 +681,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="ccHelp">
-						<div class="summary" tabindex="0"><span class="name">?ccHelp</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?ccHelp</div>
 							<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -744,7 +745,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="clearRadiation">
-						<div class="summary" tabindex="0"><span class="name">?clearRadiation</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?clearRadiation</div>
 							<div class="description">Cleans up all irradiated areas on the map.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -785,7 +787,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="clearVehicle">
-						<div class="summary" tabindex="0"><span class="name">?clearVehicle</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?clearVehicle</div>
 							<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -848,7 +851,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="equip">
-						<div class="summary" tabindex="0"><span class="name">?equip</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?equip</div>
 							<div class="description">Equips you with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -947,7 +951,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="equipmentIDs">
-						<div class="summary" tabindex="0"><span class="name">?equipmentIDs</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?equipmentIDs</div>
 							<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1010,7 +1015,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="equipp">
-						<div class="summary" tabindex="0"><span class="name">?equipp</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?equipp</div>
 							<div class="description">Equips the specified player with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1118,7 +1124,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="gameSettings">
-						<div class="summary" tabindex="0"><span class="name">?gameSettings</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?gameSettings</div>
 							<div class="description">Lists all of the game settings and their states.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1159,7 +1166,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="giveRole">
-						<div class="summary" tabindex="0"><span class="name">?giveRole</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?giveRole</div>
 							<div class="description">Assigns a role to a player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1231,7 +1239,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="heal">
-						<div class="summary" tabindex="0"><span class="name">?heal</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?heal</div>
 							<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1303,7 +1312,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="kill">
-						<div class="summary" tabindex="0"><span class="name">?kill</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?kill</div>
 							<div class="description">Kills another player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1366,7 +1376,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="playerPerms">
-						<div class="summary" tabindex="0"><span class="name">?playerPerms</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?playerPerms</div>
 							<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1429,7 +1440,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="playerRoles">
-						<div class="summary" tabindex="0"><span class="name">?playerRoles</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?playerRoles</div>
 							<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1492,7 +1504,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="position">
-						<div class="summary" tabindex="0"><span class="name">?position</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?position</div>
 							<div class="description">Get the 3D coordinates of the target player, or yourself.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1555,7 +1568,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="preferences">
-						<div class="summary" tabindex="0"><span class="name">?preferences</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?preferences</div>
 							<div class="description">Lists the preferences and their states for you.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1596,7 +1610,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="removeAlias">
-						<div class="summary" tabindex="0"><span class="name">?removeAlias</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?removeAlias</div>
 							<div class="description">Removes an alias for a command</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1659,7 +1674,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="removeRole">
-						<div class="summary" tabindex="0"><span class="name">?removeRole</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?removeRole</div>
 							<div class="description">Removes a role from all players and deletes it.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1722,7 +1738,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="removeRule">
-						<div class="summary" tabindex="0"><span class="name">?removeRule</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?removeRule</div>
 							<div class="description">Removes a rule from the rulebook.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1785,7 +1802,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="resetPreferences">
-						<div class="summary" tabindex="0"><span class="name">?resetPreferences</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?resetPreferences</div>
 							<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1848,7 +1866,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="respawn">
-						<div class="summary" tabindex="0"><span class="name">?respawn</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?respawn</div>
 							<div class="description">Kills your character, giving you the option to respawn.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1889,7 +1908,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="revokeRole">
-						<div class="summary" tabindex="0"><span class="name">?revokeRole</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?revokeRole</div>
 							<div class="description">Revokes a role from a player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -1961,7 +1981,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="roleAccess">
-						<div class="summary" tabindex="0"><span class="name">?roleAccess</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?roleAccess</div>
 							<div class="description">Sets whether a role has access to a command or not.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2042,7 +2063,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="rolePerms">
-						<div class="summary" tabindex="0"><span class="name">?rolePerms</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?rolePerms</div>
 							<div class="description">Sets the permissions of a role.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2123,7 +2145,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="roleStatus">
-						<div class="summary" tabindex="0"><span class="name">?roleStatus</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?roleStatus</div>
 							<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2195,7 +2218,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="roles">
-						<div class="summary" tabindex="0"><span class="name">?roles</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?roles</div>
 							<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2258,7 +2282,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="rules">
-						<div class="summary" tabindex="0"><span class="name">?rules</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?rules</div>
 							<div class="description">Displays the rules of this server.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2321,7 +2346,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="setEditable">
-						<div class="summary" tabindex="0"><span class="name">?setEditable</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?setEditable</div>
 							<div class="description">Sets a vehicle to either be editable or non-editable.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2393,7 +2419,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="setGameSetting">
-						<div class="summary" tabindex="0"><span class="name">?setGameSetting</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?setGameSetting</div>
 							<div class="description">Sets the specified game setting to the requested value.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2465,7 +2492,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="setPref">
-						<div class="summary" tabindex="0"><span class="name">?setPref</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?setPref</div>
 							<div class="description">Sets the specified preference to the requested value. Use ?preferences to see all of the preferences.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2537,7 +2565,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="steamID">
-						<div class="summary" tabindex="0"><span class="name">?steamID</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?steamID</div>
 							<div class="description">Displays the steamID of the requested player. Displays your steamID if no player is specified.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2600,7 +2629,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tp2me">
-						<div class="summary" tabindex="0"><span class="name">?tp2me</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tp2me</div>
 							<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2663,7 +2693,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tp2v">
-						<div class="summary" tabindex="0"><span class="name">?tp2v</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tp2v</div>
 							<div class="description">Teleports you to a vehicle.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2726,7 +2757,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpLocations">
-						<div class="summary" tabindex="0"><span class="name">?tpLocations</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpLocations</div>
 							<div class="description">Lists the named locations that you can teleport to.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2767,7 +2799,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpb">
-						<div class="summary" tabindex="0"><span class="name">?tpb</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpb</div>
 							<div class="description">Blocks other players' ability to teleport to you.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2808,7 +2841,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpc">
-						<div class="summary" tabindex="0"><span class="name">?tpc</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpc</div>
 							<div class="description">Teleports the player to the specified x, y, z coordinates.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2889,7 +2923,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpl">
-						<div class="summary" tabindex="0"><span class="name">?tpl</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpl</div>
 							<div class="description">Teleports the player to the specified location. You can use ?tpLocations to see what locations are available.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -2952,7 +2987,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpp">
-						<div class="summary" tabindex="0"><span class="name">?tpp</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpp</div>
 							<div class="description">Teleports the player to the specified player's position.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3015,7 +3051,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tps">
-						<div class="summary" tabindex="0"><span class="name">?tps</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tps</div>
 							<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3087,7 +3124,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="tpv">
-						<div class="summary" tabindex="0"><span class="name">?tpv</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?tpv</div>
 							<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3159,7 +3197,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="unban">
-						<div class="summary" tabindex="0"><span class="name">?unban</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?unban</div>
 							<div class="description">Unbans a player from the server.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3222,7 +3261,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="vehicleIDs">
-						<div class="summary" tabindex="0"><span class="name">?vehicleIDs</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?vehicleIDs</div>
 							<div class="description">Toggles displaying vehicle IDs.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3263,7 +3303,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="vehicleInfo">
-						<div class="summary" tabindex="0"><span class="name">?vehicleInfo</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?vehicleInfo</div>
 							<div class="description">Get detailed info on a vehicle. If no vehicleID is provided, the nearest vehicle will be used</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3326,7 +3367,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="vehicleList">
-						<div class="summary" tabindex="0"><span class="name">?vehicleList</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?vehicleList</div>
 							<div class="description">Lists all the player vehicles that are spawned in the game.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -3389,7 +3431,8 @@
 						</div>
 					</div>
 					<div class="accordion" id="whisper">
-						<div class="summary" tabindex="0"><span class="name">?whisper</span>
+						<div class="summary" tabindex="0">
+							<div class="name">?whisper</div>
 							<div class="description">Whispers your message to the specified player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
@@ -8179,6 +8222,14 @@
 		</div>
 	</footer>
 
+	<!-- tooltips from tippy.js -->
+	
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+
+	<script src="/js/accordion.js"></script>
+	<script src="/js/sidenav.js"></script>
+	<script src="/js/typeStyling.js"></script
 
 </body>
 
