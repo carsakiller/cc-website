@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -14,6 +15,14 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">>
+
+	<!-- tooltips from tippy.js -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+
+	<script src="/js/accordion.js" defer></script>
+	<script src="/js/sidenav.js" defer></script>
+	<script src="/js/typeStyling.js" defer></script>
 </head>
 
 <body>
@@ -178,7 +187,8 @@
 							<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div><code language="command" class="syntax">?addAlias alias command</code>
+							<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div>
+							<code language="command" class="syntax">?addAlias alias command</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -251,7 +261,8 @@
 							<div class="description">Adds a role to the server that can be assigned to players.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Adds a role to the server that can be assigned to players.</div><code language="command" class="syntax">?addRole role_name</code>
+							<div class="description">Adds a role to the server that can be assigned to players.</div>
+							<code language="command" class="syntax">?addRole role_name</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -315,7 +326,8 @@
 							<div class="description">Adds a rule to the rulebook.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Adds a rule to the rulebook.</div><code language="command" class="syntax">?addRule text [position]</code>
+							<div class="description">Adds a rule to the rulebook.</div>
+							<code language="command" class="syntax">?addRule text [position]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -388,7 +400,8 @@
 							<div class="description">Lists the aliases that can be used instead of the full command names</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the aliases that can be used instead of the full command names</div><code language="command" class="syntax">?aliases [page]</code>
+							<div class="description">Lists the aliases that can be used instead of the full command names</div>
+							<code language="command" class="syntax">?aliases [page]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -452,7 +465,8 @@
 							<div class="description">Gives the "player" the specified amount of money.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Gives the "player" the specified amount of money.</div><code language="command" class="syntax">?bailout $ amount</code>
+							<div class="description">Gives the "player" the specified amount of money.</div>
+							<code language="command" class="syntax">?bailout $ amount</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -516,7 +530,8 @@
 							<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (?ban).</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (<a href="/docs/commands.html#ban"> <span class="command">?ban</span> </a>).</div><code language="command" class="syntax">?banPlayer playerID</code>
+							<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (<a href="/docs/commands.html#ban"> <span class="command">?ban</span> </a>).</div>
+							<code language="command" class="syntax">?banPlayer playerID</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -580,7 +595,8 @@
 							<div class="description">Shows the list of banned players.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Shows the list of banned players.</div><code language="command" class="syntax">?banned [page]</code>
+							<div class="description">Shows the list of banned players.</div>
+							<code language="command" class="syntax">?banned [page]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -644,7 +660,8 @@
 							<div class="description">Displays info about Carsa's Commands.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Displays info about Carsa's Commands.</div><code language="command" class="syntax">?cc</code>
+							<div class="description">Displays info about Carsa's Commands.</div>
+							<code language="command" class="syntax">?cc</code>
 							<table>
 								<thead>
 									<tr>
@@ -686,7 +703,8 @@
 							<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div><code language="command" class="syntax">?ccHelp [page/command]</code>
+							<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div>
+							<code language="command" class="syntax">?ccHelp [page/command]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -750,7 +768,8 @@
 							<div class="description">Cleans up all irradiated areas on the map.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Cleans up all irradiated areas on the map.</div><code language="command" class="syntax">?clearRadiation</code>
+							<div class="description">Cleans up all irradiated areas on the map.</div>
+							<code language="command" class="syntax">?clearRadiation</code>
 							<table>
 								<thead>
 									<tr>
@@ -792,7 +811,8 @@
 							<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><code language="command" class="syntax">?clearVehicle [vehicleID]...</code>
+							<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div>
+							<code language="command" class="syntax">?clearVehicle [vehicleID]...</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -856,7 +876,8 @@
 							<div class="description">Equips you with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Equips you with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><code language="command" class="syntax">?equip item_id [slot] [data1] [data2] [is_active]</code>
+							<div class="description">Equips you with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div>
+							<code language="command" class="syntax">?equip item_id [slot] [data1] [data2] [is_active]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -956,7 +977,8 @@
 							<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div><code language="command" class="syntax">?equipmentIDs [equipment_type]</code>
+							<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div>
+							<code language="command" class="syntax">?equipmentIDs [equipment_type]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1020,7 +1042,8 @@
 							<div class="description">Equips the specified player with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Equips the specified player with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><code language="command" class="syntax">?equipp playerID item_id [slot] [data1] [data2] [is_active]</code>
+							<div class="description">Equips the specified player with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div>
+							<code language="command" class="syntax">?equipp playerID item_id [slot] [data1] [data2] [is_active]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1129,7 +1152,8 @@
 							<div class="description">Lists all of the game settings and their states.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists all of the game settings and their states.</div><code language="command" class="syntax">?gameSettings</code>
+							<div class="description">Lists all of the game settings and their states.</div>
+							<code language="command" class="syntax">?gameSettings</code>
 							<table>
 								<thead>
 									<tr>
@@ -1171,7 +1195,8 @@
 							<div class="description">Assigns a role to a player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Assigns a role to a player.</div><code language="command" class="syntax">?giveRole role [playerID]</code>
+							<div class="description">Assigns a role to a player.</div>
+							<code language="command" class="syntax">?giveRole role [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1244,7 +1269,8 @@
 							<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div><code language="command" class="syntax">?heal [playerID] [amount]</code>
+							<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div>
+							<code language="command" class="syntax">?heal [playerID] [amount]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1317,7 +1343,8 @@
 							<div class="description">Kills another player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Kills another player.</div><code language="command" class="syntax">?kill playerID</code>
+							<div class="description">Kills another player.</div>
+							<code language="command" class="syntax">?kill playerID</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1381,7 +1408,8 @@
 							<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div><code language="command" class="syntax">?playerPerms [playerID]</code>
+							<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div>
+							<code language="command" class="syntax">?playerPerms [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1445,7 +1473,8 @@
 							<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div><code language="command" class="syntax">?playerRoles [playerID]</code>
+							<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div>
+							<code language="command" class="syntax">?playerRoles [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1509,7 +1538,8 @@
 							<div class="description">Get the 3D coordinates of the target player, or yourself.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Get the 3D coordinates of the target player, or yourself.</div><code language="command" class="syntax">?position [playerID]</code>
+							<div class="description">Get the 3D coordinates of the target player, or yourself.</div>
+							<code language="command" class="syntax">?position [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1573,7 +1603,8 @@
 							<div class="description">Lists the preferences and their states for you.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the preferences and their states for you.</div><code language="command" class="syntax">?preferences</code>
+							<div class="description">Lists the preferences and their states for you.</div>
+							<code language="command" class="syntax">?preferences</code>
 							<table>
 								<thead>
 									<tr>
@@ -1615,7 +1646,8 @@
 							<div class="description">Removes an alias for a command</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Removes an alias for a command</div><code language="command" class="syntax">?removeAlias alias</code>
+							<div class="description">Removes an alias for a command</div>
+							<code language="command" class="syntax">?removeAlias alias</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1679,7 +1711,8 @@
 							<div class="description">Removes a role from all players and deletes it.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Removes a role from all players and deletes it.</div><code language="command" class="syntax">?removeRole role_name</code>
+							<div class="description">Removes a role from all players and deletes it.</div>
+							<code language="command" class="syntax">?removeRole role_name</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1743,7 +1776,8 @@
 							<div class="description">Removes a rule from the rulebook.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Removes a rule from the rulebook.</div><code language="command" class="syntax">?removeRule rule #</code>
+							<div class="description">Removes a rule from the rulebook.</div>
+							<code language="command" class="syntax">?removeRule rule #</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1807,7 +1841,8 @@
 							<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div><code language="command" class="syntax">?resetPreferences confirm</code>
+							<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div>
+							<code language="command" class="syntax">?resetPreferences confirm</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1871,7 +1906,8 @@
 							<div class="description">Kills your character, giving you the option to respawn.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Kills your character, giving you the option to respawn.</div><code language="command" class="syntax">?respawn</code>
+							<div class="description">Kills your character, giving you the option to respawn.</div>
+							<code language="command" class="syntax">?respawn</code>
 							<table>
 								<thead>
 									<tr>
@@ -1913,7 +1949,8 @@
 							<div class="description">Revokes a role from a player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Revokes a role from a player.</div><code language="command" class="syntax">?revokeRole role [playerID]</code>
+							<div class="description">Revokes a role from a player.</div>
+							<code language="command" class="syntax">?revokeRole role [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -1986,7 +2023,8 @@
 							<div class="description">Sets whether a role has access to a command or not.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Sets whether a role has access to a command or not.</div><code language="command" class="syntax">?roleAccess role command value</code>
+							<div class="description">Sets whether a role has access to a command or not.</div>
+							<code language="command" class="syntax">?roleAccess role command value</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2068,7 +2106,8 @@
 							<div class="description">Sets the permissions of a role.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Sets the permissions of a role.</div><code language="command" class="syntax">?rolePerms role_name is_admin is_auth</code>
+							<div class="description">Sets the permissions of a role.</div>
+							<code language="command" class="syntax">?rolePerms role_name is_admin is_auth</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2150,7 +2189,8 @@
 							<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div><code language="command" class="syntax">?roleStatus role [status]</code>
+							<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div>
+							<code language="command" class="syntax">?roleStatus role [status]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2223,7 +2263,8 @@
 							<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div><code language="command" class="syntax">?roles [page/role_name]</code>
+							<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div>
+							<code language="command" class="syntax">?roles [page/role_name]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2287,7 +2328,8 @@
 							<div class="description">Displays the rules of this server.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Displays the rules of this server.</div><code language="command" class="syntax">?rules [page]</code>
+							<div class="description">Displays the rules of this server.</div>
+							<code language="command" class="syntax">?rules [page]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2351,7 +2393,8 @@
 							<div class="description">Sets a vehicle to either be editable or non-editable.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Sets a vehicle to either be editable or non-editable.</div><code language="command" class="syntax">?setEditable vehicleID true/false</code>
+							<div class="description">Sets a vehicle to either be editable or non-editable.</div>
+							<code language="command" class="syntax">?setEditable vehicleID true/false</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2424,7 +2467,8 @@
 							<div class="description">Sets the specified game setting to the requested value.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Sets the specified game setting to the requested value.</div><code language="command" class="syntax">?setGameSetting setting_name value</code>
+							<div class="description">Sets the specified game setting to the requested value.</div>
+							<code language="command" class="syntax">?setGameSetting setting_name value</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2497,7 +2541,8 @@
 							<div class="description">Sets the specified preference to the requested value. Use ?preferences to see all of the preferences.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Sets the specified preference to the requested value. Use <a href="/docs/commands.html#preferences"> <span class="command">?preferences</span> </a> to see all of the preferences.</div><code language="command" class="syntax">?setPref preference_name value</code>
+							<div class="description">Sets the specified preference to the requested value. Use <a href="/docs/commands.html#preferences"> <span class="command">?preferences</span> </a> to see all of the preferences.</div>
+							<code language="command" class="syntax">?setPref preference_name value</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2570,7 +2615,8 @@
 							<div class="description">Displays the steamID of the requested player. Displays your steamID if no player is specified.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Displays the steamID of the requested player. Displays your <span class="dataType" data-tippy-content="A 17 digit number unique to a certain player. It is used to uniquely identify players within C².">steamID</span> if no player is specified.</div><code language="command" class="syntax">?steamID [playerID]</code>
+							<div class="description">Displays the steamID of the requested player. Displays your <span class="dataType" data-tippy-content="A 17 digit number unique to a certain player. It is used to uniquely identify players within C².">steamID</span> if no player is specified.</div>
+							<code language="command" class="syntax">?steamID [playerID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2634,7 +2680,8 @@
 							<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div><code language="command" class="syntax">?tp2me playerID...</code>
+							<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div>
+							<code language="command" class="syntax">?tp2me playerID...</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2698,7 +2745,8 @@
 							<div class="description">Teleports you to a vehicle.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports you to a vehicle.</div><code language="command" class="syntax">?tp2v vehicleID</code>
+							<div class="description">Teleports you to a vehicle.</div>
+							<code language="command" class="syntax">?tp2v vehicleID</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2762,7 +2810,8 @@
 							<div class="description">Lists the named locations that you can teleport to.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists the named locations that you can teleport to.</div><code language="command" class="syntax">?tpLocations</code>
+							<div class="description">Lists the named locations that you can teleport to.</div>
+							<code language="command" class="syntax">?tpLocations</code>
 							<table>
 								<thead>
 									<tr>
@@ -2804,7 +2853,8 @@
 							<div class="description">Blocks other players' ability to teleport to you.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Blocks other players' ability to teleport to you.</div><code language="command" class="syntax">?tpb</code>
+							<div class="description">Blocks other players' ability to teleport to you.</div>
+							<code language="command" class="syntax">?tpb</code>
 							<table>
 								<thead>
 									<tr>
@@ -2846,7 +2896,8 @@
 							<div class="description">Teleports the player to the specified x, y, z coordinates.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports the player to the specified x, y, z coordinates.</div><code language="command" class="syntax">?tpc x y z</code>
+							<div class="description">Teleports the player to the specified x, y, z coordinates.</div>
+							<code language="command" class="syntax">?tpc x y z</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2928,7 +2979,8 @@
 							<div class="description">Teleports the player to the specified location. You can use ?tpLocations to see what locations are available.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports the player to the specified location. You can use <a href="/docs/commands.html#tpLocations"> <span class="command">?tpLocations</span> </a> to see what locations are available.</div><code language="command" class="syntax">?tpl location name</code>
+							<div class="description">Teleports the player to the specified location. You can use <a href="/docs/commands.html#tpLocations"> <span class="command">?tpLocations</span> </a> to see what locations are available.</div>
+							<code language="command" class="syntax">?tpl location name</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -2992,7 +3044,8 @@
 							<div class="description">Teleports the player to the specified player's position.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports the player to the specified player's position.</div><code language="command" class="syntax">?tpp playerID</code>
+							<div class="description">Teleports the player to the specified player's position.</div>
+							<code language="command" class="syntax">?tpp playerID</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3056,7 +3109,8 @@
 							<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div><code language="command" class="syntax">?tps [r/n/vehicleID] [seat name]</code>
+							<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div>
+							<code language="command" class="syntax">?tps [r/n/vehicleID] [seat name]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3129,7 +3183,8 @@
 							<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div><code language="command" class="syntax">?tpv vehicleID [unsafe]</code>
+							<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div>
+							<code language="command" class="syntax">?tpv vehicleID [unsafe]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3202,7 +3257,8 @@
 							<div class="description">Unbans a player from the server.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Unbans a player from the server.</div><code language="command" class="syntax">?unban steamID</code>
+							<div class="description">Unbans a player from the server.</div>
+							<code language="command" class="syntax">?unban steamID</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3266,7 +3322,8 @@
 							<div class="description">Toggles displaying vehicle IDs.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Toggles displaying vehicle IDs.</div><code language="command" class="syntax">?vehicleIDs</code>
+							<div class="description">Toggles displaying vehicle IDs.</div>
+							<code language="command" class="syntax">?vehicleIDs</code>
 							<table>
 								<thead>
 									<tr>
@@ -3308,7 +3365,8 @@
 							<div class="description">Get detailed info on a vehicle. If no vehicleID is provided, the nearest vehicle will be used</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Get detailed info on a vehicle. If no <span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span> is provided, the nearest vehicle will be used</div><code language="command" class="syntax">?vehicleInfo [vehicleID]</code>
+							<div class="description">Get detailed info on a vehicle. If no <span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span> is provided, the nearest vehicle will be used</div>
+							<code language="command" class="syntax">?vehicleInfo [vehicleID]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3372,7 +3430,8 @@
 							<div class="description">Lists all the player vehicles that are spawned in the game.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Lists all the player vehicles that are spawned in the game.</div><code language="command" class="syntax">?vehicleList [page]</code>
+							<div class="description">Lists all the player vehicles that are spawned in the game.</div>
+							<code language="command" class="syntax">?vehicleList [page]</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -3436,7 +3495,8 @@
 							<div class="description">Whispers your message to the specified player.</div><span class="icon"></span>
 						</div>
 						<div class="content">
-							<div class="description">Whispers your message to the specified player.</div><code language="command" class="syntax">?whisper playerID message</code>
+							<div class="description">Whispers your message to the specified player.</div>
+							<code language="command" class="syntax">?whisper playerID message</code>
 							<table class="args">
 								<thead>
 									<tr>
@@ -8221,15 +8281,6 @@
 			</a>
 		</div>
 	</footer>
-
-	<!-- tooltips from tippy.js -->
-	
-	<script src="https://unpkg.com/@popperjs/core@2"></script>
-	<script src="https://unpkg.com/tippy.js@6"></script>
-
-	<script src="/js/accordion.js"></script>
-	<script src="/js/sidenav.js"></script>
-	<script src="/js/typeStyling.js"></script
 
 </body>
 
