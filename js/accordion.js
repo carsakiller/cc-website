@@ -44,7 +44,7 @@ class Accordion {
 		// resize accordion on window resize
 		window.addEventListener('resize', (event) => {
 			if (!this.closed) {
-				this.content.style.setProperty('height', `fit-content`);
+				this.open(true);
 			}
 		});
 
@@ -94,7 +94,7 @@ class Accordion {
 	open(instant) {
 		this.element.setAttribute('open', '');
 		this.element.removeAttribute('closed');
-		this.content.style.setProperty('height', `fit-content`);
+		this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
 
 		// skip transition of opening
 		if (instant) {

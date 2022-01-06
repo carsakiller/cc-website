@@ -51,6 +51,7 @@ $sidenavTransitionLength : 0.2s
     .accordions
         .accordion
             .summary
+                font-family: 'Varela Round', sans-serif
                 background: colors.$quaternary
                 align-items: center
             .content
@@ -74,9 +75,11 @@ main
         .accordions
 
             .accordion
+                margin: 7px 0px
                 .summary
                     display: flex
                     align-items: center
+                    padding: 15px 30px
 
                     .name
                         text-align: left
@@ -89,10 +92,43 @@ main
                     .description
                         font-size: 0.9em
                         width: fit-content
+                        line-height: 1.3
                         margin: 0px 12em
                         white-space: nowrap
                         overflow: hidden
                         text-overflow: ellipsis
+
+                .content
+
+                    .description
+                        line-height: 1.6
+
+                    table
+                        text-align: center
+
+                        tbody
+                            word-break: break-all
+                            tr
+                                background: #121212
+
+                                &:nth-of-type(2n)
+                                    background: #1b1b1b
+                            td
+                                padding: 6px 5px
+                                vertical-align: middle
+
+                                .dataType
+                                    word-break: keep-all
+                        thead td
+                            background: #050505
+                            text-transform: uppercase
+                            font-weight: 600
+                            padding: 10px 9px
+                        
+                        &.args
+                            width: calc(100% - 2em)
+                                
+                            
 
 @media (min-width: 1000px)
     main
@@ -105,7 +141,7 @@ main
     #sidenav
         width: calc(100% - 10px)
 
-@media (max-height: 800px)
+@media (max-height: 700px)
     main
         margin-top: 70px
     #sidenav

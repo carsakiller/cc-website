@@ -75,10 +75,10 @@ header + * {
 
 main section {
   max-width: 1200px;
-  width: calc(100% - 40px);
+  width: calc(100% - 45px);
   margin: 30px auto;
   background: #103b77;
-  padding: 20px 5px;
+  padding: 20px 10px;
   border-radius: 10px;
 }
 main section > h1 {
@@ -180,7 +180,7 @@ a > .command:hover {
 
 code {
   font-family: "Source Code Pro", monospace;
-  background: #222222;
+  background: #121212;
   padding: 2px 6px;
   border-radius: 5px;
 }
@@ -200,6 +200,13 @@ code {
   color: #21CFDF;
   box-shadow: #252525 3px 3px 5px 0px;
   white-space: pre;
+}
+
+.bool[true] {
+  color: #00b500;
+}
+.bool[false] {
+  color: #db0000;
 }
 
 .accordion {
@@ -237,6 +244,7 @@ code {
   content: "";
   display: block;
   position: absolute;
+  font-size: 0.8em;
   right: 10px;
   top: 50%;
   transform: translate(0px, -50%);

@@ -4987,10 +4987,10 @@ end
 
 				let roleTable = document.createElement('table');
 				let thead = document.createElement('thead');
+				let tbody = document.createElement('tbody');
 				let tr = document.createElement('tr');
 				let td = document.createElement('td');
 				td.innerText = 'Default Access';
-				td.id = 'title';
 				td.setAttribute('colspan', 2);
 				tr.appendChild(td);
 				thead.appendChild(tr);
@@ -5009,8 +5009,9 @@ end
 					const hasAccess = name === 'Owner' || (role.commands ? Object.keys(role.commands).includes(commandName) : false);
 					td.innerHTML = `<span class="bool im ${hasAccess ? 'im-check-mark' : 'im-x-mark'}" ${hasAccess ? 'true' : 'false'}></span>`; 
 					tr.appendChild(td);
-					roleTable.appendChild(tr);
+					tbody.appendChild(tr);
 				}
+				roleTable.appendChild(tbody);
 				content.appendChild(roleTable);
 
 				if (command.dataReference) {

@@ -1,16 +1,16 @@
 var virtualTypes = document.getElementsByClassName('virtualType');
 var dataTypes = document.getElementsByClassName('dataType');
 
-for (let e of virtualTypes) {
+for (let e of dataTypes) {
     let color = 'orange';
     let type = e.innerText.toLowerCase();
 
     switch(type) {
-        case "steam_id":
+        case "steamid":
             color = '#f6496f';
             e.setAttribute('data-tippy-content', 'A steam_id is a 17 digit number unique to a certain player. It is used to uniquely identify players within C².');
             break;
-        case "peer_id":
+        case "peerid":
             color = '#01b771';
             e.setAttribute('data-tippy-content', 'The peer_id of a user is a unique number given to players by Stormworks. These ids can be seen by using the tilde (~) key in-game.');
             break;
@@ -22,7 +22,7 @@ for (let e of virtualTypes) {
             color = '#d1ce3e';
             e.setAttribute('data-tippy-content', 'A vehicleID is a unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.');
             break;
-        case "item_id":
+        case "itemid":
             color = '#0099dd';
             e.setAttribute('data-tippy-content', 'An item_id is a unique number given to each piece of equipment from Stormworks.');
             break;
@@ -30,18 +30,10 @@ for (let e of virtualTypes) {
             color = '#c25706';
             e.setAttribute('data-tippy-content', 'A named location that C² has added to the game.');
             break;
-        default:
-            color = 'magenta';
-    }
-
-    e.style.color = color;
-}
-
-for (let e of dataTypes) {
-    let color = '';
-    let type = e.innerText.toLowerCase();
-
-    switch(type) {
+        case "letter":
+            color = '#ffea57';
+            e.setAttribute('data-tippy-content', 'A capital letter like "A" or "B".');
+            break;
         case "bool":
             color = '#f92672';
             e.setAttribute('data-tippy-content', 'A boolean value like "true" or "false".');
@@ -54,6 +46,8 @@ for (let e of dataTypes) {
             color = '#e6db74';
             e.setAttribute('data-tippy-content', 'Some text like "hello" or "a".');
             break;
+        default:
+            color = 'magenta';
     }
 
     e.style.color = color;

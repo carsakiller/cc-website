@@ -44,6 +44,7 @@
   width: calc(100% - 20px);
 }
 #sidenav .accordions .accordion .summary {
+  font-family: "Varela Round", sans-serif;
   background: #031b3d;
   align-items: center;
 }
@@ -65,9 +66,13 @@
 main {
   margin: 100px 0px 0px 0px;
 }
+main section .accordions .accordion {
+  margin: 7px 0px;
+}
 main section .accordions .accordion .summary {
   display: flex;
   align-items: center;
+  padding: 15px 30px;
 }
 main section .accordions .accordion .summary .name {
   text-align: left;
@@ -84,10 +89,42 @@ main section .accordions .accordion .summary .description {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  line-height: 1.3;
   margin: 0px 12em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+main section .accordions .accordion .content .description {
+  line-height: 1.6;
+}
+main section .accordions .accordion .content table {
+  text-align: center;
+}
+main section .accordions .accordion .content table tbody {
+  word-break: break-all;
+}
+main section .accordions .accordion .content table tbody tr {
+  background: #121212;
+}
+main section .accordions .accordion .content table tbody tr:nth-of-type(2n) {
+  background: #1b1b1b;
+}
+main section .accordions .accordion .content table tbody td {
+  padding: 6px 5px;
+  vertical-align: middle;
+}
+main section .accordions .accordion .content table tbody td .dataType {
+  word-break: keep-all;
+}
+main section .accordions .accordion .content table thead td {
+  background: #050505;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 9px;
+}
+main section .accordions .accordion .content table.args {
+  width: calc(100% - 2em);
 }
 
 @media (min-width: 1000px) {
@@ -104,7 +141,7 @@ main section .accordions .accordion .summary .description {
     width: calc(100% - 10px);
   }
 }
-@media (max-height: 800px) {
+@media (max-height: 700px) {
   main {
     margin-top: 70px;
   }
