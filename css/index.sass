@@ -1,0 +1,99 @@
+@use "sass:list"
+
+$iconColors : #bde4ff, #93c1ff
+	
+section 
+	.content 
+		width: 90%
+		margin: auto
+
+
+#banner 
+	text-align: center
+	background: #083b9b
+	padding: 20px 0px
+	width: 100%
+
+	a#more
+		font-size: 1.3em
+
+#external_links
+	margin-top: 20px
+	justify-content: space-around
+	font-size: 1.2em
+	> *
+		width: 7em
+		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+		&:before
+			font-size: 4.5em
+			color: white
+		.external
+			margin-top: 10px
+			font-family: 'Poppins'
+		&:hover
+			transform: scale(1.1)
+
+#features 
+	font-size: 1.2em
+	text-align: left
+	width: fit-content
+	margin: auto
+
+	li
+		font-size: 1em
+		padding: 0.3em 2px
+		margin-left: 1.5em
+		white-space: break-spaces
+		position: relative
+		line-height: 1.6
+
+		&:before
+			position: absolute
+			left: -1.7em
+			top: 50%
+			transform: translate(0px, -50%)
+			color: white
+			font-size: 1.3em
+
+		@for $i from 1 through 10
+			&:nth-child(#{$i}):before
+				color: nth($iconColors, $i % 2 + 1)
+
+#news
+	.grid
+		grid-template-columns: 50% 50%
+
+#contributors
+	align-items: stretch
+
+	.profile 
+		width: 40%
+		background: #0a264d
+		padding: 10px 20px
+		display: flex
+		border-radius: 12px
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		align-content: center
+		flex-wrap: nowrap
+
+		img 
+			width: 10em
+			height: 10em
+			border-radius: 50%
+		
+		>.name
+			font-size: 1.8em
+			margin: 5px 0px 10px 0px
+		
+		p
+			margin-top: 30px
+
+@media (max-width: 700px)
+	#news
+		.grid
+			grid-template-columns: 100%
+	#contributors
+		.profile
+			width: 80%

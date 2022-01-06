@@ -1,255 +1,115 @@
 #sidenav {
-    width: 270px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100%;
-    z-index: 2;
-    position: fixed;
-    top: 70px;
+  width: max(300px, 25%);
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+  position: fixed;
+  top: 70px;
+  transition: transform 0.2s ease-in-out;
 }
-
-div#sidenav:not([open]) {
-    transform: translateX(-240px);
+#sidenav:not([open]) {
+  transform: translate(calc(-100% + 30px), 0px);
 }
-
-#sidenav div#openButton {
-    background: white;
-    color: #103b77;
-    border-radius: 0px 10px 10px 0px;
-    cursor: pointer;
-    padding: 10px 4px;
-    align-self: center;
-}
-
-#sidenav #openButton > svg {
-    margin: 0;
-    fill: #103b77;
-    transform: rotateZ(0deg);
-    transition: transform 0.5s ease-in-out;
-}
-
 #sidenav[open] #openButton > svg {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#sidenav #openButton {
+  background: white;
+  color: #2D64AE;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  padding: 10px 4px;
+  align-self: center;
+}
+#sidenav #openButton svg {
+  fill: #2D64AE;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+#sidenav > .content {
+  width: 100%;
+  transform: scaleX(-1);
+  background: #0a264d;
+  padding: 10px 0px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+#sidenav > .content > div {
+  transform: scaleX(-1);
+  width: calc(100% - 20px);
+}
+#sidenav .accordions .accordion .summary {
+  background: #031b3d;
+  align-items: center;
+}
+#sidenav .accordions .accordion .content {
+  background: #001430;
+}
+#sidenav .accordions .accordion .content a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#sidenav .accordions .accordion .content a:hover {
+  color: orange;
+  transform: scale(1.1);
 }
 
-#sidenav > div.content {
-    background: #031b3d;
-    padding: 10px 0;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 1;
+main {
+  margin: 100px 0px 0px 0px;
+}
+main section .accordions .accordion .summary {
+  display: flex;
+  align-items: center;
+}
+main section .accordions .accordion .summary .name {
+  text-align: left;
+  position: absolute;
+  left: 10px;
+  white-space: nowrap;
+  justify-self: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main section .accordions .accordion .summary .description {
+  font-size: 0.9em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px 12em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#sidenav .accordion .content {
-	background: #3c507d;
+@media (min-width: 1000px) {
+  main {
+    margin-left: max(300px, 25%);
+  }
+
+  #sidenav #openButton {
+    display: none;
+  }
 }
-
-#sidenav div.content > div {
-	margin: 0px 10px;
-	width: calc(100% - 20px);
+@media (max-width: 600px) {
+  #sidenav {
+    width: calc(100% - 10px);
+  }
 }
+@media (max-height: 800px) {
+  main {
+    margin-top: 70px;
+  }
 
-#sidenav .content .accordion .content div {
-    margin: 5px 10px;
-	display: block;
-}
-
-#sidenav .content .accordion .content .command {
-	display: block;
-}
-
-main section {
-	margin: 20px auto;
-	max-width: 1500px;
-	background-color: #103b77;
-	padding: 15px;
-	border-radius: 10px;
-}
-
-main section h1,h2,h3,h4,h5,h6 {
-	text-align: center;
-}
-
-main section code {
-	font-family: 'Source Code Pro', monospace;
-}
-
-main section div.content {
-	width: 90%;
-	margin: auto;
-}
-
-main section .accordion .content > div {
-	padding: 10px 20px;
-}
-
-.accordion .summary {
-	background: #0a264d;
-	border-radius: 10px 10px 0px 0px;
-	padding: 10px 10px;
-	display: flex;
-	align-items: center;
-}
-
-.accordion:not([closing]):not([open]) .summary {
-	background: #0a264d;
-	border-radius: 10px;
-}
-
-.accordion .summary span.name {
-	text-align: left;
-	white-space: nowrap;
-}
-
-.accordion .summary span.description {
-	font-size: 0.9em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.accordion .summary span.description::before {
-	content: ' - ';
-	display: none;
-	margin: 0px 10px;
-}
-
-.accordion .content {
-	width: 100%;
-	background: #031b3d;
-	border-radius: 0px 0px 10px 10px;
-}
-
-.cheat {
-	background-color: #dd0000;
-	border-radius: 20px;
-	padding: 0px 5px;
-	font-size: 0.8em;
-}
-
-.commandDefinition .syntax {
-	display: inline-block;
-	margin: 30px auto;
-	padding: 3px 8px;
-	border-radius: 4px;
-}
-
-.commandDefinition .args,.data {
-	overflow-x: auto;
-}
-
-.commandDefinition .args table {
-	border-spacing: 5px 5px;
-	width: calc(100% - 4px);
-	text-align: center;
-	margin: 0;
-	min-width: 500px;
-}
-
-.commandDefinition .flex.row {
-	align-items: flex-start;
-}
-
-.commandDefinition table {
-	border-collapse: collapse;
-	font-size: 0.8em;
-}
-
-.commandDefinition table td {
-	word-break: break-word;
-	vertical-align: middle;
-	padding: 4px;
-}
-
-.commandDefinition table th {
-	padding: 8px;
-	text-align: center;
-}
-
-.commandDefinition table tr {
-	background: #0c0c0c;
-}
-
-.commandDefinition table tr:nth-of-type(2n) {
-	background: #16161e;
-}
-
-.commandDefinition .args table .description {
-	width: 450px;
-	text-align: left;
-}
-
-.commandDefinition table.access {
-	font-size: 0.8em;
-	text-align: justify;
-	border-spacing: 5px 8px;
-}
-
-.commandDefinition .data table {
-	text-align: center;
-}
-
-.commandDefinition div.data {
-	overflow-y: auto;
-	max-height: 500px;
-}
-
-.commandDefinition .examples h1 {
-	font-size: 1.4em;
-	margin-top: 0;
-}
-
-.commandDefinition .examples code {
-	display: block;
-	margin: 4px auto;
-	border-radius: 4px;
-	padding: 2px 15px;
-	font-size: 0.8em;
-}
-
-.commandDefinition .examples p {
-	margin: 5px auto;
-}
-
-main section .true,.false {
-	border-radius: 15px;
-	text-align: center;
-	width: 60px;
-	padding: 1px 3px;
-	margin: auto;
-}
-
-main section .true {
-	background: green;
-}
-
-main section .false {
-	background: #dd0000;
-}
-
-
-@media only screen and (max-width: 1000px) {
-	main section div.content {
-		width: 98%;
-	}
-}
-
-@media only screen and (min-width: 1000px) {
-	#sidenav #openButton {
-		display: none;
-	}
-}
-
-
-/* Only allow hover on clients with pointers (no touch screens) */
-@media(hover: hover) and (pointer: fine) {
-	#sidenav .content .accordion .content .command:hover{
-		background: #dddddd;
-	}
-}
+  #sidenav {
+    top: 40px;
+  }
+}/*# sourceMappingURL=commands.css.map */

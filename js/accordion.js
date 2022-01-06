@@ -33,18 +33,44 @@ class Accordion {
 			  this.click(event);
 			}
 		  });
+		  
 		// expand accordion when content is given focus
 		this.content.addEventListener('focusin', event => {
 			if (this.closed) {
 				this.click(event);
 			}
 		})
+
 		// resize accordion on window resize
 		window.addEventListener('resize', (event) => {
 			if (!this.closed) {
-				this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
+				this.content.style.setProperty('height', `fit-content`);
 			}
 		});
+
+		window.addEventListener('hashchange', (event) => {
+			const target = window.location.hash;
+
+			if (!target) return;
+
+			if (target.substring(1) === this.element.id) {
+				window.scroll(0, window.scrollY); // cancel default scroll
+				this.open(true);
+				setTimeout(() => this.element.scrollIntoView(true), 10);
+			}
+		});
+
+		window.addEventListener('load', (event) => {
+			const target = window.location.hash;
+
+			if (!target) return;
+
+			if (target.substring(1) === this.element.id) {
+				window.scroll(0, window.scrollY); // cancel default scroll
+				this.open(true);
+				setTimeout(() => this.element.scrollIntoView(true), 10);
+			}
+		})
 	}
 
 	/**
@@ -65,20 +91,26 @@ class Accordion {
 	/**
 	 * Opens the accordion, displaying it's contents
 	 */
-	open() {
+	open(instant) {
 		this.element.setAttribute('open', '');
 		this.element.removeAttribute('closed');
-		this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
+		this.content.style.setProperty('height', `fit-content`);
+
+		// skip transition of opening
+		if (instant) {
+			this.content.classList.add('skipTransition');
+			setTimeout(() => this.content.classList.remove('skipTransition'), 1);
+		}
 
 		// set state of accordion when animation is complete
 		setTimeout(() => {
 			this.closed = false;
 		}, ANIMATION_DURATION);
 
-		// close all other accorions that are open in this accordions group
+		// close all other accordions that are open in this accordions group
 		accordions[this.groupIndex].forEach((instance) => {
 			if (instance !== this && !instance.closed) {
-				instance.close();
+				instance.close(instant ? true : false);
 			}
 		});
 	}
@@ -86,10 +118,18 @@ class Accordion {
 	/**
 	 * Closes the accordion, hiding it's contents
 	 */
-	close() {
+	close(instant) {
 		this.element.removeAttribute('open');
 		this.content.style.removeProperty('height');
 		this.element.setAttribute('closing', '')
+
+		if (instant) {
+			this.content.classList.add('skipTransition');
+			setTimeout(() => this.content.classList.remove('skipTransition'), 1);
+			this.element.removeAttribute('closing');
+			this.closed = true;
+			return
+		}
 
 		// set state of accordion when animation is complete
 		setTimeout(() => {
@@ -100,11 +140,18 @@ class Accordion {
 }
 
 
+function findAccordions() {
+	// create a new accordion for each accordion element in the document
+	for (const group of document.getElementsByClassName('accordions')) {
+		let groupIndex = accordions.push([]) - 1;
 
-// create a new accordion for each accordion element in the document
-document.querySelectorAll('.accordions').forEach((group) => {
-	let groupIndex = accordions.push([]) - 1;
-	group.querySelectorAll('.accordion').forEach((accordion, n) => {
-		accordions[groupIndex].push(new Accordion(accordion, groupIndex, n));
-	});
-});
+		const children = Array.from(group.getElementsByClassName('accordion'));
+		children.forEach((v, k) => {
+			accordions[groupIndex].push(new Accordion(v, groupIndex, k));
+		})
+	}
+}
+
+
+document.addEventListener('relocateAccordions', findAccordions);
+findAccordions();

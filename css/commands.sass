@@ -1,0 +1,112 @@
+@use 'colors'
+
+$sidenavTransitionLength : 0.2s
+
+#sidenav
+    width: max(300px, 25%)
+    height: 100%
+    margin: 0
+    display: flex
+    flex-wrap: nowrap
+    z-index: 1
+    position: fixed
+    top: 70px
+    transition: transform $sidenavTransitionLength ease-in-out
+
+    &:not([open])
+        transform: translate(calc(-100% + 30px), 0px)
+
+    &[open]
+        #openButton > svg
+            transform: rotateY(180deg)            
+    
+    #openButton
+        background: white
+        color: colors.$primary
+        border-radius: 0px 10px 10px 0px
+        cursor: pointer
+        padding: 10px 4px
+        align-self: center
+
+        svg
+            fill: colors.$primary
+            transform: rotate(0deg)
+            transition: transform 0.5s ease-in-out
+    
+    > .content
+        width: 100%
+        transform: scaleX(-1) // Flip ontents so scrollbar is on left
+        background: colors.$tertiary
+        padding: 10px 0px
+        overflow-x: hidden
+        display: flex
+        flex-direction: column
+        align-content: center
+        align-items: center
+
+        > div
+            transform: scaleX(-1) // Flip contents back to right way round
+            width: calc(100% - 20px)
+
+    .accordions
+        .accordion
+            .summary
+                background: colors.$quaternary
+                align-items: center
+            .content
+                background: colors.$quinary
+                a
+                    display: block
+                    color: white
+                    text-align: center
+                    font-weight: normal
+                    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out
+
+                    &:hover
+                        color: colors.$highlight
+                        transform: scale(1.1)
+
+main
+    margin: 100px 0px 0px 0px
+
+    section
+
+        .accordions
+
+            .accordion
+                .summary
+                    display: flex
+                    align-items: center
+
+                    .name
+                        text-align: left
+                        position: absolute
+                        left: 10px
+                        white-space: nowrap
+                        justify-self: start
+                        width: fit-content
+
+                    .description
+                        font-size: 0.9em
+                        width: fit-content
+                        margin: 0px 12em
+                        white-space: nowrap
+                        overflow: hidden
+                        text-overflow: ellipsis
+
+@media (min-width: 1000px)
+    main
+        margin-left: max(300px, 25%)
+    #sidenav
+        #openButton
+            display: none
+
+@media (max-width: 600px)
+    #sidenav
+        width: calc(100% - 10px)
+
+@media (max-height: 800px)
+    main
+        margin-top: 70px
+    #sidenav
+        top: 40px

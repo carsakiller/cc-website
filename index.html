@@ -1,335 +1,380 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Carsa's Commands - Home</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="theme-color" content="#103b77">
-		<link rel="stylesheet" href="./css/master.css">
-		<link rel="stylesheet" href="./css/index.css">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<head>
+	<title>Carsa's Commands - Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#103b77">
 
-		<script src="./js/accordion.js" defer></script>
-	</head>
-	<body>
-		<header>
-			<div id="gradient">
-				<h1 class="logo">C²</h1>
-			</div>
-			<nav>
-				<a href="docs/commands">Commands</a>
-				<a href="docs/code">Documentation</a>
-			</nav>
-		</header>
-		<div id="header_spacer"><br></div>
-		<div id="banner">
-			<h1>🎉 New v2.0 Update! 🎉</h1>
-			<p>Adds roles, support for new equipment, the ability to call commands with buttons, fixes, and more!</p>
-			<a href="#new">Learn More</a>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/master.css">
+	<link rel="stylesheet" href="/css/index.css">
+
+	<!-- fonts -->
+	<link rel="stylesheet" href="/assets/fonts/iconmonstr-3.1/css/iconmonstr-iconic-font.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+
+	<script src="/js/accordion.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div id="gradient">
+			<span id="logo">C²</span>
 		</div>
-		<main>
-			<section id="introduction">
-				<h1>An Addon for <a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" class="third_party_link">Stormworks</a></h1>
-				<div class="content">
-					<p>
-						Carsa's Commands adds many features to Stormworks. Some are for fun,
-						some are for adding to the sandbox experience, and some I feel should
-						have been included in the base game. You can subscribe to the addon
-						through the Steam Workshop below. For reporting bugs, please use the
-						GitHub repository.
-						<br>
-					</p>
+		<nav>
+			<a href="docs/commands">Commands</a>
+			<a href="docs/code">Documentation</a>
+		</nav>
+	</header>
+	<div id="banner">
+		<h1>
+			<svg width="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+				<path fill="#DD2E44" d="M11.626 7.488c-.112.112-.197.247-.268.395l-.008-.008L.134 33.141l.011.011c-.208.403.14 1.223.853 1.937.713.713 1.533 1.061 1.936.853l.01.01L28.21 24.735l-.008-.009c.147-.07.282-.155.395-.269 1.562-1.562-.971-6.627-5.656-11.313-4.687-4.686-9.752-7.218-11.315-5.656z" />
+				<path fill="#EA596E" d="M13 12L.416 32.506l-.282.635.011.011c-.208.403.14 1.223.853 1.937.232.232.473.408.709.557L17 17l-4-5z" />
+				<path fill="#A0041E" d="M23.012 13.066c4.67 4.672 7.263 9.652 5.789 11.124-1.473 1.474-6.453-1.118-11.126-5.788-4.671-4.672-7.263-9.654-5.79-11.127 1.474-1.473 6.454 1.119 11.127 5.791z" />
+				<path fill="#AA8DD8" d="M18.59 13.609c-.199.161-.459.245-.734.215-.868-.094-1.598-.396-2.109-.873-.541-.505-.808-1.183-.735-1.862.128-1.192 1.324-2.286 3.363-2.066.793.085 1.147-.17 1.159-.292.014-.121-.277-.446-1.07-.532-.868-.094-1.598-.396-2.11-.873-.541-.505-.809-1.183-.735-1.862.13-1.192 1.325-2.286 3.362-2.065.578.062.883-.057 1.012-.134.103-.063.144-.123.148-.158.012-.121-.275-.446-1.07-.532-.549-.06-.947-.552-.886-1.102.059-.549.55-.946 1.101-.886 2.037.219 2.973 1.542 2.844 2.735-.13 1.194-1.325 2.286-3.364 2.067-.578-.063-.88.057-1.01.134-.103.062-.145.123-.149.157-.013.122.276.446 1.071.532 2.037.22 2.973 1.542 2.844 2.735-.129 1.192-1.324 2.286-3.362 2.065-.578-.062-.882.058-1.012.134-.104.064-.144.124-.148.158-.013.121.276.446 1.07.532.548.06.947.553.886 1.102-.028.274-.167.511-.366.671z" />
+				<path fill="#77B255" d="M30.661 22.857c1.973-.557 3.334.323 3.658 1.478.324 1.154-.378 2.615-2.35 3.17-.77.216-1.001.584-.97.701.034.118.425.312 1.193.095 1.972-.555 3.333.325 3.657 1.479.326 1.155-.378 2.614-2.351 3.17-.769.216-1.001.585-.967.702.033.117.423.311 1.192.095.53-.149 1.084.16 1.233.691.148.532-.161 1.084-.693 1.234-1.971.555-3.333-.323-3.659-1.479-.324-1.154.379-2.613 2.353-3.169.77-.217 1.001-.584.967-.702-.032-.117-.422-.312-1.19-.096-1.974.556-3.334-.322-3.659-1.479-.325-1.154.378-2.613 2.351-3.17.768-.215.999-.585.967-.701-.034-.118-.423-.312-1.192-.096-.532.15-1.083-.16-1.233-.691-.149-.53.161-1.082.693-1.232z" />
+				<path fill="#AA8DD8" d="M23.001 20.16c-.294 0-.584-.129-.782-.375-.345-.432-.274-1.061.156-1.406.218-.175 5.418-4.259 12.767-3.208.547.078.927.584.849 1.131-.078.546-.58.93-1.132.848-6.493-.922-11.187 2.754-11.233 2.791-.186.148-.406.219-.625.219z" />
+				<path fill="#77B255" d="M5.754 16c-.095 0-.192-.014-.288-.042-.529-.159-.829-.716-.67-1.245 1.133-3.773 2.16-9.794.898-11.364-.141-.178-.354-.353-.842-.316-.938.072-.849 2.051-.848 2.071.042.551-.372 1.031-.922 1.072-.559.034-1.031-.372-1.072-.923-.103-1.379.326-4.035 2.692-4.214 1.056-.08 1.933.287 2.552 1.057 2.371 2.951-.036 11.506-.542 13.192-.13.433-.528.712-.958.712z" />
+				<circle fill="#5C913B" cx="25.5" cy="9.5" r="1.5" />
+				<circle fill="#9266CC" cx="2" cy="18" r="2" />
+				<circle fill="#5C913B" cx="32.5" cy="19.5" r="1.5" />
+				<circle fill="#5C913B" cx="23.5" cy="31.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="28" cy="4" r="2" />
+				<circle fill="#FFCC4D" cx="32.5" cy="8.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="29.5" cy="12.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="7.5" cy="23.5" r="1.5" /></svg>
+			<sub>v</sub>2.0 Update
+			<svg width="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+				<path fill="#DD2E44" d="M11.626 7.488c-.112.112-.197.247-.268.395l-.008-.008L.134 33.141l.011.011c-.208.403.14 1.223.853 1.937.713.713 1.533 1.061 1.936.853l.01.01L28.21 24.735l-.008-.009c.147-.07.282-.155.395-.269 1.562-1.562-.971-6.627-5.656-11.313-4.687-4.686-9.752-7.218-11.315-5.656z" />
+				<path fill="#EA596E" d="M13 12L.416 32.506l-.282.635.011.011c-.208.403.14 1.223.853 1.937.232.232.473.408.709.557L17 17l-4-5z" />
+				<path fill="#A0041E" d="M23.012 13.066c4.67 4.672 7.263 9.652 5.789 11.124-1.473 1.474-6.453-1.118-11.126-5.788-4.671-4.672-7.263-9.654-5.79-11.127 1.474-1.473 6.454 1.119 11.127 5.791z" />
+				<path fill="#AA8DD8" d="M18.59 13.609c-.199.161-.459.245-.734.215-.868-.094-1.598-.396-2.109-.873-.541-.505-.808-1.183-.735-1.862.128-1.192 1.324-2.286 3.363-2.066.793.085 1.147-.17 1.159-.292.014-.121-.277-.446-1.07-.532-.868-.094-1.598-.396-2.11-.873-.541-.505-.809-1.183-.735-1.862.13-1.192 1.325-2.286 3.362-2.065.578.062.883-.057 1.012-.134.103-.063.144-.123.148-.158.012-.121-.275-.446-1.07-.532-.549-.06-.947-.552-.886-1.102.059-.549.55-.946 1.101-.886 2.037.219 2.973 1.542 2.844 2.735-.13 1.194-1.325 2.286-3.364 2.067-.578-.063-.88.057-1.01.134-.103.062-.145.123-.149.157-.013.122.276.446 1.071.532 2.037.22 2.973 1.542 2.844 2.735-.129 1.192-1.324 2.286-3.362 2.065-.578-.062-.882.058-1.012.134-.104.064-.144.124-.148.158-.013.121.276.446 1.07.532.548.06.947.553.886 1.102-.028.274-.167.511-.366.671z" />
+				<path fill="#77B255" d="M30.661 22.857c1.973-.557 3.334.323 3.658 1.478.324 1.154-.378 2.615-2.35 3.17-.77.216-1.001.584-.97.701.034.118.425.312 1.193.095 1.972-.555 3.333.325 3.657 1.479.326 1.155-.378 2.614-2.351 3.17-.769.216-1.001.585-.967.702.033.117.423.311 1.192.095.53-.149 1.084.16 1.233.691.148.532-.161 1.084-.693 1.234-1.971.555-3.333-.323-3.659-1.479-.324-1.154.379-2.613 2.353-3.169.77-.217 1.001-.584.967-.702-.032-.117-.422-.312-1.19-.096-1.974.556-3.334-.322-3.659-1.479-.325-1.154.378-2.613 2.351-3.17.768-.215.999-.585.967-.701-.034-.118-.423-.312-1.192-.096-.532.15-1.083-.16-1.233-.691-.149-.53.161-1.082.693-1.232z" />
+				<path fill="#AA8DD8" d="M23.001 20.16c-.294 0-.584-.129-.782-.375-.345-.432-.274-1.061.156-1.406.218-.175 5.418-4.259 12.767-3.208.547.078.927.584.849 1.131-.078.546-.58.93-1.132.848-6.493-.922-11.187 2.754-11.233 2.791-.186.148-.406.219-.625.219z" />
+				<path fill="#77B255" d="M5.754 16c-.095 0-.192-.014-.288-.042-.529-.159-.829-.716-.67-1.245 1.133-3.773 2.16-9.794.898-11.364-.141-.178-.354-.353-.842-.316-.938.072-.849 2.051-.848 2.071.042.551-.372 1.031-.922 1.072-.559.034-1.031-.372-1.072-.923-.103-1.379.326-4.035 2.692-4.214 1.056-.08 1.933.287 2.552 1.057 2.371 2.951-.036 11.506-.542 13.192-.13.433-.528.712-.958.712z" />
+				<circle fill="#5C913B" cx="25.5" cy="9.5" r="1.5" />
+				<circle fill="#9266CC" cx="2" cy="18" r="2" />
+				<circle fill="#5C913B" cx="32.5" cy="19.5" r="1.5" />
+				<circle fill="#5C913B" cx="23.5" cy="31.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="28" cy="4" r="2" />
+				<circle fill="#FFCC4D" cx="32.5" cy="8.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="29.5" cy="12.5" r="1.5" />
+				<circle fill="#FFCC4D" cx="7.5" cy="23.5" r="1.5" /></svg>
+		</h1>
+		<p>Adds roles, support for new equipment, the ability to call commands with buttons, fixes, and more!</p>
+		<br>
+		<a id="more" href="#news">Learn More</a>
+	</div>
+	<main>
+		<section id="introduction">
+			<h1>An Addon for <a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" class="external">Stormworks</a></h1>
+			<div class="content">
+				<p>
+					Carsa's Commands adds many features to Stormworks. Some are for fun,
+					some are for adding to the sandbox experience, and some I feel should
+					have been included in the base game. You can subscribe to the addon
+					through the Steam Workshop below. For reporting bugs, please use the
+					GitHub repository.
 					<br>
-					<div class="flex row" id="external_links">
-						<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
-							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60" viewBox="0 0 233 233" class="steamLogo">
-								<defs>
-									<linearGradient id="a" x2="50%" x1="50%" y2="100%">
-									<stop stop-color="#FFFFFF" offset="0"/>
-									<stop stop-color="#FFFFFF" offset=".21248"/>
-									<stop stop-color="#0A1B48" offset=".40695"/>
-									<stop stop-color="#132E62" offset=".58110"/>
-									<stop stop-color="#144B7E" offset=".73760"/>
-									<stop stop-color="#136497" offset=".87279"/>
-									<stop stop-color="#1387B8" offset="1"/>
-									</linearGradient>
-								</defs>
-								<path fill="#ffffff" d="m4.8911 150.01c14.393 48.01 58.916 82.99 111.61 82.99 64.34 0 116.5-52.16 116.5-116.5 0-64.341-52.16-116.5-116.5-116.5-61.741 0-112.26 48.029-116.25 108.76 7.5391 12.66 10.481 20.49 4.6411 41.25z"/>
-								<path fill="#103b77" d="m110.5 87.322c0 0.196 0 0.392 0.01 0.576l-28.508 41.412c-4.618-0.21-9.252 0.6-13.646 2.41-1.937 0.79-3.752 1.76-5.455 2.88l-62.599-25.77c0.00049 0-1.4485 23.83 4.588 41.59l44.254 18.26c2.222 9.93 9.034 18.64 19.084 22.83 16.443 6.87 35.402-0.96 42.242-17.41 1.78-4.3 2.61-8.81 2.49-13.31l40.79-29.15c0.33 0.01 0.67 0.02 1 0.02 24.41 0 44.25-19.9 44.25-44.338 0-24.44-19.84-44.322-44.25-44.322-24.4 0-44.25 19.882-44.25 44.322zm-6.84 83.918c-5.294 12.71-19.9 18.74-32.596 13.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405 5.97c9.363 3.9 20.105-0.54 23.997-9.9 3.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18 12.278-2.26 18.381 0.28 6.153 2.56 10.927 7.38 13.457 13.54s2.52 12.96-0.04 19.1m51.09-54.38c-16.25 0-29.48-13.25-29.48-29.538 0-16.275 13.23-29.529 29.48-29.529 16.26 0 29.49 13.254 29.49 29.529 0 16.288-13.23 29.538-29.49 29.538m-22.09-29.583c0-12.253 9.92-22.191 22.14-22.191 12.23 0 22.15 9.938 22.15 22.191 0 12.254-9.92 22.183-22.15 22.183-12.22 0-22.14-9.929-22.14-22.183z"/>
-							</svg>
-							<br>
-							<div class="third_party_link">Subscribe</div>
-						</a>
-						<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
-							<svg viewBox="0 0 16 16" version="1.1" width="60" height="60" data-view-component="true" class="githubLogo">
-								<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-							</svg>
-							<br>
-							<div class="third_party_link">View GitHub</div>
-						</a>
-						<a title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank">
-							<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path d="M7.074 1.408c0-.778.641-1.408 1.431-1.408.942 0 1.626.883 1.38 1.776-.093.336-.042.695.138.995.401.664 1.084 1.073 1.977 1.078.88-.004 1.572-.408 1.977-1.078.181-.299.23-.658.139-.995-.247-.892.435-1.776 1.379-1.776.79 0 1.431.63 1.431 1.408 0 .675-.482 1.234-1.117 1.375-.322.071-.6.269-.77.548-.613 1.017.193 1.917.931 2.823-1.211.562-2.525.846-3.97.846-1.468 0-2.771-.277-3.975-.84.748-.92 1.555-1.803.935-2.83-.168-.279-.446-.477-.768-.548-.636-.14-1.118-.699-1.118-1.374zm3.926 7.531c-1.709-.135-3.271-.599-4.703-1.435-.217.359-.421.738-.601 1.146-.227.514-.646.552-.941.437l-2.295-.89c-.542-.21-1.153.051-1.367.584-.213.533.053 1.136.594 1.346l2.231.866c.496.192.854.694.773 1.274-.106.758-.683 1.111-1.235 1.111h-2.402c-.582 0-1.054.464-1.054 1.037s.472 1.037 1.054 1.037h2.387c.573 0 1.159.372 1.265 1.057.112.728-.228 1.229-.751 1.462l-2.42 1.078c-.53.236-.766.851-.526 1.373s.865.753 1.395.518l2.561-1.14c.307-.137.688-.106.901.259.922 1.587 2.674 3.361 5.134 3.941v-15.061zm9.559 6.513h2.387c.583 0 1.055-.464 1.055-1.037s-.472-1.037-1.055-1.037h-2.402c-.574 0-1.137-.393-1.227-1.052-.092-.677.286-1.147.766-1.333l2.23-.866c.541-.21.808-.813.594-1.346-.213-.533-.825-.795-1.367-.584l-2.294.891c-.329.127-.734.036-.926-.401-.185-.423-.396-.816-.62-1.188-1.433.829-3.008 1.3-4.699 1.439v15.062c2.406-.567 4.134-2.284 5.072-3.837.262-.432.629-.514.964-.364l2.561 1.14c.528.236 1.154.005 1.395-.518.239-.522.005-1.137-.526-1.373l-2.42-1.078c-.494-.221-.867-.738-.764-1.383.128-.803.717-1.135 1.276-1.135z"/></svg>
-							<br>
-							<div class="third_party_link">Report Issue</div>
-						</a>
-					</div>
-
-					<h2>Features:</h2>
-					<ul>
-						<li bullet="💼">Roles system that allows the host to give players certain permissions</li>
-						<li bullet="👮‍♀️"><span class="command">?ban</span> as well as <span class="command">?unban</span> (stormworks does not have an unban)</li>
-						<li bullet="🧯">Equip players with specific equipment</li>
-						<li bullet="🚗">View and manage vehicles in the world</li>
-						<li bullet="👻">Teleport to coordinates, named locations, and players - or teleport them to you</li>
-						<li bullet="🚁">Teleport vehicles to your current location</li>
-						<li bullet="📜">Manage and display rules to players</li>
-						<li bullet="📝">Customize preferences</li>
-						<li bullet="🙊">Whisper to other players</li>
-						<li bullet="🙋‍♂️">Help command that explains each command in-game</li>
-					</ul>
+				</p>
+				<br>
+				<div class="flex" id="external_links">
+					<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+						<svg class="logo steam" xmlns="http://www.w3.org/2000/svg" width="4.5em" viewBox="0 0 232.75 233">
+							<path class="primary" d="M116.5,0A116.52,116.52,0,0,0,.25,108.76l0,.08h0L62.9,134.6a31.53,31.53,0,0,1,5.46-2.88A31.9,31.9,0,0,1,82,129.31L110.51,87.9c0-.19,0-.38,0-.58a44.25,44.25,0,1,1,44.25,44.34l-1,0L113,160.79a32.3,32.3,0,0,1-63.82,7.89L5,150.48A116.51,116.51,0,1,0,116.5,0Z" transform="translate(-0.25)" />
+							<path class="secondary" d="M103.7,152.14a24.85,24.85,0,0,0-31.84-13.82l14.89,6.17a18.37,18.37,0,0,1-14.11,33.93l-14.41-6a24.86,24.86,0,0,0,45.43-1.21h0A24.84,24.84,0,0,0,103.7,152.14Z" transform="translate(-0.25)" />
+							<path class="secondary" d="M154.75,57.79a29.54,29.54,0,1,0,29.49,29.53A29.55,29.55,0,0,0,154.75,57.79Zm.05,51.67A22.19,22.19,0,1,1,177,87.28,22.16,22.16,0,0,1,154.8,109.46Z" transform="translate(-0.25)" />
+						</svg>
+						<div class="external">Subscribe</div>
+					</a>
+					<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+						<div class="external">View GitHub</div>
+					</a>
+					<a class="im im-bug" title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank">
+						<div class="external">Report Issue</div>
+					</a>
 				</div>
-			</section>
 
-			<section>
-				<a class="anchor" name="new"></a>
-				<h1>What's New?</h1>
-				<div class="content">
-					<h2>v2.0</h2>
-					<p>
-						This latest version adds plenty of features that I have been wanting to add
-						for a long while. There are quite a few changes to already existing commands
-						as well. For example, the <span class="command">?tp</span> command was
-						seperated into multiple different commands. I recommend viewing the full
-						<a href="changelog#v2" target="_blank">change log</a>.
-					</p>
-					<div class="grid">
-						<div>
-							<h3>✨Features✨</h3>
-							<div class="accordions">
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Role system to manage player permissions</div></div>
-									<div class="content">
-										<p>
-											Managing what permissions players have is now much more in-depth.
-											You can add/remove roles, edit their in-game permissions, and
-											change which commands a role has permission to use.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Call commands using buttons</div></div>
-									<div class="content">
-										<p>
-											You can now call commands using buttons! Just name the button
-											<span class="command">?cc&lt;command name&gt;</span> - for
-											example, <span class="command">?ccHeal</span>. So long as the
-											player pressing the button has access to the command, they will
-											be healed!
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Server autosaves persistent data</div></div>
-									<div class="content">
-										<p>
-											<code>server.save()</code> is called after changes are made to the
-											persistent data (change preferences, ban player, etc.). The autosaves
-											are saved as "CC_Autosave" in the saves folder. As of the release of
-											this version, <code>server.save()</code> still only applies to
-											dedicated servers for some reason, so this feature will only work
-											with dedicated servers.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Teleport to vehicle command</div></div>
-									<div class="content">
-										<p>
-											There is now a new <span class="command">?tp2v</span> command that
-											teleports the player to the requested vehicle.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div><span class="command">?clearRadiation</span> command</div></div>
-									<div class="content">
-										<p>
-											It is easier than ever to clean the nuclear apocolypse from your server.
-											Simply call <span class="command">?clearRadiation</span>!
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Limit the max weight of vehicles</div></div>
-									<div class="content">
-										<p>
-											Are you tired of creations the size of Jupiter spawning on your server,
-											slowing everything to a crawl? Well here is a setting to help combat that.
-											You can now set the max <a title="mcro.org" href="http://mcro.org/issues/view_issue/21635#editor_reply_19390" target="_blank" class="third_party_link">mass</a> for vehicles! If a vehicle is being spawned
-											that is over this set limit, it will be removed from the world before it
-											can cause too much damage. The player spawning it will also be notified
-											that your server doesn't deserve to be abused ❤.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h3>🔧Fixes🔧</h3>
-							<div class="accordions">
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div><span class="command">?give</span class="command"> now supports the new data parameters</div></div>
-									<div class="content">
-										<p>
-											v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem</code> works.
-											The function now allows the user to define some data for the item such as
-											durability/ammo or radio frequency. By default, this function would now give
-											characters the items with 0 durability/ammo - for some reason. This has been
-											fixed in v2.0.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Easier ways to target players for commands</div></div>
-									<div class="content">
-										<p>
-											Previously, you would have to know the peer id of the player you are using a command
-											on. Now you can enter the player's name instead - or in the case of using a command on
-											yourself, you can use "me". More commands will also automatically target the player
-											calling it if no other player is defined.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div><span class="command">?help</span class="command"> has been renamed for compatibility</div></div>
-										<div class="content">
-											<p>
-												In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
-												has been renamed to <span class="command">?ccHelp</span class="command">. This makes things a little nicer
-												if you have multiple add-ons all trying to use the <span class="command">?help</span class="command"> command.
-											</p>
-										</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Greatly improved algorithm for closest string</div></div>
-									<div class="content">
-										<p>
-											Previously, when using <span class="command">?tp</span> to teleport to a location,
-											there was a less than desireable algorithm in place that would estimate which
-											location you <i>really</i> meant. This was okay at dealing with misspellings of a
-											character or two, but it was really bad at "autocomplete". If you tried to just enter
-											a few characters of a location, it was a gamble as to where you would really end up.
-											<br>
-											<br>								
-											I am happy to announce that a much better algorithm is in place now that is vastly
-											superior at autocompleting strings, given options to pick from. Expect
-											<span class="command">?tpl</span> (the new teleport to location command) to work a lot
-											better than the previous <span class="command">?tp</span> command.
-										</p>
-									</div>
-								</div>
-								<div class="accordion">
-									<div class="summary" tabindex="0"><div>Telport commands better prevent clipping</div></div>
-									<div class="content">
-										<p>
-											One of the most frustrating parts of developing this addon originally was discovering
-											that there is no loading screen when teleporting a player to an unloaded location. The
-											player will just be telported instantly before collisions are loaded, and often, the
-											player will just fall through the ground. The loading times of the collision meshes
-											appear to have gotten even worse lately, causing people to fall through the terrain
-											even more now. My previous fix of teleporting players multiple times when teleporting
-											far away was no longer sufficient.
-											<br>
-											<br>
-											Now the script will teleport the player, then "hold"
-											them stationary for a short while (like a loading screen) while things load in.
-											Unfortunately, there is no way to tell if the collisions have loaded in, so it is just
-											an estimated time delay. This seems to be sufficient for now though.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+				<br>
 
-			<section>
-				<h1>Contributors</h1>
-				<div id="contributors" class="flex">
-					<div class="profile">
-						<h2>Project Lead</h2>
-						<img src="images/carsa.webp" width="150" height="150">
-						<h3>Carsa</h3>
-						<blockquote>Addon Lua, where the code to fix flaws within the game amounts to more work than the initial feature</blockquote>
-						<p>
-
-						</p>
-					</div>
-					<div class="profile">
-						<h2>Developer</h2>
-						<img src="images/pony.webp" width="150" height="150">
-						<h3>CrazyFluffyPony</h3>
-						<blockquote>
-							The only way to not make a mistake while coding in the in-game editor is to not use it
-						</blockquote>
-						<p>
-							He is a literal pony
-						</p>
-					</div>
-					<div class="profile">
-						<h2>Developer</h2>
-						<img src="images/dargino.webp" width="150" height="150">
-						<h3>Dargino</h3>
-						<blockquote>
-							Stonkwonk go brr
-						</blockquote>
-						<p>
-							Real life aussie man
-						</p>
-					</div>
-					<div class="profile">
-						<h2>Developer</h2>
-						<img src="images/leopard.webp" width="150" height="150">
-						<h3>Leopard</h3>
-						<blockquote>
-							<svg width="50px" height="50px" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve" version="1.1"><defs id="defs6"><clipPath id="clipPath16" clipPathUnits="userSpaceOnUse"><path id="path18" d="M 0,36 36,36 36,0 0,0 0,36 Z"/></clipPath></defs><g transform="matrix(1.25,0,0,-1.25,0,45)" id="g10"><g id="g12"><g clip-path="url(#clipPath16)" id="g14"><g transform="translate(2,20)" id="g20"><path id="path22" style="fill:#ffcc4d;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-8.837 7.164,-16 16,-16 8.837,0 16,7.163 16,16 C 32,8.836 24.837,16 16,16 7.164,16 0,8.836 0,0"/></g><g transform="translate(15.4063,25.5)" id="g24"><path id="path26" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.381 -0.896,-2.5 -2,-2.5 -1.104,0 -2,1.119 -2,2.5 0,1.38 0.896,2.5 2,2.5 1.104,0 2,-1.12 2,-2.5"/></g><g transform="translate(26,24.5)" id="g28"><path id="path30" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,-1.381 -0.895,-2.5 -2,-2.5 -1.104,0 -2,1.119 -2,2.5 0,1.38 0.896,2.5 2,2.5 1.105,0 2,-1.12 2,-2.5"/></g><g transform="translate(9.6709,29.667)" id="g32"><path id="path34" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.164,0.087 -0.303,0.223 -0.391,0.398 -0.607,0.827 -0.431,1.325 0.002,1.511 4.268,3.341 7.701,1.554 7.845,1.477 8.278,1.246 8.453,0.729 8.236,0.323 8.02,-0.082 7.496,-0.223 7.063,0.005 6.94,0.069 4.231,1.437 0.785,-0.042 0.528,-0.151 0.238,-0.127 0,0"/></g><g transform="translate(14.7427,16.4277)" id="g36"><path id="path38" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.136,0.127 -0.236,0.293 -0.276,0.486 -0.375,0.955 -0.078,1.392 0.389,1.46 4.981,2.138 7.841,-0.469 7.962,-0.58 8.322,-0.914 8.357,-1.457 8.044,-1.795 7.732,-2.131 7.189,-2.133 6.83,-1.801 6.726,-1.709 4.458,0.307 0.748,-0.24 0.471,-0.281 0.197,-0.184 0,0"/></g><g transform="translate(20.4307,25.917)" id="g40"><path id="path42" style="fill:#664500;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.156,0.098 -0.286,0.243 -0.362,0.424 -0.549,0.866 -0.339,1.352 0.105,1.508 4.486,3.044 7.79,1.028 7.929,0.941 8.344,0.681 8.483,0.154 8.24,-0.237 7.998,-0.627 7.464,-0.732 7.049,-0.475 6.929,-0.402 4.321,1.146 0.782,-0.095 0.518,-0.187 0.23,-0.143 0,0"/></g><g transform="translate(17.2764,0.8682)" id="g44"><path id="path46" style="fill:#f4900c;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,0 1.265,0.411 1.429,1.352 0.173,0.971 -0.624,1.167 -0.624,1.167 0,0 1.041,0.208 1.172,1.376 0.123,1.1 -0.862,1.363 -0.862,1.363 0,0 0.97,0.4 1.016,1.539 0.038,0.959 -0.995,1.428 -0.995,1.428 0,0 5.038,1.22 5.555,1.34 0.516,0.121 1.321,0.616 1.07,1.695 -0.249,1.08 -1.204,1.118 -1.698,1.003 -0.494,-0.116 -6.744,-1.567 -8.9,-2.069 -0.23,-0.053 -1.308,-0.302 -1.439,-0.334 -0.54,-0.127 -0.785,0.111 -0.405,0.512 0.509,0.536 0.833,1.129 0.947,2.113 0.119,1.036 -0.232,2.314 -0.433,2.809 -0.374,0.921 -1.005,1.649 -1.734,1.899 -1.138,0.39 -1.946,-0.321 -1.542,-1.561 0.604,-1.855 0.209,-3.375 -0.833,-4.293 -2.449,-2.157 -3.589,-3.695 -2.83,-6.973 0.827,-3.575 4.377,-5.876 7.952,-5.048 C -2.965,-0.64 0,0 0,0"/></g></g></g></g></svg>
-						</blockquote>
-						<p>
-							Cat
-						</p>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div id="external">
-				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="45" height="45" viewBox="0 0 233 233" class="steamLogo">
-						<defs>
-							<linearGradient id="a" x2="50%" x1="50%" y2="100%">
-							<stop stop-color="#FFFFFF" offset="0"/>
-							<stop stop-color="#FFFFFF" offset=".21248"/>
-							<stop stop-color="#0A1B48" offset=".40695"/>
-							<stop stop-color="#132E62" offset=".58110"/>
-							<stop stop-color="#144B7E" offset=".73760"/>
-							<stop stop-color="#136497" offset=".87279"/>
-							<stop stop-color="#1387B8" offset="1"/>
-							</linearGradient>
-						</defs>
-						<path fill="#ffffff" d="m4.8911 150.01c14.393 48.01 58.916 82.99 111.61 82.99 64.34 0 116.5-52.16 116.5-116.5 0-64.341-52.16-116.5-116.5-116.5-61.741 0-112.26 48.029-116.25 108.76 7.5391 12.66 10.481 20.49 4.6411 41.25z"/>
-						<path fill="#103b77" d="m110.5 87.322c0 0.196 0 0.392 0.01 0.576l-28.508 41.412c-4.618-0.21-9.252 0.6-13.646 2.41-1.937 0.79-3.752 1.76-5.455 2.88l-62.599-25.77c0.00049 0-1.4485 23.83 4.588 41.59l44.254 18.26c2.222 9.93 9.034 18.64 19.084 22.83 16.443 6.87 35.402-0.96 42.242-17.41 1.78-4.3 2.61-8.81 2.49-13.31l40.79-29.15c0.33 0.01 0.67 0.02 1 0.02 24.41 0 44.25-19.9 44.25-44.338 0-24.44-19.84-44.322-44.25-44.322-24.4 0-44.25 19.882-44.25 44.322zm-6.84 83.918c-5.294 12.71-19.9 18.74-32.596 13.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405 5.97c9.363 3.9 20.105-0.54 23.997-9.9 3.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18 12.278-2.26 18.381 0.28 6.153 2.56 10.927 7.38 13.457 13.54s2.52 12.96-0.04 19.1m51.09-54.38c-16.25 0-29.48-13.25-29.48-29.538 0-16.275 13.23-29.529 29.48-29.529 16.26 0 29.49 13.254 29.49 29.529 0 16.288-13.23 29.538-29.49 29.538m-22.09-29.583c0-12.253 9.92-22.191 22.14-22.191 12.23 0 22.15 9.938 22.15 22.191 0 12.254-9.92 22.183-22.15 22.183-12.22 0-22.14-9.929-22.14-22.183z"/>
-					</svg>
-				</a>
-				<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
-					<svg viewBox="0 0 16 16" version="1.1" width="45" height="45" data-view-component="true" class="githubLogo">
-						<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-					</svg>
-				</a>
+				<h2>Features:</h2>
+				<ul id="features">
+					<li class="im im-briefcase">Roles system that allows the host to give players certain permissions</li>
+					<li class="im im-flag"><a href="/docs/commands#banPlayer"><span class="command">?banPlayer</span></a> as well as <a href="/docs/commands#unban"><span class="command">?unban</span></a> (stormworks does not have an unban)</li>
+					<li class="im im-tools">Equip players with specific equipment</li>
+					<li class="im im-car">View and manage vehicles in the world</li>
+					<li class="im im-plane">Teleport to coordinates, named locations, players, and vehicles - or teleport them to you</li>
+					<li class="im im-note-o">Manage and display rules to players</li>
+					<li class="im im-gear">Customize preferences</li>
+					<li class="im im-speech-bubble-comment">Whisper to other players</li>
+					<li class="im im-question">Help command that explains each command in-game</li>
+				</ul>
 			</div>
-		</footer>
-	</body>
+		</section>
+
+		<section id="news">
+			<h1>What's New?</h1>
+			<div class="content">
+				<h2><sub>v</sub>2.0</h2>
+				<p>
+					This latest version adds plenty of features that I have been wanting to add
+					for a long while. There are quite a few changes to already existing commands
+					as well. For example, the <span class="command">?tp</span> command was
+					seperated into multiple different commands. I recommend viewing the full
+					<a href="changelog#v2" target="_blank">change log</a>.
+				</p>
+				<br>
+				<div class="grid">
+					<div>
+						<h3>
+							<icon class="twa twa-sparkles"></icon>Features<icon class="twa twa-sparkles"></icon>
+						</h3>
+						<div class="accordions">
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Role system to manage player permissions</div>
+								</div>
+								<div class="content">
+									<p>
+										Managing what permissions players have is now much more in-depth.
+										You can add/remove roles, edit their in-game permissions, and
+										change which commands a role has permission to use.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Call commands using buttons</div>
+								</div>
+								<div class="content">
+									<p>
+										You can now call commands using buttons! Just name the button
+										<span class="command">?cc&lt;command name&gt;</span> - for
+										example, <span class="command">?ccHeal</span>. So long as the
+										player pressing the button has access to the command, they will
+										be healed!
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Server autosaves persistent data</div>
+								</div>
+								<div class="content">
+									<p>
+										<code>server.save()</code> is called after changes are made to the
+										persistent data (change preferences, ban player, etc.). The autosaves
+										are saved as "CC_Autosave" in the saves folder. As of the release of
+										this version, <code>server.save()</code> still only applies to
+										dedicated servers for some reason, so this feature will only work
+										with dedicated servers.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Teleport to vehicle command</div>
+								</div>
+								<div class="content">
+									<p>
+										There is now a new <a href="/docs/commands#tp2v"><span class="command">?tp2v</span></a> command that
+										teleports the player to the requested vehicle.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div><a href="/docs/commands#clearRadiation"><span class="command">?clearRadiation</span></a> command</div>
+								</div>
+								<div class="content">
+									<p>
+										It is easier than ever to clean the nuclear apocolypse from your server.
+										Simply call <span class="command">?clearRadiation</span>!
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Limit the max weight of vehicles</div>
+								</div>
+								<div class="content">
+									<p>
+										Are you tired of creations the size of Jupiter spawning on your server,
+										slowing everything to a crawl? Well here is a setting to help combat that.
+										You can now set the max mass for vehicles! If a vehicle is being spawned
+										that is over this set limit, it will be removed from the world before it
+										can cause too much damage. The player spawning it will also be notified
+										that your server doesn't deserve to be abused <icon class="twa twa-blue-heart"></icon>.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<h3>
+							<icon class="twa twa-wrench"></icon>Fixes<icon class="twa twa-wrench"></icon>
+						</h3>
+						<div class="accordions">
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div><a href="/docs/commands#equip"><span class="command">?equip</span class="command"></a> now supports the new data parameters</div>
+								</div>
+								<div class="content">
+									<p>
+										v1.2.5-6 of Stormworks changed the way <code>server.setCharacterItem()</code> works.
+										The function now allows the user to define some data for the item such as
+										durability/ammo or radio frequency. By default, this function would now give
+										characters the items with 0 durability/ammo - for some reason. This has been
+										fixed in v2.0.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Easier ways to target players for commands</div>
+								</div>
+								<div class="content">
+									<p>
+										Previously, you would have to know the peerID of the player you are using a command
+										on. Now you can enter the player's name instead - or in the case of using a command on
+										yourself, you can use <code>me</code>. More commands will also automatically target the player
+										calling it if no other player is defined.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div><span class="command">?help</span class="command"> has been renamed for compatibility</div>
+								</div>
+								<div class="content">
+									<p>
+										In order to increase compatibility with other add-ons, <span class="command">?help</span class="command">
+										has been renamed to <a href="/docs/commands#ccHelp"><span class="command">?ccHelp</span class="command"></a>. This makes things a little nicer
+										if you have multiple add-ons all trying to use the <span class="command">?help</span class="command"> command.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Greatly improved algorithm for closest string</div>
+								</div>
+								<div class="content">
+									<p>
+										Previously, when using <span class="command">?tp</span> to teleport to a location,
+										there was a less than desireable algorithm in place that would estimate which
+										location you <i>really</i> meant. This was okay at dealing with misspellings of a
+										character or two, but it was really bad at "autocomplete". If you tried to just enter
+										a few characters of a location, it was a gamble as to where you would really end up.
+										<br>
+										<br>
+										I am happy to announce that a much better algorithm is in place now that is vastly
+										superior at autocompleting strings, given options to pick from. Expect
+										<a href="/docs/commands#tpl"><span class="command">?tpl</span></a> (the new teleport to location command) to work a lot
+										better than the previous <span class="command">?tp</span> command.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Telport commands better prevent clipping</div>
+								</div>
+								<div class="content">
+									<p>
+										One of the most frustrating parts of developing this addon originally was discovering
+										that there is no loading screen when teleporting a player to an unloaded location. The
+										player will just be telported instantly before collisions are loaded, and often, the
+										player will just fall through the ground. The loading times of the collision meshes
+										appear to have gotten even worse lately, causing people to fall through the terrain
+										even more now. My previous fix of teleporting players multiple times when teleporting
+										far away was no longer sufficient.
+										<br>
+										<br>
+										Now the script will teleport the player, then "hold"
+										them stationary for a short while (like a loading screen) while things load in.
+										Unfortunately, there is no way to tell if the collisions have loaded in, so it is just
+										an estimated time delay. This seems to be sufficient for now though.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h1>Contributors</h1>
+			<div id="contributors" class="flex">
+				<div class="profile">
+					<h2>Project Lead</h2>
+					<img src="/assets/images/profiles/carsa.webp" width="150" height="150">
+					<div class="name">Carsa</div>
+					<blockquote>Addon Lua, where the code to fix flaws within the game amounts to more work than the initial feature</blockquote>
+					<p>
+						Lua Lover
+					</p>
+				</div>
+				<div class="profile">
+					<h2>Developer</h2>
+					<img src="/assets/images/profiles/pony.webp" width="150" height="150">
+					<div class="name">CrazyFluffyPony</div>
+					<blockquote>
+						The only way to not make a mistake while coding in the in-game editor is to not use it
+					</blockquote>
+					<p>
+						Is a literal pony
+					</p>
+				</div>
+				<div class="profile">
+					<h2>Developer</h2>
+					<img src="/assets/images/profiles/dargino.webp" width="150" height="150">
+					<div class="name">Dargino</div>
+					<blockquote>
+						Stonkwonk go brr
+					</blockquote>
+					<p>
+						Real life aussie man
+					</p>
+				</div>
+				<div class="profile">
+					<h2>Developer</h2>
+					<img src="/assets/images/profiles/leopard.webp" width="150" height="150">
+					<div class="name">Leopard</div>
+					<blockquote>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="3em">
+							<circle fill="#FFCB4C" cx="18" cy="17.018" r="17" />
+							<path fill="#65471B" d="M14.524 21.036c-.145-.116-.258-.274-.312-.464-.134-.46.13-.918.59-1.021 4.528-1.021 7.577 1.363 7.706 1.465.384.306.459.845.173 1.205-.286.358-.828.401-1.211.097-.11-.084-2.523-1.923-6.182-1.098-.274.061-.554-.016-.764-.184z" />
+							<ellipse fill="#65471B" cx="13.119" cy="11.174" rx="2.125" ry="2.656" />
+							<ellipse fill="#65471B" cx="24.375" cy="12.236" rx="2.125" ry="2.656" />
+							<path fill="#F19020" d="M17.276 35.149s1.265-.411 1.429-1.352c.173-.972-.624-1.167-.624-1.167s1.041-.208 1.172-1.376c.123-1.101-.861-1.363-.861-1.363s.97-.4 1.016-1.539c.038-.959-.995-1.428-.995-1.428s5.038-1.221 5.556-1.341c.516-.12 1.32-.615 1.069-1.694-.249-1.08-1.204-1.118-1.697-1.003-.494.115-6.744 1.566-8.9 2.068l-1.439.334c-.54.127-.785-.11-.404-.512.508-.536.833-1.129.946-2.113.119-1.035-.232-2.313-.433-2.809-.374-.921-1.005-1.649-1.734-1.899-1.137-.39-1.945.321-1.542 1.561.604 1.854.208 3.375-.833 4.293-2.449 2.157-3.588 3.695-2.83 6.973.828 3.575 4.377 5.876 7.952 5.048l3.152-.681z" />
+							<path fill="#65471B" d="M9.296 6.351c-.164-.088-.303-.224-.391-.399-.216-.428-.04-.927.393-1.112 4.266-1.831 7.699-.043 7.843.034.433.231.608.747.391 1.154-.216.405-.74.546-1.173.318-.123-.063-2.832-1.432-6.278.047-.257.109-.547.085-.785-.042zm12.135 3.75c-.156-.098-.286-.243-.362-.424-.187-.442.023-.927.468-1.084 4.381-1.536 7.685.48 7.823.567.415.26.555.787.312 1.178-.242.39-.776.495-1.191.238-.12-.072-2.727-1.621-6.267-.379-.266.091-.553.046-.783-.096z" />
+						</svg>
+					</blockquote>
+					<p>
+						Cat
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div id="links">
+			<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+				<svg class="logo steam" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 232.75 233">
+					<path class="primary" d="M116.5,0A116.52,116.52,0,0,0,.25,108.76l0,.08h0L62.9,134.6a31.53,31.53,0,0,1,5.46-2.88A31.9,31.9,0,0,1,82,129.31L110.51,87.9c0-.19,0-.38,0-.58a44.25,44.25,0,1,1,44.25,44.34l-1,0L113,160.79a32.3,32.3,0,0,1-63.82,7.89L5,150.48A116.51,116.51,0,1,0,116.5,0Z" transform="translate(-0.25)" />
+					<path class="secondary" d="M103.7,152.14a24.85,24.85,0,0,0-31.84-13.82l14.89,6.17a18.37,18.37,0,0,1-14.11,33.93l-14.41-6a24.86,24.86,0,0,0,45.43-1.21h0A24.84,24.84,0,0,0,103.7,152.14Z" transform="translate(-0.25)" />
+					<path class="secondary" d="M154.75,57.79a29.54,29.54,0,1,0,29.49,29.53A29.55,29.55,0,0,0,154.75,57.79Zm.05,51.67A22.19,22.19,0,1,1,177,87.28,22.16,22.16,0,0,1,154.8,109.46Z" transform="translate(-0.25)" />
+				</svg>
+			</a>
+			<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+			</a>
+		</div>
+	</footer>
+</body>
+
 </html>

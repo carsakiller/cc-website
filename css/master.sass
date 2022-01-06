@@ -1,0 +1,283 @@
+@use "colors"
+
+// scrollbar
+$track : colors.$quaternary
+$thumb : colors.$secondary
+$thumbHover : lighten($thumb, 10%)
+
+$accordionAnimationDuration : 0.25s
+
+@mixin grid($columns : 2, $rows : 0, $gap : 5px)
+	display: grid
+	grid-template-columns: repeat($columns, auto)
+	gap: $gap
+	@if $rows > 0
+		grid-template-rows: repeat($rows, auto)
+
+::-webkit-scrollbar
+	width: 15px
+
+::-webkit-scrollbar-track 
+	background: colors.$quaternary
+
+
+::-webkit-scrollbar-thumb 
+	background: colors.$secondary
+
+
+::-webkit-scrollbar-thumb:hover 
+	background: $thumbHover
+
+
+html
+	scrollbar-color: green
+	scrollbar-width: 17px
+	scroll-padding-top: 90px
+	scroll-behavior: smooth
+
+body
+	background: colors.$primary
+	color: white
+	font-size: 18px
+	font-family: 'Poppins', sans-serif
+	text-align: center
+
+header
+	width: calc(100% - 1.5vw)
+	height: 70px
+	position: fixed
+	top: 0px
+	display: flex
+	z-index: 2
+	background: url(/assets/images/headerBanner.jpg)
+	padding: 0px 1.5vw
+
+	a
+		color: white
+
+	nav
+		background: colors.$secondary
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		a
+			margin: 0px 10px
+
+	#gradient
+		display: flex
+		align-items: center
+		flex: 1
+		background: linear-gradient(90deg, transparent, colors.$secondary)
+
+		#logo
+			display: block
+			width: fit-content
+			margin: 4px auto 0 0
+			font-size: 3em
+			font-family: 'Source Code Pro', monospace
+			font-weight: 700
+			line-height: 1
+	& + *
+		margin-top: 100px
+
+main
+	section
+		max-width: 1200px
+		width: calc(100% - 40px)
+		margin: 30px auto
+		background: colors.$secondary
+		padding: 20px 5px
+		border-radius: 10px
+
+		> h1
+			margin-bottom: 30px
+
+footer
+	background: colors.$secondary
+	#links
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 3.5em
+		padding: 0.3em 0px
+		a
+			margin: 0px 2vw
+			display: flex
+			svg
+				display: block
+		> *
+			color: white
+		
+
+h1, h2, h3, h4, h5, h6
+	margin: 0.3em 0px
+	font-family: 'Varela Round', sans-serif
+	line-height: 1
+
+h1
+	font-size: 2.8em
+h2
+	font-size: 2.4em
+	color: colors.$highlight
+h3
+	font-size: 1.8em
+
+p
+	line-height: 1.6
+
+sub 
+	font-size: 0.8em
+
+svg.logo
+	path
+		fill: white
+
+blockquote
+	display: flex
+	flex-wrap: nowrap
+	margin-top: 15px
+	line-height: 1.3
+	font-style: italic
+	&:before, &:after
+		color: colors.$highlight
+		font-size: 1.5em
+		position: relative
+		line-height: 0.5
+	&:before
+		content: "“"
+		align-self: flex-start
+		top: -0.2em
+	&:after
+		content: "„"
+		align-self: flex-end
+		bottom: 0px
+
+a
+	text-decoration: none
+	color: colors.$linkColor
+
+	&.anchor
+		position: relative
+		top: -100px
+		visibility: hidden
+	
+	> .command
+		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+
+		&:hover
+			transform: scale(1.1)
+
+code
+	font-family: 'Source Code Pro', monospace
+	background: #222222
+	padding: 2px 6px
+	border-radius: 5px
+
+.dataType
+	font-family: 'Source Code Pro', monospace
+	font-weight: 600
+
+.command
+	display: inline-block
+	background: #34342c
+	border-radius: 9px
+	font-weight: 600
+	line-height: 1.3
+	padding: 0px 8px
+	color: colors.$linkColor
+	box-shadow: #252525 3px 3px 5px 0px
+	white-space: pre
+
+.accordion
+	width: 100%
+	margin: 10px auto
+
+	&:not([closing]):not([open]) > .summary
+		border-radius: 10px 10px 10px 10px
+
+	&[open] > .summary:after
+		transform: translate(0, -50%) rotate(90deg)
+
+	>.content
+		width: 100%
+		height: 0px
+		border-radius: 0px 0px 10px 10px
+		text-align: left
+		background: colors.$quaternary
+		overflow: hidden
+		transition: height $accordionAnimationDuration ease-in-out
+
+		> *
+			margin: 0.8em 1em
+
+	> .summary
+		background: colors.$tertiary
+		display: flex
+		justify-content: center
+		cursor: pointer
+		position: relative
+		padding: 20px 30px
+		border-radius: 10px 10px 0px 0px
+
+
+		&:after
+			content: "\e011"
+			display: block
+			position: absolute
+			right: 10px
+			top: 50%
+			transform: translate(0px, -50%)
+			transition: transform 0.3s cubic-bezier(0.46, -0.4, 0.57, 1.41)
+			font-family: 'iconmonstr-iconic-font'
+
+.external
+	position: relative
+	&:after
+		content: '\e04d'
+		font-family: 'iconmonstr-iconic-font'
+		font-size: 0.5em
+		color: white
+		position: absolute
+		top: 0
+		margin-left: 2px
+	.im-external-link
+		&:after
+			content: '\e04d'
+
+.grid
+	@include grid(2, 0, 20px)
+
+.flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	gap: 1em
+
+icon
+	&.large
+		font-size: 1.2em
+	&.huge
+		font-size: 2em
+
+
+@media (max-width: 1000px)
+	body
+		font-size: 14px
+
+@media (max-width: 600px)
+	body
+		font-size: 12px
+
+@media (max-height: 700px)
+	html
+		scroll-padding-top: 60px
+	body
+		font-size: 12px
+	header
+		height: 40px
+		font-size: 0.7em
+
+		& + *
+			margin-top: 70px

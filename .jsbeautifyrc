@@ -1,0 +1,10 @@
+{
+	"indent_size": 4,
+	"indent_char": "\t",
+	"indent_with_tabs": true,
+	"preserve_newlines": true,
+	"space_around_combinator": true,
+	"space_after_anon_function": true,
+	"space_after_named_function": true,
+	"selector_separator_newline": false
+}

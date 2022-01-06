@@ -1,0 +1,269 @@
+#sidenav {
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 70px;
+}
+
+div#sidenav:not([open]) {
+    transform: translateX(-240px);
+}
+
+#sidenav div#openButton {
+    background: white;
+    color: #103b77;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    padding: 10px 4px;
+    align-self: center;
+}
+
+#sidenav #openButton > svg {
+    margin: 0;
+    fill: #103b77;
+    transform: rotateZ(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidenav[open] #openButton > svg {
+    transform: rotateY(180deg);
+}
+
+#sidenav > div.content {
+	transform: scaleX(-1); /* Flip container so scrollbar is on left */
+    background: #031b3d;
+    padding: 10px 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#sidenav > .content > div {
+	transform: scaleX(-1); /* Flip contents back to right way round */
+	margin: 0px 10px;
+	width: calc(100% - 20px);
+}
+
+#sidenav .accordion .content {
+	background: #3c507d;
+}
+
+#sidenav .accordion > .content div {
+    margin: 5px 10px;
+	display: block;
+}
+
+#sidenav .accordion > .content > div > a {
+	display: block;
+	padding: 0.2em 0.5em;
+	font-size: 0.7em;
+}
+
+main section {
+	margin: 20px auto;
+	background-color: #103b77;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+main section h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+}
+
+main section code {
+	font-family: 'Source Code Pro', monospace;
+}
+
+main section div.content {
+	width: 90%;
+	margin: auto;
+}
+
+main section .accordion .content > * {
+	margin: 10px 20px;
+}
+
+.accordion .summary {
+	background: #0a264d;
+	border-radius: 10px 10px 0px 0px;
+	padding: 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accordion:not([closing]):not([open]) .summary {
+	background: #0a264d;
+	border-radius: 10px;
+}
+
+.accordion .summary span.name {
+	text-align: left;
+	white-space: nowrap;
+}
+
+.accordion .summary .description {
+	font-size: 0.9em;
+}
+
+.accordion .summary span.description::before {
+	content: ' - ';
+	display: none;
+	margin: 0px 10px;
+}
+
+.accordion .content {
+	width: 100%;
+	background: #031b3d;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.cheat {
+	background-color: #dd0000;
+	border-radius: 20px;
+	padding: 0px 5px;
+	font-size: 0.8em;
+}
+
+.accordion .content code.syntax {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 4px;
+}
+
+.accordion .content .args,.data {
+	overflow-x: auto;
+}
+
+.accordion .content .args table {
+	border-spacing: 5px 5px;
+	width: calc(100% - 4px);
+	text-align: center;
+	margin: 0;
+	min-width: 500px;
+}
+
+.accordion .content .flex.row {
+	align-items: flex-start;
+}
+
+.accordion .content table {
+	border-collapse: collapse;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.accordion .content table #title{
+	background: #000000;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.accordion .content table td {
+	word-break: break-word;
+	vertical-align: middle;
+	padding: 4px;
+}
+
+.accordion .content table tr {
+	background: #0c0c0c;
+}
+
+.accordion .content table tr:nth-of-type(2n) {
+	background: #16161e;
+}
+
+.accordion .content .args table .description {
+	width: 450px;
+	text-align: left;
+}
+
+.accordion .content table.access {
+	font-size: 0.8em;
+	text-align: justify;
+	border-spacing: 5px 8px;
+}
+
+.accordion .content .data table {
+	text-align: center;
+}
+
+.accordion .content div.data {
+	overflow-y: auto;
+	max-height: 500px;
+}
+
+.accordion .content .examples h1 {
+	font-size: 1.4em;
+	margin-top: 0;
+}
+
+.accordion .content .examples code {
+	display: block;
+	margin: 4px auto;
+	border-radius: 4px;
+	padding: 2px 15px;
+	font-size: 0.8em;
+}
+
+.accordion .content .examples p {
+	margin: 5px auto;
+}
+
+main section .bool {
+	border-radius: 15px;
+	text-align: center;
+	width: 60px;
+	padding: 3px 7px;
+	margin: auto;
+	font-size: 1.3em;
+}
+
+main section .bool[true] {
+	color: #00b900;
+}
+
+main section .bool[false] {
+	color: #dd0000;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	main section div.content {
+		width: 98%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	#sidenav #openButton {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.accordion .summary .description {
+		display: none;
+	}
+	.accordion .summary .icon {
+		flex: 0 0;
+	}
+	.accordion .summary span.name {
+		text-align: center;
+	}
+}
+
+/* Only allow hover on clients with pointers (no touch screens) */
+@media(hover: hover) and (pointer: fine) {
+	#sidenav .content .accordion .content .command:hover{
+		background: #dddddd;
+	}
+}
