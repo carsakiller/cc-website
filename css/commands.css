@@ -100,21 +100,22 @@ main section .accordions .accordion .content .description {
 }
 main section .accordions .accordion .content table {
   text-align: center;
+  font-size: 0.8em;
 }
 main section .accordions .accordion .content table tbody {
   word-break: break-all;
 }
-main section .accordions .accordion .content table tbody tr {
+main section .accordions .accordion .content table tr {
   background: #121212;
 }
-main section .accordions .accordion .content table tbody tr:nth-of-type(2n) {
+main section .accordions .accordion .content table tr:nth-of-type(2n) {
   background: #1b1b1b;
 }
-main section .accordions .accordion .content table tbody td {
+main section .accordions .accordion .content table td {
   padding: 6px 5px;
   vertical-align: middle;
 }
-main section .accordions .accordion .content table tbody td .dataType {
+main section .accordions .accordion .content table td .dataType {
   word-break: keep-all;
 }
 main section .accordions .accordion .content table thead td {
@@ -149,4 +150,4 @@ main section .accordions .accordion .content table.args {
   #sidenav {
     top: 40px;
   }
-}/*# sourceMappingURL=commands.css.map */
+}

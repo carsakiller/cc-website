@@ -202,6 +202,9 @@ code {
   white-space: pre;
 }
 
+.bool {
+  font-size: 1em;
+}
 .bool[true] {
   color: #00b500;
 }
@@ -315,4 +318,4 @@ icon.huge {
   header + * {
     margin-top: 70px;
   }
-}/*# sourceMappingURL=master.css.map */
+}
