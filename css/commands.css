@@ -1,6 +1,6 @@
 #sidenav {
   width: max(300px, 20%);
-  height: 100%;
+  height: calc(100% - 70px);
   margin: 0;
   display: flex;
   flex-wrap: nowrap;
@@ -136,6 +136,10 @@ main section .accordions .accordion .content table.args {
   #sidenav #openButton {
     display: none;
   }
+
+  footer #links {
+    margin-left: max(300px, 20%);
+  }
 }
 @media (max-width: 600px) {
   #sidenav {
@@ -148,6 +152,7 @@ main section .accordions .accordion .content table.args {
   }
 
   #sidenav {
+    height: calc(100% - 40px);
     top: 40px;
   }
 }

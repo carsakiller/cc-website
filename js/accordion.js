@@ -1,3 +1,4 @@
+"use strict";
 const ANIMATION_DURATION = 250;
 var accordions = [];
 

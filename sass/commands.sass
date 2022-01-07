@@ -5,7 +5,7 @@ $sidenavWidth : max(300px, 20%)
 
 #sidenav
     width: $sidenavWidth
-    height: 100%
+    height: calc(100% - 70px)
     margin: 0
     display: flex
     flex-wrap: nowrap
@@ -140,6 +140,9 @@ main
     #sidenav
         #openButton
             display: none
+    footer
+        #links
+            margin-left: $sidenavWidth
 
 @media (max-width: 600px)
     #sidenav
@@ -149,4 +152,5 @@ main
     main
         margin-top: 70px
     #sidenav
+        height: calc(100% - 40px)
         top: 40px

@@ -1,4 +1,4 @@
-
+"use strict";
 class Sidenav {
     constructor(element) {
         this.element = element;

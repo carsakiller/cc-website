@@ -1,3 +1,4 @@
+"use strict";
 var virtualTypes = document.getElementsByClassName('virtualType');
 var dataTypes = document.getElementsByClassName('dataType');
 
