@@ -206,10 +206,10 @@ code {
 .bool {
   font-size: 1em;
 }
-.bool[true] {
+.bool[data-value=true] {
   color: #00b500;
 }
-.bool[false] {
+.bool[data-value=false] {
   color: #db0000;
 }
 

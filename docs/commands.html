@@ -163,7 +163,7 @@
 			<div class="accordions">
 				<div class="accordion" id="addAlias">
 					<div class="summary" tabindex="0"><span class="name">?addAlias</span>
-						<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div><span class="icon"></span>
+						<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div>
 					</div>
 					<div class="content">
 						<div class="description">Adds an alias for a pre-existing command. For example, you can add an alias so ccHelp becomes just help</div><code language="command" class="syntax">?addAlias alias command</code>
@@ -181,53 +181,39 @@
 								<tr>
 									<td>alias</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>command</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -235,7 +221,7 @@
 				</div>
 				<div class="accordion" id="aliases">
 					<div class="summary" tabindex="0"><span class="name">?aliases</span>
-						<div class="description">Lists the aliases that can be used instead of the full command names</div><span class="icon"></span>
+						<div class="description">Lists the aliases that can be used instead of the full command names</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the aliases that can be used instead of the full command names</div><code language="command" class="syntax">?aliases [page]</code>
@@ -253,44 +239,32 @@
 								<tr>
 									<td>page</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -298,7 +272,7 @@
 				</div>
 				<div class="accordion" id="removeAlias">
 					<div class="summary" tabindex="0"><span class="name">?removeAlias</span>
-						<div class="description">Removes an alias for a command</div><span class="icon"></span>
+						<div class="description">Removes an alias for a command</div>
 					</div>
 					<div class="content">
 						<div class="description">Removes an alias for a command</div><code language="command" class="syntax">?removeAlias alias</code>
@@ -316,44 +290,32 @@
 								<tr>
 									<td>alias</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -366,7 +328,7 @@
 			<div class="accordions">
 				<div class="accordion" id="addRole">
 					<div class="summary" tabindex="0"><span class="name">?addRole</span>
-						<div class="description">Adds a role to the server that can be assigned to players.</div><span class="icon"></span>
+						<div class="description">Adds a role to the server that can be assigned to players.</div>
 					</div>
 					<div class="content">
 						<div class="description">Adds a role to the server that can be assigned to players.</div><code language="command" class="syntax">?addRole role_name</code>
@@ -384,44 +346,32 @@
 								<tr>
 									<td>role_name</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -429,7 +379,7 @@
 				</div>
 				<div class="accordion" id="giveRole">
 					<div class="summary" tabindex="0"><span class="name">?giveRole</span>
-						<div class="description">Assigns a role to a player.</div><span class="icon"></span>
+						<div class="description">Assigns a role to a player.</div>
 					</div>
 					<div class="content">
 						<div class="description">Assigns a role to a player.</div><code language="command" class="syntax">?giveRole role [playerID]</code>
@@ -447,53 +397,39 @@
 								<tr>
 									<td>role</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -501,7 +437,7 @@
 				</div>
 				<div class="accordion" id="removeRole">
 					<div class="summary" tabindex="0"><span class="name">?removeRole</span>
-						<div class="description">Removes a role from all players and deletes it.</div><span class="icon"></span>
+						<div class="description">Removes a role from all players and deletes it.</div>
 					</div>
 					<div class="content">
 						<div class="description">Removes a role from all players and deletes it.</div><code language="command" class="syntax">?removeRole role_name</code>
@@ -519,44 +455,32 @@
 								<tr>
 									<td>role_name</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -564,7 +488,7 @@
 				</div>
 				<div class="accordion" id="revokeRole">
 					<div class="summary" tabindex="0"><span class="name">?revokeRole</span>
-						<div class="description">Revokes a role from a player.</div><span class="icon"></span>
+						<div class="description">Revokes a role from a player.</div>
 					</div>
 					<div class="content">
 						<div class="description">Revokes a role from a player.</div><code language="command" class="syntax">?revokeRole role [playerID]</code>
@@ -582,53 +506,39 @@
 								<tr>
 									<td>role</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -636,7 +546,7 @@
 				</div>
 				<div class="accordion" id="roleAccess">
 					<div class="summary" tabindex="0"><span class="name">?roleAccess</span>
-						<div class="description">Sets whether a role has access to a command or not.</div><span class="icon"></span>
+						<div class="description">Sets whether a role has access to a command or not.</div>
 					</div>
 					<div class="content">
 						<div class="description">Sets whether a role has access to a command or not.</div><code language="command" class="syntax">?roleAccess role command value</code>
@@ -654,62 +564,46 @@
 								<tr>
 									<td>role</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>command</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>value</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -717,7 +611,7 @@
 				</div>
 				<div class="accordion" id="rolePerms">
 					<div class="summary" tabindex="0"><span class="name">?rolePerms</span>
-						<div class="description">Sets the permissions of a role.</div><span class="icon"></span>
+						<div class="description">Sets the permissions of a role.</div>
 					</div>
 					<div class="content">
 						<div class="description">Sets the permissions of a role.</div><code language="command" class="syntax">?rolePerms role_name is_admin is_auth</code>
@@ -735,62 +629,46 @@
 								<tr>
 									<td>role_name</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>is_admin</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>is_auth</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -798,7 +676,7 @@
 				</div>
 				<div class="accordion" id="roleStatus">
 					<div class="summary" tabindex="0"><span class="name">?roleStatus</span>
-						<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div><span class="icon"></span>
+						<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div>
 					</div>
 					<div class="content">
 						<div class="description">Gets or sets whether a role is active or not. An inactive role won't apply it's permissions to it's members</div><code language="command" class="syntax">?roleStatus role [status]</code>
@@ -816,53 +694,39 @@
 								<tr>
 									<td>role</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>status</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -870,7 +734,7 @@
 				</div>
 				<div class="accordion" id="roles">
 					<div class="summary" tabindex="0"><span class="name">?roles</span>
-						<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div><span class="icon"></span>
+						<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists all of the roles on the server. Specifying a role's name will list detailed info on it.</div><code language="command" class="syntax">?roles [page/role_name]</code>
@@ -888,44 +752,32 @@
 								<tr>
 									<td>page/role_name</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span>/<span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -938,7 +790,7 @@
 			<div class="accordions">
 				<div class="accordion" id="addRule">
 					<div class="summary" tabindex="0"><span class="name">?addRule</span>
-						<div class="description">Adds a rule to the rulebook.</div><span class="icon"></span>
+						<div class="description">Adds a rule to the rulebook.</div>
 					</div>
 					<div class="content">
 						<div class="description">Adds a rule to the rulebook.</div><code language="command" class="syntax">?addRule text [position]</code>
@@ -956,53 +808,39 @@
 								<tr>
 									<td>text</td>
 									<td><span class="dataType" data-tippy-content="Any text from a letter to a paragraph.">text</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>position</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1010,7 +848,7 @@
 				</div>
 				<div class="accordion" id="removeRule">
 					<div class="summary" tabindex="0"><span class="name">?removeRule</span>
-						<div class="description">Removes a rule from the rulebook.</div><span class="icon"></span>
+						<div class="description">Removes a rule from the rulebook.</div>
 					</div>
 					<div class="content">
 						<div class="description">Removes a rule from the rulebook.</div><code language="command" class="syntax">?removeRule rule #</code>
@@ -1028,44 +866,32 @@
 								<tr>
 									<td>rule #</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1073,7 +899,7 @@
 				</div>
 				<div class="accordion" id="rules">
 					<div class="summary" tabindex="0"><span class="name">?rules</span>
-						<div class="description">Displays the rules of this server.</div><span class="icon"></span>
+						<div class="description">Displays the rules of this server.</div>
 					</div>
 					<div class="content">
 						<div class="description">Displays the rules of this server.</div><code language="command" class="syntax">?rules [page]</code>
@@ -1091,44 +917,32 @@
 								<tr>
 									<td>page</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1141,7 +955,7 @@
 			<div class="accordions">
 				<div class="accordion" id="bailout">
 					<div class="summary" tabindex="0"><span class="name">?bailout</span>
-						<div class="description">Gives the "player" the specified amount of money.</div><span class="icon"></span>
+						<div class="description">Gives the "player" the specified amount of money.</div>
 					</div>
 					<div class="content">
 						<div class="description">Gives the "player" the specified amount of money.</div><code language="command" class="syntax">?bailout $ amount</code>
@@ -1159,44 +973,32 @@
 								<tr>
 									<td>$ amount</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1204,40 +1006,30 @@
 				</div>
 				<div class="accordion" id="cc">
 					<div class="summary" tabindex="0"><span class="name">?cc</span>
-						<div class="description">Displays info about Carsa's Commands.</div><span class="icon"></span>
+						<div class="description">Displays info about Carsa's Commands.</div>
 					</div>
 					<div class="content">
 						<div class="description">Displays info about Carsa's Commands.</div><code language="command" class="syntax">?cc</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1245,7 +1037,7 @@
 				</div>
 				<div class="accordion" id="ccHelp">
 					<div class="summary" tabindex="0"><span class="name">?ccHelp</span>
-						<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div><span class="icon"></span>
+						<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the help info for Carsa's Commands. You can provide a command's name to get detailed info on a specific command.</div><code language="command" class="syntax">?ccHelp [page/command]</code>
@@ -1263,44 +1055,32 @@
 								<tr>
 									<td>page/command</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span>/<span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1308,7 +1088,7 @@
 				</div>
 				<div class="accordion" id="equipmentIDs">
 					<div class="summary" tabindex="0"><span class="name">?equipmentIDs</span>
-						<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div><span class="icon"></span>
+						<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div>
 					</div>
 					<div class="content">
 						<div class="description">List the IDs of the equipment in the game. Equipment types are: small, large, outfit. If the type is omitted, all IDs will be listed.</div><code language="command" class="syntax">?equipmentIDs [equipment_type]</code>
@@ -1326,44 +1106,32 @@
 								<tr>
 									<td>equipment_type</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1371,40 +1139,30 @@
 				</div>
 				<div class="accordion" id="tpLocations">
 					<div class="summary" tabindex="0"><span class="name">?tpLocations</span>
-						<div class="description">Lists the named locations that you can teleport to.</div><span class="icon"></span>
+						<div class="description">Lists the named locations that you can teleport to.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the named locations that you can teleport to.</div><code language="command" class="syntax">?tpLocations</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1412,7 +1170,7 @@
 				</div>
 				<div class="accordion" id="whisper">
 					<div class="summary" tabindex="0"><span class="name">?whisper</span>
-						<div class="description">Whispers your message to the specified player.</div><span class="icon"></span>
+						<div class="description">Whispers your message to the specified player.</div>
 					</div>
 					<div class="content">
 						<div class="description">Whispers your message to the specified player.</div><code language="command" class="syntax">?whisper playerID message</code>
@@ -1430,53 +1188,39 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>message</td>
 									<td><span class="dataType" data-tippy-content="Any text from a letter to a paragraph.">text</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1489,7 +1233,7 @@
 			<div class="accordions">
 				<div class="accordion" id="banPlayer">
 					<div class="summary" tabindex="0"><span class="name">?banPlayer</span>
-						<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (?ban).</div><span class="icon"></span>
+						<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (?ban).</div>
 					</div>
 					<div class="content">
 						<div class="description">Bans a player so that when they join they are immediately kicked. Replacement for vanilla perma-ban (<a href="/docs/commands.html#ban"> <span class="command">?ban</span> </a>).</div><code language="command" class="syntax">?banPlayer playerID</code>
@@ -1507,44 +1251,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1552,7 +1284,7 @@
 				</div>
 				<div class="accordion" id="banned">
 					<div class="summary" tabindex="0"><span class="name">?banned</span>
-						<div class="description">Shows the list of banned players.</div><span class="icon"></span>
+						<div class="description">Shows the list of banned players.</div>
 					</div>
 					<div class="content">
 						<div class="description">Shows the list of banned players.</div><code language="command" class="syntax">?banned [page]</code>
@@ -1570,44 +1302,32 @@
 								<tr>
 									<td>page</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1615,40 +1335,30 @@
 				</div>
 				<div class="accordion" id="clearRadiation">
 					<div class="summary" tabindex="0"><span class="name">?clearRadiation</span>
-						<div class="description">Cleans up all irradiated areas on the map.</div><span class="icon"></span>
+						<div class="description">Cleans up all irradiated areas on the map.</div>
 					</div>
 					<div class="content">
 						<div class="description">Cleans up all irradiated areas on the map.</div><code language="command" class="syntax">?clearRadiation</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1656,7 +1366,7 @@
 				</div>
 				<div class="accordion" id="unban">
 					<div class="summary" tabindex="0"><span class="name">?unban</span>
-						<div class="description">Unbans a player from the server.</div><span class="icon"></span>
+						<div class="description">Unbans a player from the server.</div>
 					</div>
 					<div class="content">
 						<div class="description">Unbans a player from the server.</div><code language="command" class="syntax">?unban steamID</code>
@@ -1674,44 +1384,32 @@
 								<tr>
 									<td>steamID</td>
 									<td><span class="dataType" data-tippy-content="A 17 digit number unique to a certain player. It is used to uniquely identify players within C².">steamID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1724,7 +1422,7 @@
 			<div class="accordions">
 				<div class="accordion" id="clearVehicle">
 					<div class="summary" tabindex="0"><span class="name">?clearVehicle</span>
-						<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><span class="icon"></span>
+						<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div>
 					</div>
 					<div class="content">
 						<div class="description">Removes vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><code language="command" class="syntax">?clearVehicle [vehicleID]...</code>
@@ -1742,44 +1440,32 @@
 								<tr>
 									<td>vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1787,7 +1473,7 @@
 				</div>
 				<div class="accordion" id="setEditable">
 					<div class="summary" tabindex="0"><span class="name">?setEditable</span>
-						<div class="description">Sets a vehicle to either be editable or non-editable.</div><span class="icon"></span>
+						<div class="description">Sets a vehicle to either be editable or non-editable.</div>
 					</div>
 					<div class="content">
 						<div class="description">Sets a vehicle to either be editable or non-editable.</div><code language="command" class="syntax">?setEditable vehicleID true/false</code>
@@ -1805,53 +1491,39 @@
 								<tr>
 									<td>vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>true/false</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1859,40 +1531,30 @@
 				</div>
 				<div class="accordion" id="vehicleIDs">
 					<div class="summary" tabindex="0"><span class="name">?vehicleIDs</span>
-						<div class="description">Toggles displaying vehicle IDs.</div><span class="icon"></span>
+						<div class="description">Toggles displaying vehicle IDs.</div>
 					</div>
 					<div class="content">
 						<div class="description">Toggles displaying vehicle IDs.</div><code language="command" class="syntax">?vehicleIDs</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1900,7 +1562,7 @@
 				</div>
 				<div class="accordion" id="vehicleInfo">
 					<div class="summary" tabindex="0"><span class="name">?vehicleInfo</span>
-						<div class="description">Get detailed info on a vehicle. If no vehicleID is provided, the nearest vehicle will be used</div><span class="icon"></span>
+						<div class="description">Get detailed info on a vehicle. If no vehicleID is provided, the nearest vehicle will be used</div>
 					</div>
 					<div class="content">
 						<div class="description">Get detailed info on a vehicle. If no <span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span> is provided, the nearest vehicle will be used</div><code language="command" class="syntax">?vehicleInfo [vehicleID]</code>
@@ -1918,44 +1580,32 @@
 								<tr>
 									<td>vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1963,7 +1613,7 @@
 				</div>
 				<div class="accordion" id="vehicleList">
 					<div class="summary" tabindex="0"><span class="name">?vehicleList</span>
-						<div class="description">Lists all the player vehicles that are spawned in the game.</div><span class="icon"></span>
+						<div class="description">Lists all the player vehicles that are spawned in the game.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists all the player vehicles that are spawned in the game.</div><code language="command" class="syntax">?vehicleList [page]</code>
@@ -1981,44 +1631,32 @@
 								<tr>
 									<td>page</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2031,7 +1669,7 @@
 			<div class="accordions">
 				<div class="accordion" id="equip">
 					<div class="summary" tabindex="0"><span class="name">?equip</span>
-						<div class="description">Equips you with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
+						<div class="description">Equips you with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div>
 					</div>
 					<div class="content">
 						<div class="description">Equips you with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><code language="command" class="syntax">?equip item_id [slot] [data1] [data2] [is_active]</code>
@@ -2049,80 +1687,60 @@
 								<tr>
 									<td>item_id</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>slot</td>
 									<td><span class="dataType" data-tippy-content="A letter like A or B.">letter</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>data1</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>data2</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>is_active</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2130,7 +1748,7 @@
 				</div>
 				<div class="accordion" id="equipp">
 					<div class="summary" tabindex="0"><span class="name">?equipp</span>
-						<div class="description">Equips the specified player with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><span class="icon"></span>
+						<div class="description">Equips the specified player with the requested item. The slot is a letter (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div>
 					</div>
 					<div class="content">
 						<div class="description">Equips the specified player with the requested item. The slot is a <span class="dataType" data-tippy-content="A letter like A or B.">letter</span> (A, B, C, D, E, F) and can appear in any position within the command. You can find an item's ID and data info using ?equipmentIDs</div><code language="command" class="syntax">?equipp playerID item_id [slot] [data1] [data2] [is_active]</code>
@@ -2148,89 +1766,67 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>item_id</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>slot</td>
 									<td><span class="dataType" data-tippy-content="A letter like A or B.">letter</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>data1</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>data2</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>is_active</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2238,7 +1834,7 @@
 				</div>
 				<div class="accordion" id="heal">
 					<div class="summary" tabindex="0"><span class="name">?heal</span>
-						<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div><span class="icon"></span>
+						<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div>
 					</div>
 					<div class="content">
 						<div class="description">Heals the target player by the specified amount. If no amount is specified, the target will be healed to full. If no amount and no player is specified then you will be healed to full.</div><code language="command" class="syntax">?heal [playerID] [amount]</code>
@@ -2256,53 +1852,39 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>amount</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2310,7 +1892,7 @@
 				</div>
 				<div class="accordion" id="kill">
 					<div class="summary" tabindex="0"><span class="name">?kill</span>
-						<div class="description">Kills another player.</div><span class="icon"></span>
+						<div class="description">Kills another player.</div>
 					</div>
 					<div class="content">
 						<div class="description">Kills another player.</div><code language="command" class="syntax">?kill playerID</code>
@@ -2328,44 +1910,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2373,7 +1943,7 @@
 				</div>
 				<div class="accordion" id="playerPerms">
 					<div class="summary" tabindex="0"><span class="name">?playerPerms</span>
-						<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div><span class="icon"></span>
+						<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the permissions of the specified player. If no player is specified, your own permissions are shown.</div><code language="command" class="syntax">?playerPerms [playerID]</code>
@@ -2391,44 +1961,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2436,7 +1994,7 @@
 				</div>
 				<div class="accordion" id="playerRoles">
 					<div class="summary" tabindex="0"><span class="name">?playerRoles</span>
-						<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div><span class="icon"></span>
+						<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the roles of the specified player. If no player is specified, your own roles are shown.</div><code language="command" class="syntax">?playerRoles [playerID]</code>
@@ -2454,44 +2012,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2499,7 +2045,7 @@
 				</div>
 				<div class="accordion" id="position">
 					<div class="summary" tabindex="0"><span class="name">?position</span>
-						<div class="description">Get the 3D coordinates of the target player, or yourself.</div><span class="icon"></span>
+						<div class="description">Get the 3D coordinates of the target player, or yourself.</div>
 					</div>
 					<div class="content">
 						<div class="description">Get the 3D coordinates of the target player, or yourself.</div><code language="command" class="syntax">?position [playerID]</code>
@@ -2517,44 +2063,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2562,40 +2096,30 @@
 				</div>
 				<div class="accordion" id="respawn">
 					<div class="summary" tabindex="0"><span class="name">?respawn</span>
-						<div class="description">Kills your character, giving you the option to respawn.</div><span class="icon"></span>
+						<div class="description">Kills your character, giving you the option to respawn.</div>
 					</div>
 					<div class="content">
 						<div class="description">Kills your character, giving you the option to respawn.</div><code language="command" class="syntax">?respawn</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2603,7 +2127,7 @@
 				</div>
 				<div class="accordion" id="steamID">
 					<div class="summary" tabindex="0"><span class="name">?steamID</span>
-						<div class="description">Displays the steamID of the requested player. Displays your steamID if no player is specified.</div><span class="icon"></span>
+						<div class="description">Displays the steamID of the requested player. Displays your steamID if no player is specified.</div>
 					</div>
 					<div class="content">
 						<div class="description">Displays the steamID of the requested player. Displays your <span class="dataType" data-tippy-content="A 17 digit number unique to a certain player. It is used to uniquely identify players within C².">steamID</span> if no player is specified.</div><code language="command" class="syntax">?steamID [playerID]</code>
@@ -2621,44 +2145,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2671,40 +2183,30 @@
 			<div class="accordions">
 				<div class="accordion" id="gameSettings">
 					<div class="summary" tabindex="0"><span class="name">?gameSettings</span>
-						<div class="description">Lists all of the game settings and their states.</div><span class="icon"></span>
+						<div class="description">Lists all of the game settings and their states.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists all of the game settings and their states.</div><code language="command" class="syntax">?gameSettings</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2712,7 +2214,7 @@
 				</div>
 				<div class="accordion" id="setGameSetting">
 					<div class="summary" tabindex="0"><span class="name">?setGameSetting</span>
-						<div class="description">Sets the specified game setting to the requested value.</div><span class="icon"></span>
+						<div class="description">Sets the specified game setting to the requested value.</div>
 					</div>
 					<div class="content">
 						<div class="description">Sets the specified game setting to the requested value.</div><code language="command" class="syntax">?setGameSetting setting_name value</code>
@@ -2730,53 +2232,39 @@
 								<tr>
 									<td>setting_name</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>value</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2789,40 +2277,30 @@
 			<div class="accordions">
 				<div class="accordion" id="preferences">
 					<div class="summary" tabindex="0"><span class="name">?preferences</span>
-						<div class="description">Lists the preferences and their states for you.</div><span class="icon"></span>
+						<div class="description">Lists the preferences and their states for you.</div>
 					</div>
 					<div class="content">
 						<div class="description">Lists the preferences and their states for you.</div><code language="command" class="syntax">?preferences</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2830,7 +2308,7 @@
 				</div>
 				<div class="accordion" id="resetPreferences">
 					<div class="summary" tabindex="0"><span class="name">?resetPreferences</span>
-						<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div><span class="icon"></span>
+						<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div>
 					</div>
 					<div class="content">
 						<div class="description">Resets all server preferences back to their default states. Be very careful with this command as it can drastically change how the server behaves.</div><code language="command" class="syntax">?resetPreferences confirm</code>
@@ -2848,44 +2326,32 @@
 								<tr>
 									<td>confirm</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2893,7 +2359,7 @@
 				</div>
 				<div class="accordion" id="setPref">
 					<div class="summary" tabindex="0"><span class="name">?setPref</span>
-						<div class="description">Sets the specified preference to the requested value. Use ?preferences to see all of the preferences.</div><span class="icon"></span>
+						<div class="description">Sets the specified preference to the requested value. Use ?preferences to see all of the preferences.</div>
 					</div>
 					<div class="content">
 						<div class="description">Sets the specified preference to the requested value. Use <a href="/docs/commands.html#preferences"> <span class="command">?preferences</span> </a> to see all of the preferences.</div><code language="command" class="syntax">?setPref preference_name value</code>
@@ -2911,53 +2377,39 @@
 								<tr>
 									<td>preference_name</td>
 									<td><span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>value</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span>/<span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span>/<span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span>/<span class="dataType" data-tippy-content="Any text from a letter to a paragraph.">text</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2970,7 +2422,7 @@
 			<div class="accordions">
 				<div class="accordion" id="tp2me">
 					<div class="summary" tabindex="0"><span class="name">?tp2me</span>
-						<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div><span class="icon"></span>
+						<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports specified player(s) to you. Use * to teleport all players to you. Overrides teleport blocking.</div><code language="command" class="syntax">?tp2me playerID...</code>
@@ -2988,44 +2440,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span>/<span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3033,7 +2473,7 @@
 				</div>
 				<div class="accordion" id="tp2v">
 					<div class="summary" tabindex="0"><span class="name">?tp2v</span>
-						<div class="description">Teleports you to a vehicle.</div><span class="icon"></span>
+						<div class="description">Teleports you to a vehicle.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports you to a vehicle.</div><code language="command" class="syntax">?tp2v vehicleID</code>
@@ -3051,44 +2491,32 @@
 								<tr>
 									<td>vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3096,40 +2524,30 @@
 				</div>
 				<div class="accordion" id="tpb">
 					<div class="summary" tabindex="0"><span class="name">?tpb</span>
-						<div class="description">Blocks other players' ability to teleport to you.</div><span class="icon"></span>
+						<div class="description">Blocks other players' ability to teleport to you.</div>
 					</div>
 					<div class="content">
 						<div class="description">Blocks other players' ability to teleport to you.</div><code language="command" class="syntax">?tpb</code>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3137,7 +2555,7 @@
 				</div>
 				<div class="accordion" id="tpc">
 					<div class="summary" tabindex="0"><span class="name">?tpc</span>
-						<div class="description">Teleports the player to the specified x, y, z coordinates.</div><span class="icon"></span>
+						<div class="description">Teleports the player to the specified x, y, z coordinates.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports the player to the specified x, y, z coordinates.</div><code language="command" class="syntax">?tpc x y z</code>
@@ -3155,62 +2573,46 @@
 								<tr>
 									<td>x</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>y</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>z</td>
 									<td><span class="dataType" data-tippy-content="An integer or decimal value like 21 or 3.14.">number</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3218,7 +2620,7 @@
 				</div>
 				<div class="accordion" id="tpl">
 					<div class="summary" tabindex="0"><span class="name">?tpl</span>
-						<div class="description">Teleports the player to the specified location. You can use ?tpLocations to see what locations are available.</div><span class="icon"></span>
+						<div class="description">Teleports the player to the specified location. You can use ?tpLocations to see what locations are available.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports the player to the specified location. You can use <a href="/docs/commands.html#tpLocations"> <span class="command">?tpLocations</span> </a> to see what locations are available.</div><code language="command" class="syntax">?tpl location name</code>
@@ -3236,44 +2638,32 @@
 								<tr>
 									<td>location name</td>
 									<td><span class="dataType" data-tippy-content="Any text from a letter to a paragraph.">text</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3281,7 +2671,7 @@
 				</div>
 				<div class="accordion" id="tpp">
 					<div class="summary" tabindex="0"><span class="name">?tpp</span>
-						<div class="description">Teleports the player to the specified player's position.</div><span class="icon"></span>
+						<div class="description">Teleports the player to the specified player's position.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports the player to the specified player's position.</div><code language="command" class="syntax">?tpp playerID</code>
@@ -3299,44 +2689,32 @@
 								<tr>
 									<td>playerID</td>
 									<td><span class="dataType" data-tippy-content="A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.">playerID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3344,7 +2722,7 @@
 				</div>
 				<div class="accordion" id="tps">
 					<div class="summary" tabindex="0"><span class="name">?tps</span>
-						<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div><span class="icon"></span>
+						<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports you to a seat on a vehicle. You can use "r" (vehicle you last spawned) or "n" (nearest vehicle) for the first argument. If no vehicle and seat name is specified, you will be teleported to the nearest seat.</div><code language="command" class="syntax">?tps [r/n/vehicleID] [seat name]</code>
@@ -3362,53 +2740,39 @@
 								<tr>
 									<td>r/n/vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span>/<span class="dataType" data-tippy-content="Any text. A letter, word, or sentence.">string</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>seat name</td>
 									<td><span class="dataType" data-tippy-content="Any text from a letter to a paragraph.">text</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3416,7 +2780,7 @@
 				</div>
 				<div class="accordion" id="tpv">
 					<div class="summary" tabindex="0"><span class="name">?tpv</span>
-						<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div><span class="icon"></span>
+						<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div>
 					</div>
 					<div class="content">
 						<div class="description">Teleports the specified vehicle to your position. Specifying an unsafe teleport will not account for other vehicles at the destination.</div><code language="command" class="syntax">?tpv vehicleID [unsafe]</code>
@@ -3434,53 +2798,39 @@
 								<tr>
 									<td>vehicleID</td>
 									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.">vehicleID</span></td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>unsafe</td>
 									<td><span class="dataType" data-tippy-content="True or False.">bool</span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-									<td>
-										<div type="text" value=""></div>
-									</td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
-						<table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
 							<thead>
 								<tr>
-									<td colspan="2">Default Access</td>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Owner</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Supervisor</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Admin</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Moderator</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
-								</tr>
-								<tr>
-									<td>Auth</td>
-									<td><span class="bool im im-x-mark" false=""></span></td>
-								</tr>
-								<tr>
-									<td>Everyone</td>
-									<td><span class="bool im im-check-mark" true=""></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
+									<td><span class="bool im im-x-mark" data-value="false"></span></td>
+									<td><span class="bool im im-check-mark" data-value="true"></span></td>
 								</tr>
 							</tbody>
 						</table>

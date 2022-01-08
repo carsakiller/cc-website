@@ -4781,37 +4781,39 @@ end
 				outputDiv.appendChild(data);
 			}
 
-			let textArea = document.createElement('textarea');
-			textArea.style.height = '300px';
-			textArea.innerText = getInner(outputDiv.cloneNode(true));
-
 			let sidenavArea = document.createElement('textarea');
 			sidenavArea.style.height = '300px';
 			sidenavArea.innerText = generateSidenav().outerHTML;
 
-			outputDiv.appendChild(sidenavArea);
-			outputDiv.appendChild(textArea);
+			generateInnerHTML();
+
+			document.body.appendChild(sidenavArea);
 
 			document.dispatchEvent(new Event('relocateAccordions'));
 			tippy('[data-tippy-content]');
 		});
 
+		function generateInnerHTML() {
+			let textArea = document.getElementById('innerhtml');
+			if (!textArea || textArea.length === 0) {
+				textArea = document.createElement('textarea');
+			}
+
+			textArea.style.height = '300px';
+			textArea.id = 'innerhtml';
+			textArea.innerText = getInner(outputDiv.cloneNode(true));
+			document.body.appendChild(textArea);
+		}
+
 		function getInner(html) {
-			for (let i = 0; i < html.children.length; i++) {
+			let len = html.children.length;
+			for (let i = 0; i < len; i++) {
 				html.children[i].outerHTML = getInner(html.children[i]);
 			}
 
 			const tag = html.tagName.toLowerCase();
 			if (tag === 'input') {
-				let div = document.createElement('div');
-
-				for (const attr of html.attributes) {
-					div.setAttribute(attr.name, attr.value);
-				}
-				div.innerText = html.value;
-				console.log(div);
-
-				return div.outerHTML;
+				return html.value;
 			}
 			
 			return html.outerHTML;
@@ -4934,16 +4936,14 @@ end
 				name.classList.add('name');
 				name.innerText = prefixed;
 
-				let shortDescription = document.createElement('input');
+				let shortDescription = document.createElement('div');
 				shortDescription.classList.add('description');
-				shortDescription.value = command.shortDescription || command.description;
-
-				let arrow = document.createElement('span');
-				arrow.classList.add('icon');
+				let input = document.createElement('input');
+				input.value = command.shortDescription || command.description
+				shortDescription.appendChild(input);
 
 				summary.appendChild(name);
 				summary.appendChild(shortDescription);
-				summary.appendChild(arrow);
 
 
 				let content = document.createElement('div');
@@ -5022,15 +5022,18 @@ end
 							tr.appendChild(td);
 		
 							td = document.createElement('td');
-							td.innerHTML = `<span class="bool im ${arg.required ? 'im-check-mark' : 'im-x-mark'}" ${arg.required ? 'true' : 'false'}></span>`;
+							td.innerHTML = `<span class="bool im ${arg.required ? 'im-check-mark' : 'im-x-mark'}" data-value="${arg.required ? 'true' : 'false'}"></span>`;
 							tr.appendChild(td);
 		
 							td = document.createElement('td');
-							td.innerHTML = `<span class="bool im ${arg.repeatable ? 'im-check-mark' : 'im-x-mark'}" ${arg.repeatable ? 'true' : 'false'}></span>`;
+							td.innerHTML = `<span class="bool im ${arg.repeatable ? 'im-check-mark' : 'im-x-mark'}" data-value="${arg.repeatable ? 'true' : 'false'}"></span>`;
 							tr.appendChild(td);
 	
 							td = document.createElement('td');
-							td.innerHTML = `<input type="text" value="${arg.description || ''}">`;
+							let desc = document.createElement('input');
+							desc.value = arg.description || '';
+							desc.addEventListener('change', generateInnerHTML);
+							td.appendChild(desc);
 							tr.appendChild(td);
 		
 		
@@ -5046,35 +5049,40 @@ end
 				}
 
 				const roleDefaults = json.DEFAULT_ROLES;
-
-				console.log(roleDefaults);
-
+				
 				let roleTable = document.createElement('table');
+				roleTable.classList.add('role-access');
+
+				let caption = document.createElement('caption');
+				caption.innerText = 'Default Role Access';
+				roleTable.appendChild(caption);
+
 				let thead = document.createElement('thead');
 				let tbody = document.createElement('tbody');
-				let tr = document.createElement('tr');
-				let td = document.createElement('td');
-				td.innerText = 'Default Access';
-				td.setAttribute('colspan', 2);
-				tr.appendChild(td);
-				thead.appendChild(tr);
-				roleTable.appendChild(thead);
+				let headRow = document.createElement('tr');
 				for (const [name, role] of Object.entries(roleDefaults)) {
 					if (!role.active) continue;
 					if (name === 'Prank') continue;
 
-					let tr = document.createElement('tr');
 					let td = document.createElement('td');
 					td.innerText = name;
-					tr.appendChild(td);
-
-					td = document.createElement('td');
-					console.log(commandName);
-					const hasAccess = name === 'Owner' || (role.commands ? Object.keys(role.commands).includes(commandName) : false);
-					td.innerHTML = `<span class="bool im ${hasAccess ? 'im-check-mark' : 'im-x-mark'}" ${hasAccess ? 'true' : 'false'}></span>`; 
-					tr.appendChild(td);
-					tbody.appendChild(tr);
+					headRow.appendChild(td);
 				}
+				thead.appendChild(headRow);
+
+				let dataRow = document.createElement('tr');
+				for (const [name, role] of Object.entries(roleDefaults)) {
+					if (!role.active) continue;
+					if (name === 'Prank') continue;
+					let td = document.createElement('td');
+
+					const hasAccess = name === 'Owner' || (role.commands ? Object.keys(role.commands).includes(commandName) : false);
+					td.innerHTML = `<span class="bool im ${hasAccess ? 'im-check-mark' : 'im-x-mark'}" data-value="${hasAccess ? 'true' : 'false'}"></span>`; 
+					dataRow.appendChild(td);
+				}
+				tbody.appendChild(dataRow);
+
+				roleTable.appendChild(thead);
 				roleTable.appendChild(tbody);
 				content.appendChild(roleTable);
 

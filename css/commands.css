@@ -99,8 +99,16 @@ main section .accordions .accordion .content .description {
   line-height: 1.6;
 }
 main section .accordions .accordion .content table {
+  width: calc(100% - 2em);
   text-align: center;
   font-size: 0.8em;
+}
+main section .accordions .accordion .content table caption {
+  background: black;
+  padding: 7px 0px;
+  font-weight: 800;
+  font-size: 1.3em;
+  text-transform: uppercase;
 }
 main section .accordions .accordion .content table tbody {
   word-break: break-all;
@@ -124,8 +132,11 @@ main section .accordions .accordion .content table thead td {
   font-weight: 600;
   padding: 10px 9px;
 }
-main section .accordions .accordion .content table.args {
-  width: calc(100% - 2em);
+main section .accordions .accordion .content table.role-access tbody tr > td {
+  background: #1b1b1b;
+}
+main section .accordions .accordion .content table.role-access tbody tr > td:nth-of-type(2n) {
+  background: #121212;
 }
 
 @media (min-width: 1000px) {
@@ -144,6 +155,39 @@ main section .accordions .accordion .content table.args {
 @media (max-width: 600px) {
   #sidenav {
     width: calc(100% - 10px);
+  }
+
+  main > section .accordion .content > .role-access {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main > section .accordion .content > .role-access caption {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+  main > section .accordion .content > .role-access thead {
+    flex: 1;
+    background: #050505;
+  }
+  main > section .accordion .content > .role-access tbody {
+    flex: 1;
+  }
+  main > section .accordion .content > .role-access thead > tr, main > section .accordion .content > .role-access tbody > tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  main > section .accordion .content > .role-access thead > tr td, main > section .accordion .content > .role-access tbody > tr td {
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 100%;
+  }
+  main > section .accordion .content > .role-access thead > tr td:nth-child(2n), main > section .accordion .content > .role-access tbody > tr td:nth-child(2n) {
+    background: #121212;
   }
 }
 @media (max-height: 700px) {

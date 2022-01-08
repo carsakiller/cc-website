@@ -4,153 +4,198 @@ $sidenavTransitionLength : 0.2s
 $sidenavWidth : max(300px, 20%)
 
 #sidenav
-    width: $sidenavWidth
-    height: calc(100% - 70px)
-    margin: 0
-    display: flex
-    flex-wrap: nowrap
-    z-index: 1
-    position: fixed
-    top: 70px
-    transition: transform $sidenavTransitionLength ease-in-out
+	width: $sidenavWidth
+	height: calc(100% - 70px)
+	margin: 0
+	display: flex
+	flex-wrap: nowrap
+	z-index: 1
+	position: fixed
+	top: 70px
+	transition: transform $sidenavTransitionLength ease-in-out
 
-    &:not([open])
-        transform: translate(calc(-100% + 30px), 0px)
+	&:not([open])
+		transform: translate(calc(-100% + 30px), 0px)
 
-    &[open]
-        #openButton > svg
-            transform: rotateY(180deg)            
-    
-    #openButton
-        background: white
-        color: colors.$primary
-        border-radius: 0px 10px 10px 0px
-        cursor: pointer
-        padding: 10px 4px
-        align-self: center
+	&[open]
+		#openButton > svg
+			transform: rotateY(180deg)            
+	
+	#openButton
+		background: white
+		color: colors.$primary
+		border-radius: 0px 10px 10px 0px
+		cursor: pointer
+		padding: 10px 4px
+		align-self: center
 
-        svg
-            fill: colors.$primary
-            transform: rotate(0deg)
-            transition: transform 0.5s ease-in-out
-    
-    > .content
-        width: 100%
-        transform: scaleX(-1) // Flip ontents so scrollbar is on left
-        background: colors.$tertiary
-        padding: 10px 0px
-        overflow-x: hidden
-        display: flex
-        flex-direction: column
-        align-content: center
-        align-items: center
+		svg
+			fill: colors.$primary
+			transform: rotate(0deg)
+			transition: transform 0.5s ease-in-out
+	
+	> .content
+		width: 100%
+		transform: scaleX(-1) // Flip ontents so scrollbar is on left
+		background: colors.$tertiary
+		padding: 10px 0px
+		overflow-x: hidden
+		display: flex
+		flex-direction: column
+		align-content: center
+		align-items: center
 
-        > div
-            transform: scaleX(-1) // Flip contents back to right way round
-            width: calc(100% - 20px)
+		> div
+			transform: scaleX(-1) // Flip contents back to right way round
+			width: calc(100% - 20px)
 
-    .accordions
-        .accordion
-            .summary
-                font-family: 'Varela Round', sans-serif
-                background: colors.$quaternary
-                align-items: center
-            .content
-                background: colors.$quinary
-                a
-                    display: block
-                    color: white
-                    text-align: center
-                    font-weight: normal
-                    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out
+	.accordions
+		.accordion
+			.summary
+				font-family: 'Varela Round', sans-serif
+				background: colors.$quaternary
+				align-items: center
+			.content
+				background: colors.$quinary
+				a
+					display: block
+					color: white
+					text-align: center
+					font-weight: normal
+					transition: color 0.3s ease-in-out, transform 0.3s ease-in-out
 
-                    &:hover
-                        color: colors.$highlight
-                        transform: scale(1.1)
+					&:hover
+						color: colors.$highlight
+						transform: scale(1.1)
 
 main
-    margin: 100px 0px 0px 0px
+	margin: 100px 0px 0px 0px
 
-    section
+	section
 
-        .accordions
+		.accordions
 
-            .accordion
-                margin: 7px 0px
-                .summary
-                    display: flex
-                    align-items: center
-                    padding: 15px 30px
+			.accordion
+				margin: 7px 0px
+				.summary
+					display: flex
+					align-items: center
+					padding: 15px 30px
 
-                    .name
-                        text-align: left
-                        position: absolute
-                        left: 10px
-                        white-space: nowrap
-                        justify-self: start
-                        width: fit-content
+					.name
+						text-align: left
+						position: absolute
+						left: 10px
+						white-space: nowrap
+						justify-self: start
+						width: fit-content
 
-                    .description
-                        font-size: 0.9em
-                        width: fit-content
-                        line-height: 1.3
-                        margin: 0px 12em
-                        white-space: nowrap
-                        overflow: hidden
-                        text-overflow: ellipsis
+					.description
+						font-size: 0.9em
+						width: fit-content
+						line-height: 1.3
+						margin: 0px 12em
+						white-space: nowrap
+						overflow: hidden
+						text-overflow: ellipsis
 
-                .content
+				.content
 
-                    .description
-                        line-height: 1.6
+					.description
+						line-height: 1.6
 
-                    table
-                        text-align: center
-                        font-size: 0.8em
+					table
+						width: calc(100% - 2em)
+						text-align: center
+						font-size: 0.8em
 
-                        tbody
-                            word-break: break-all
-                        tr
-                            background: #121212
+						caption
+							background: black
+							padding: 7px 0px
+							font-weight: 800
+							font-size: 1.3em
+							text-transform: uppercase
 
-                            &:nth-of-type(2n)
-                                background: #1b1b1b
-                        td
-                            padding: 6px 5px
-                            vertical-align: middle
+						tbody
+							word-break: break-all
+						tr
+							background: #121212
 
-                            .dataType
-                                word-break: keep-all
-                        thead td
-                            background: #050505
-                            text-transform: uppercase
-                            font-weight: 600
-                            padding: 10px 9px
-                        
-                        &.args
-                            width: calc(100% - 2em)
-                                    
+							&:nth-of-type(2n)
+								background: #1b1b1b
+						td
+							padding: 6px 5px
+							vertical-align: middle
 
-                                
-                            
+							.dataType
+								word-break: keep-all
+						thead td
+							background: #050505
+							text-transform: uppercase
+							font-weight: 600
+							padding: 10px 9px
+
+						&.role-access
+							thead
+							tbody tr > td
+								background: #1b1b1b
+
+								&:nth-of-type(2n)
+									background: #121212
+									
+
+								
+							
 
 @media (min-width: 1000px)
-    main
-        margin-left: $sidenavWidth
-    #sidenav
-        #openButton
-            display: none
-    footer
-        #links
-            margin-left: $sidenavWidth
+	main
+		margin-left: $sidenavWidth
+	#sidenav
+		#openButton
+			display: none
+	footer
+		#links
+			margin-left: $sidenavWidth
 
 @media (max-width: 600px)
-    #sidenav
-        width: calc(100% - 10px)
+	#sidenav
+		width: calc(100% - 10px)
+
+	// transpose role access table using flexbox
+	main > section .accordion .content > .role-access
+		display: flex
+		flex-wrap: wrap
+
+		caption
+			flex: 1 0 100%
+			display: flex
+			justify-content: center
+		thead
+			flex: 1
+			background: #050505
+		tbody
+			flex: 1
+		
+		thead, tbody
+			> tr
+				display: flex
+				flex-direction: column
+				justify-content: space-evenly
+				height: 100%
+				td
+					background: #1b1b1b
+					display: flex
+					justify-content: center
+					align-items: space-evenly
+					height: 100%
+
+					&:nth-child(2n)
+						background: #121212
+						
 
 @media (max-height: 700px)
-    main
-        margin-top: 70px
-    #sidenav
-        height: calc(100% - 40px)
-        top: 40px
+	main
+		margin-top: 70px
+	#sidenav
+		height: calc(100% - 40px)
+		top: 40px
