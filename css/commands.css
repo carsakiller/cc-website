@@ -7,7 +7,7 @@
   z-index: 1;
   position: fixed;
   top: 70px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 #sidenav:not([open]) {
   transform: translate(calc(-100% + 30px), 0px);
@@ -26,7 +26,7 @@
 #sidenav #openButton svg {
   fill: #2D64AE;
   transform: rotate(0deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 #sidenav > .content {
   width: 100%;

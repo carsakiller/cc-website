@@ -1,6 +1,6 @@
 @use 'colors'
 
-$sidenavTransitionLength : 0.2s
+$sidenavTransitionLength : 0.4s
 $sidenavWidth : max(300px, 20%)
 
 #sidenav
@@ -32,7 +32,7 @@ $sidenavWidth : max(300px, 20%)
 		svg
 			fill: colors.$primary
 			transform: rotate(0deg)
-			transition: transform 0.5s ease-in-out
+			transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1)
 	
 	> .content
 		width: 100%
@@ -191,7 +191,7 @@ main
 
 					&:nth-child(2n)
 						background: #121212
-						
+
 
 @media (max-height: 700px)
 	main

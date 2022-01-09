@@ -223,6 +223,9 @@ code {
 .accordion[open] > .summary:after {
   transform: translate(0, -50%) rotate(90deg);
 }
+.accordion:not([open]) > .content {
+  opacity: 0;
+}
 .accordion > .content {
   width: 100%;
   height: 0px;
@@ -230,7 +233,11 @@ code {
   text-align: left;
   background: #031b3d;
   overflow: hidden;
-  transition: height 0.25s ease-in-out;
+  opacity: 1;
+  transition: height 0.25s ease-in-out, opacity 0.5s ease-in-out;
+}
+.accordion > .content.skipTransition {
+  transition: height 0s linear;
 }
 .accordion > .content > * {
   margin: 0.8em 1em;

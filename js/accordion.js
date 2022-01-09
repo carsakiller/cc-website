@@ -22,8 +22,8 @@ class Accordion {
 		// if the accordion is closed or not
 		this.closed = true;
 
-		this.element.setAttribute('group', groupIndex);
-		this.content.setAttribute('index', index);
+		this.element.setAttribute('data-group', groupIndex);
+		this.content.setAttribute('data-index', index);
 
 		// add event listener to the accordion
 		this.summary.addEventListener('click', (event) => this.click(event));
@@ -56,8 +56,8 @@ class Accordion {
 
 			if (target.substring(1) === this.element.id) {
 				window.scroll(0, window.scrollY); // cancel default scroll
-				this.open(true);
-				setTimeout(() => this.element.scrollIntoView(true), 10);
+				this.open();
+				setTimeout(() => this.element.scrollIntoView(true), ANIMATION_DURATION);
 			}
 		});
 
@@ -69,7 +69,7 @@ class Accordion {
 			if (target.substring(1) === this.element.id) {
 				window.scroll(0, window.scrollY); // cancel default scroll
 				this.open(true);
-				setTimeout(() => this.element.scrollIntoView(true), 10);
+				setTimeout(() => this.element.scrollIntoView(true), 100);
 			}
 		})
 	}
@@ -100,7 +100,7 @@ class Accordion {
 		// skip transition of opening
 		if (instant) {
 			this.content.classList.add('skipTransition');
-			setTimeout(() => this.content.classList.remove('skipTransition'), 1);
+			setTimeout(() => this.content.classList.remove('skipTransition'), 200);
 		}
 
 		// set state of accordion when animation is complete
@@ -126,7 +126,7 @@ class Accordion {
 
 		if (instant) {
 			this.content.classList.add('skipTransition');
-			setTimeout(() => this.content.classList.remove('skipTransition'), 1);
+			setTimeout(() => this.content.classList.remove('skipTransition'), 200);
 			this.element.removeAttribute('closing');
 			this.closed = true;
 			return
