@@ -86,14 +86,14 @@ main section .accordions .accordion .summary .name {
 }
 main section .accordions .accordion .summary .description {
   font-size: 0.9em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 40em;
   line-height: 1.3;
   margin: 0px 12em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 main section .accordions .accordion .content .description {
   line-height: 1.6;
@@ -111,7 +111,7 @@ main section .accordions .accordion .content table caption {
   text-transform: uppercase;
 }
 main section .accordions .accordion .content table tbody {
-  word-break: break-all;
+  word-break: break-word;
 }
 main section .accordions .accordion .content table tr {
   background: #121212;
@@ -137,6 +137,9 @@ main section .accordions .accordion .content table.role-access tbody tr > td {
 }
 main section .accordions .accordion .content table.role-access tbody tr > td:nth-of-type(2n) {
   background: #121212;
+}
+main section .accordions .accordion[open] .summary .description {
+  opacity: 0;
 }
 
 @media (min-width: 1000px) {

@@ -1,9 +1,7 @@
 "use strict";
-var virtualTypes = document.getElementsByClassName('virtualType');
 var dataTypes = document.getElementsByClassName('dataType');
 
 for (let e of dataTypes) {
-    let color = 'orange';
     let type = e.innerText.toLowerCase();
 
     switch(type) {
@@ -37,8 +35,11 @@ for (let e of dataTypes) {
         case "string":
             e.setAttribute('data-tippy-content', 'Some text like "hello" or "a".');
             break;
+        case "text":
+            e.setAttribute('data-tippy-content', 'Any text from a letter to a paragraph.');
+            break;
         default:
-            console.warn(`Unrecognized type "${type}"\n${e}`);
+            console.error(`Unrecognized type "${type}"\n${e}`);
     }
 
     e.setAttribute('data-type', type)

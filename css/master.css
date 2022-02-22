@@ -1,4 +1,58 @@
 @charset "UTF-8";
+.bool {
+  font-size: 1.5em;
+}
+.bool[data-value=true] {
+  color: #00b500;
+}
+.bool[data-value=false] {
+  color: #db0000;
+}
+
+.dataType {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 1em;
+  font-size: 0.9em;
+  display: inline-block;
+  margin: 1px;
+  line-height: 1em;
+}
+.dataType[data-type=steamid] {
+  background: #00743d;
+}
+.dataType[data-type=peerid] {
+  background: #02b15f;
+}
+.dataType[data-type=playerid] {
+  background: #00cd6d;
+}
+.dataType[data-type=vehicleid] {
+  background: #8f03c9;
+}
+.dataType[data-type=itemid] {
+  background: #ae8fff;
+}
+.dataType[data-type=location] {
+  background: #fb72ca;
+}
+.dataType[data-type=text] {
+  background: #42cbff;
+}
+.dataType[data-type=letter] {
+  background: #ffaa10;
+}
+.dataType[data-type=number] {
+  background: #9767f5;
+}
+.dataType[data-type=string] {
+  background: #00b9ff;
+}
+.dataType[data-type=bool] {
+  background: #ff634a;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -187,11 +241,6 @@ code {
   border-radius: 5px;
 }
 
-.dataType {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 600;
-}
-
 .command {
   display: inline-block;
   background: #34342c;
@@ -201,16 +250,6 @@ code {
   padding: 0px 8px;
   box-shadow: #252525 3px 3px 5px 0px;
   white-space: pre;
-}
-
-.bool {
-  font-size: 1.5em;
-}
-.bool[data-value=true] {
-  color: #00b500;
-}
-.bool[data-value=false] {
-  color: #db0000;
 }
 
 .accordion {
@@ -252,7 +291,7 @@ code {
   border-radius: 10px 10px 0px 0px;
 }
 .accordion > .summary:after {
-  content: "";
+  content: "\e011";
   display: block;
   position: absolute;
   font-size: 0.8em;
@@ -269,7 +308,7 @@ code {
   display: inline-block;
 }
 .external:after {
-  content: "";
+  content: "\e04d";
   font-family: "iconmonstr-iconic-font";
   font-size: 0.5em;
   color: white;
@@ -278,7 +317,7 @@ code {
   margin-left: 2px;
 }
 .external .im-external-link:after {
-  content: "";
+  content: "\e04d";
 }
 
 .grid {

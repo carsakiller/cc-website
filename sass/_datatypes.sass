@@ -1,0 +1,26 @@
+@use 'sass:list'
+@use 'sass:color'
+
+$types: steamid, peerid, playerid, vehicleid, itemid, location, text, letter, number, string, bool
+$type-colors: #00743d, #02b15f, #00cd6d, #8f03c9, #ae8fff, #fb72ca, #42cbff, #ffaa10, #9767f5, #00b9ff, #ff634a
+
+.bool
+	font-size: 1.5em
+	&[data-value="true"]
+		color: #00b500
+	&[data-value="false"]
+		color: #db0000
+
+.dataType
+	font-family: "Source Code Pro", monospace
+	font-weight: 600
+	padding: 2px 7px
+	border-radius: 1em
+	font-size: 0.9em
+	display: inline-block
+	margin: 1px
+	line-height: 1em
+
+	@for $i from 1 through list.length($types)
+		&[data-type=#{list.nth($types, $i)}]
+			background: #{list.nth($type-colors, $i)}
