@@ -12,7 +12,7 @@
 .dataType {
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
-  padding: 2px 7px;
+  padding: 3px 5px;
   border-radius: 1em;
   font-size: 0.9em;
   display: inline-block;
@@ -50,7 +50,7 @@
   background: #00b9ff;
 }
 .dataType[data-type=bool] {
-  background: #ff634a;
+  background: #ff2828;
 }
 
 ::-webkit-scrollbar {
@@ -162,6 +162,10 @@ footer #links > * {
   color: white;
 }
 
+*:focus {
+  outline: orange 2px solid;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0.3em 0px;
   font-family: "Varela Round", sans-serif;
@@ -239,6 +243,7 @@ code {
   background: #121212;
   padding: 2px 6px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .command {

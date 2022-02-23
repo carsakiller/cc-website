@@ -34,13 +34,13 @@ class Accordion {
 			  this.click(event);
 			}
 		  });
-		  
+
 		// expand accordion when content is given focus
 		this.content.addEventListener('focusin', event => {
 			if (this.closed) {
 				this.click(event);
 			}
-		})
+		});
 
 		// resize accordion on window resize
 		window.addEventListener('resize', (event) => {

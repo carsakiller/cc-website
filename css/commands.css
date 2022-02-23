@@ -86,9 +86,9 @@ main section .accordions .accordion .summary .name {
 }
 main section .accordions .accordion .summary .description {
   font-size: 0.9em;
-  width: 40em;
+  width: 25em;
   line-height: 1.3;
-  margin: 0px 12em;
+  margin: 0px 11em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,7 +111,7 @@ main section .accordions .accordion .content table caption {
   text-transform: uppercase;
 }
 main section .accordions .accordion .content table tbody {
-  word-break: break-word;
+  word-break: keep-all;
 }
 main section .accordions .accordion .content table tr {
   background: #121212;
@@ -122,6 +122,7 @@ main section .accordions .accordion .content table tr:nth-of-type(2n) {
 main section .accordions .accordion .content table td {
   padding: 6px 5px;
   vertical-align: middle;
+  line-height: 1.5;
 }
 main section .accordions .accordion .content table td .dataType {
   word-break: keep-all;

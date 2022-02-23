@@ -16,6 +16,9 @@
 	<!-- tooltips from tippy.js -->
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script src="https://unpkg.com/tippy.js@6"></script>
+
+	<script src="/js/typeStyling.js"></script>
+
 	<style>
 		textarea {
 			width: 100%;
@@ -64,62 +67,42 @@
 			number: {
 				name: "Number",
 				description: "An integer or decimal value like 21 or 3.14.",
-				color: "#AE81FF",
-				background: "#240028"
 			},
 			string: {
 				name: "String",
 				description: "Any text. A letter, word, or sentence.",
-				color: "#E6DB74",
-				background: "#240028"
 			},
 			bool: {
 				name: "Boolean",
 				description: "True or False.",
-				color: "#F92672",
-				background: "#240028"
 			},
-			playerID: {
+			playerid: {
 				name: "playerID",
-				description: "A playerID is either the player's peerID or name. You can see a player's peerID using the tilde (~) key in game.",
-				color: "#757af4",
-				background: "#000000"
+				description: "A playerID is either the player's name, peerID, or steamID. You can see a player's peerID using the tilde (~) key in game.",
 			},
-			peerID: {
+			peerid: {
 				name: "peerID",
 				description: "The id of a player assigned by Stormworks. These ids can be seen by using the backtick (`) key in-game.",
-				color: "#01b771",
-				background: "#000000"
 			},
-			steamID: {
+			steamid: {
 				name: "steamID",
 				description: "A 17 digit number unique to a certain player. It is used to uniquely identify players within C².",
-				color: "#f6496f",
-				background: "#000000"
 			},
-			itemID: {
+			itemid: {
 				name: "itemID",
 				description: "A unique number given to each piece of equipment from Stormworks.",
-				color: "#0099dd",
-				background: "#000000"
 			},
-			vehicleID: {
+			vehicleid: {
 				name: "vehicleID",
 				description: "A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks.",
-				color: "#d1ce3e",
-				background: "#000000"
 			},
 			text: {
 				name: "Text",
 				description: "Any text from a letter to a paragraph.",
-				color: "#ffffff",
-				background: "#000000"
 			},
 			letter: {
 				name: "Letter",
 				description: "A letter like A or B.",
-				color: "#ffffff",
-				background: "#000000"
 			}
 		};
 	</script>
@@ -170,27 +153,13 @@
 
 			textArea.style.height = '300px';
 			textArea.id = 'innerhtml';
-			textArea.innerText = getInner(outputDiv.cloneNode(true));
+			textArea.innerText = outputDiv.cloneNode(true).innerHTML;
 			document.body.appendChild(textArea);
 		}
 
-		function getInner(html) {
-			let len = html.children.length;
-			for (let i = 0; i < len; i++) {
-				html.children[i].outerHTML = getInner(html.children[i]);
-			}
-
-			const tag = html.tagName.toLowerCase();
-			if (tag === 'input') {
-				return html.value;
-			}
-
-			return html.outerHTML;
-		}
-
 		function formatData(data) {
-			// match commands
 			let t = data
+			// match commands
 			for (const match of data.matchAll(/\?[\w]+/g)) {
 				const begin = match.index;
 				const end = match.index + match[0].length;
@@ -199,22 +168,36 @@
 					<span class="command">${match[0]}</span>
 				</a>`
 
-				t = data.substring(0, begin) + html + data.substring(end, data.length);
+				data = data.substring(0, match.index) + html + data.substring(match.index + match[0].length, data.length);
 			}
 
 			// match types
+			let matches = [];
 			for (const [name, value] of Object.entries(types)) {
-				for (const match of data.matchAll(name)) {
+				const reg = new RegExp(`${name}`, 'ig');
+
+				for (const match of data.toLowerCase().matchAll(reg)) {
 					const begin = match.index;
 					const end = match.index + match[0].length;
 
-					let html = `<span class="dataType" data-tippy-content="${value.description}">${match[0]}</span>`;
+					let html = `<span class="dataType" data-tippy-content="${value.description}" data-type="${name}">${value.name}</span>`;
 
-					t = data.substring(0, begin) + html + data.substring(end, data.length)
+					matches.push({
+						start: match.index,
+						end: match.index + match[0].length,
+						target: match,
+						replacement: html
+					});
 				}
 			}
 
-			return t;
+			let offset = 0;
+			for (const match of matches) {
+				data = data.substring(0, match.start + offset) + match.replacement + data.substring(match.end + offset);
+				offset += match.replacement.length - match.target[0].length;
+			}
+
+			return data;
 		}
 
 
@@ -307,7 +290,7 @@
 
 				let shortDescription = document.createElement('div');
 				shortDescription.classList.add('description');
-				shortDescription.innerText = command.description;
+				shortDescription.innerHTML = command.description;
 
 				summary.appendChild(name);
 				summary.appendChild(shortDescription);
@@ -379,11 +362,11 @@
 							td = document.createElement('td');
 							let t = '';
 							for (let i = 0; i < arg.type.length; i++) {
-								let type = arg.type[i];
+								let type = arg.type[i].toLowerCase();
 								if (i > 0) {
 									t += "/";
 								}
-								t += `<span class="dataType" data-tippy-content="${types[type].description}">${type}</span>`;
+								t += `<span class="dataType" data-tippy-content="${types[type].description}" data-type="${type}">${type}</span>`;
 							}
 							td.innerHTML = t;
 							tr.appendChild(td);
@@ -397,7 +380,7 @@
 							tr.appendChild(td);
 
 							td = document.createElement('td');
-							td.innerText = arg.description;
+							td.innerHTML = formatData(arg.description);
 							tr.appendChild(td);
 
 
