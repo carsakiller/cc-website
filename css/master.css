@@ -20,13 +20,13 @@
   line-height: 1em;
 }
 .dataType[data-type=steamid] {
-  background: #00743d;
+  background: #006636;
 }
 .dataType[data-type=peerid] {
-  background: #02b15f;
+  background: #009751;
 }
 .dataType[data-type=playerid] {
-  background: #00cd6d;
+  background: #00ad5c;
 }
 .dataType[data-type=vehicleid] {
   background: #8f03c9;
@@ -35,19 +35,19 @@
   background: #ae8fff;
 }
 .dataType[data-type=location] {
-  background: #fb72ca;
+  background: #f74ebc;
 }
 .dataType[data-type=text] {
-  background: #42cbff;
+  background: #1499ce;
 }
 .dataType[data-type=letter] {
-  background: #ffaa10;
+  background: #e69706;
 }
 .dataType[data-type=number] {
   background: #9767f5;
 }
 .dataType[data-type=string] {
-  background: #00b9ff;
+  background: #009bd3;
 }
 .dataType[data-type=bool] {
   background: #ff2828;
