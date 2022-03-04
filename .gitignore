@@ -1,2 +1,3 @@
 .jsbeautifyrc
-css/
+css/*
+!reset.css
