@@ -70,7 +70,7 @@
 			},
 			string: {
 				name: "String",
-				description: "Any text. A letter, word, or sentence.",
+				description: "A letter or word",
 			},
 			bool: {
 				name: "Boolean",
@@ -366,7 +366,7 @@
 								if (i > 0) {
 									t += "/";
 								}
-								t += `<span class="dataType" data-tippy-content="${types[type].description}" data-type="${type}">${type}</span>`;
+								t += `<span class="dataType" data-tippy-content="${types[type].description}" data-type="${type}">${types[type].name}</span>`;
 							}
 							td.innerHTML = t;
 							tr.appendChild(td);

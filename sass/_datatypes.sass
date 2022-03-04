@@ -14,12 +14,15 @@ $type-colors: #006636, #009751, #00ad5c, #8f03c9, #ae8fff, #f74ebc, #1499ce, #e6
 .dataType
 	font-family: "Source Code Pro", monospace
 	font-weight: 600
-	padding: 3px 5px
-	border-radius: 1em
+	padding: 3px 4px
+	border-radius: 0.4em
 	font-size: 0.9em
 	display: inline-block
 	margin: 1px
 	line-height: 1em
+	box-shadow: black 2px 3px 7px 0px
+	word-break: keep-all
+	text-shadow: black 1px 1px 8px
 
 	@for $i from 1 through list.length($types)
 		&[data-type=#{list.nth($types, $i)}]

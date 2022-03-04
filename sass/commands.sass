@@ -126,12 +126,9 @@ main
 							&:nth-of-type(2n)
 								background: #1b1b1b
 						td
-							padding: 6px 5px
+							padding: 4px
 							vertical-align: middle
 							line-height: 1.5
-
-							.dataType
-								word-break: keep-all
 						thead td
 							background: #050505
 							text-transform: uppercase
@@ -144,6 +141,16 @@ main
 
 								&:nth-of-type(2n)
 									background: #121212
+					.argoptions
+						text-align: center
+						h2
+							width: 100%
+						ul
+							display: grid
+							grid-template-columns: repeat(auto-fill, minmax(20em, 1fr))
+							gap: 10px
+
+
 				&[open]
 					.summary
 						.description

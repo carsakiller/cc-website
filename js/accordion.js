@@ -45,7 +45,10 @@ class Accordion {
 		// resize accordion on window resize
 		window.addEventListener('resize', (event) => {
 			if (!this.closed) {
-				this.open(true);
+				this.content.style.setProperty('height', '0px');
+				setTimeout(() => {
+					this.content.style.setProperty('height', `${this.content.scrollHeight}px`);
+				}, 0);
 			}
 		});
 
