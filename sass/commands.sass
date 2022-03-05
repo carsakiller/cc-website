@@ -134,6 +134,7 @@ main
 							text-transform: uppercase
 							font-weight: 600
 							padding: 10px 9px
+							word-break: keep-all
 
 						&.role-access
 							tbody tr > td
@@ -141,14 +142,23 @@ main
 
 								&:nth-of-type(2n)
 									background: #121212
-					.argoptions
+					.arg_options
 						text-align: center
 						h2
 							width: 100%
-						ul
+						ul,ol
 							display: grid
-							grid-template-columns: repeat(auto-fill, minmax(20em, 1fr))
-							gap: 10px
+							grid-template-columns: repeat(auto-fill, minmax(15em, 1fr))
+							gap: 7px
+							background: #121212
+							list-style: auto
+
+							li
+								background: #1b1b1b
+								padding: 6px 2px
+
+						ul > li::marker
+							content: ''
 
 
 				&[open]
