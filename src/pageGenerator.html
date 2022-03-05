@@ -372,11 +372,11 @@
 							tr.appendChild(td);
 
 							td = document.createElement('td');
-							td.innerHTML = `<span class="bool im ${arg.required ? 'im-check-mark' : 'im-x-mark'}" data-value="${arg.required ? 'true' : 'false'}"></span>`;
+							td.innerHTML = `<span class="bool im ${arg.required ? 'im-check-mark' : 'im-x-mark'}"></span>`;
 							tr.appendChild(td);
 
 							td = document.createElement('td');
-							td.innerHTML = `<span class="bool im ${arg.repeatable ? 'im-check-mark' : 'im-x-mark'}" data-value="${arg.repeatable ? 'true' : 'false'}"></span>`;
+							td.innerHTML = `<span class="bool im ${arg.repeatable ? 'im-check-mark' : 'im-x-mark'}"></span>`;
 							tr.appendChild(td);
 
 							td = document.createElement('td');
@@ -424,7 +424,7 @@
 					let td = document.createElement('td');
 
 					const hasAccess = name === 'Owner' || (role.commands ? Object.keys(role.commands).includes(commandName) : false);
-					td.innerHTML = `<span class="bool im ${hasAccess ? 'im-check-mark' : 'im-x-mark'}" data-value="${hasAccess ? 'true' : 'false'}"></span>`;
+					td.innerHTML = `<span class="bool im ${hasAccess ? 'im-check-mark' : 'im-x-mark'}"></span>`;
 					dataRow.appendChild(td);
 				}
 				tbody.appendChild(dataRow);
