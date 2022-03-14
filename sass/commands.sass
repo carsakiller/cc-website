@@ -71,103 +71,102 @@ $sidenavWidth : max(300px, 20%)
 main
 	margin: 100px 0px 0px 0px
 
-	section
+	.accordions
 
-		.accordions
+		.accordion
+			margin: 7px 0px
+			.summary
+				display: flex
+				align-items: center
+				padding: 15px 30px
 
-			.accordion
-				margin: 7px 0px
-				.summary
-					display: flex
-					align-items: center
-					padding: 15px 30px
+				.name
+					text-align: left
+					position: absolute
+					left: 10px
+					white-space: nowrap
+					justify-self: start
+					width: fit-content
 
-					.name
-						text-align: left
-						position: absolute
-						left: 10px
-						white-space: nowrap
-						justify-self: start
-						width: fit-content
+				.description
+					font-size: 0.9em
+					width: 25em
+					line-height: 1.3
+					margin: 0px 11em
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					opacity: 1
+					transition: opacity 0.2s ease-in-out
 
-					.description
-						font-size: 0.9em
-						width: 25em
-						line-height: 1.3
-						margin: 0px 11em
-						white-space: nowrap
-						overflow: hidden
-						text-overflow: ellipsis
-						opacity: 1
-						transition: opacity 0.2s ease-in-out
+			.content
 
-				.content
+				.description
+					line-height: 1.6
 
-					.description
-						line-height: 1.6
+				table
+					width: calc(100% - 2em)
+					text-align: center
+					font-size: 0.8em
 
-					table
-						width: calc(100% - 2em)
-						text-align: center
-						font-size: 0.8em
+					caption
+						background: black
+						padding: 7px 0px
+						font-weight: 800
+						font-size: 1.3em
+						text-transform: uppercase
 
-						caption
-							background: black
-							padding: 7px 0px
-							font-weight: 800
-							font-size: 1.3em
-							text-transform: uppercase
+					tbody
+						word-break: keep-all
+					tr
+						background: #121212
 
-						tbody
-							word-break: keep-all
-						tr
-							background: #121212
+						&:nth-of-type(2n)
+							background: #1b1b1b
+					td
+						padding: 4px 2px
+						vertical-align: middle
+						line-height: 1.2
+					thead td
+						background: #050505
+						text-transform: uppercase
+						font-weight: 600
+						padding: 10px 9px
+						word-break: keep-all
+
+					&.role-access
+						tbody tr > td
+							background: #1b1b1b
 
 							&:nth-of-type(2n)
-								background: #1b1b1b
-						td
-							padding: 4px 2px
-							vertical-align: middle
-							line-height: 1.2
-						thead td
-							background: #050505
-							text-transform: uppercase
-							font-weight: 600
-							padding: 10px 9px
-							word-break: keep-all
+								background: #121212
 
-						&.role-access
-							tbody tr > td
-								background: #1b1b1b
+				.arg_options
+					text-align: center
+					table
+						width: 100%
+					h2
+						width: 100%
+					ul,ol
+						display: grid
+						grid-template-columns: repeat(auto-fill, minmax(15em, 1fr))
+						gap: 7px
+						padding: 7px
+						background: #121212
+						list-style: auto
 
-								&:nth-of-type(2n)
-									background: #121212
-					.arg_options
-						text-align: center
-						table
-							width: 100%
-						h2
-							width: 100%
-						ul,ol
-							display: grid
-							grid-template-columns: repeat(auto-fill, minmax(15em, 1fr))
-							gap: 7px
-							padding: 7px
-							background: #121212
-							list-style: auto
+						li
+							background: #1b1b1b
+							padding: 6px 2px
 
-							li
-								background: #1b1b1b
-								padding: 6px 2px
-
-						ul > li::marker
-							content: ''
+					ul > li::marker
+						content: ''
 
 
-				&[open]
-					.summary
-						.description
-							opacity: 0
+			&[open]
+				.summary
+					.description
+						opacity: 0
 
 
 
@@ -188,7 +187,7 @@ main
 		width: calc(100% - 10px)
 
 	// transpose role access table using flexbox
-	main > section .accordion .content > .role-access
+	section .accordion .content > .role-access
 		display: flex
 		flex-wrap: wrap
 
