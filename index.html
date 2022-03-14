@@ -18,6 +18,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
 
 	<script src="/js/accordion.js" defer></script>
+	<!-- tooltips from tippy.js -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
 </head>
 
 <body>
@@ -105,7 +108,7 @@
 				<h2>Features:</h2>
 				<ul id="features">
 					<li class="im im-briefcase">Roles system that allows admins to give players certain permissions</li>
-					<li class="im im-flag"><a href="/docs/commands#banPlayer"><span class="command">?banPlayer</span></a> as well as <a href="/docs/commands#unban"><span class="command">?unban</span></a> (stormworks does not have an unban)</li>
+					<li class="im im-flag"><a href="/docs/commands#banPlayer"><span class="command">?banPlayer</span></a> as well as <a href="/docs/commands#unban"><span class="command" data-tippy-content="stormworks does not have an unban">?unban</span></a></li>
 					<li class="im im-tools">Equip players with specific equipment</li>
 					<li class="im im-car">View and manage vehicles in the world</li>
 					<li class="im im-plane">Teleport to coordinates, named locations, players, and vehicles - or teleport them to you</li>
@@ -376,6 +379,10 @@
 			</a>
 		</div>
 	</footer>
+	
+	<script>
+		tippy('[data-tippy-content]');
+	</script>
 </body>
 
 </html>
