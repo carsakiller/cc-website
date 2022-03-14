@@ -379,6 +379,8 @@
 							td.innerHTML = `<span class="bool im ${arg.repeatable ? 'im-check-mark' : 'im-x-mark'}"></span>`;
 							tr.appendChild(td);
 
+							console.log(arg);
+
 							td = document.createElement('td');
 							td.innerHTML = formatData(arg.description);
 							tr.appendChild(td);
