@@ -8,14 +8,10 @@
 	<meta name="theme-color" content="#103b77">
 
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/master.css">
 	<link rel="stylesheet" href="/css/index.css">
 
 	<!-- fonts -->
 	<link rel="stylesheet" href="/assets/fonts/iconmonstr-3.1/css/iconmonstr-iconic-font.min.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
 
 	<script src="/js/accordion.js" defer></script>
 	<!-- tooltips from tippy.js -->
@@ -30,7 +26,7 @@
 		</div>
 		<nav>
 			<a href="docs/commands">Commands</a>
-			<a href="docs/code">Documentation</a>
+			<a href="https://github.com/carsakiller/Carsas-Companion" target="_blank" rel="noopener noreferrer">Carsa's Companion</a>
 		</nav>
 	</header>
 	<div id="banner">
@@ -75,7 +71,7 @@
 	</div>
 	<main>
 		<section id="introduction">
-			<h1>An Addon for <a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" class="external">Stormworks</a></h1>
+			<h1>An Addon for <a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" class="external" rel="noopener noreferrer">Stormworks</a></h1>
 			<div class="content">
 				<p>
 					Carsa's Commands adds many features to Stormworks. Some are for fun,
@@ -87,7 +83,7 @@
 				</p>
 				<br>
 				<div class="flex" id="external_links">
-					<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+					<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank" rel="noopener noreferrer">
 						<svg class="logo steam" xmlns="http://www.w3.org/2000/svg" width="4.5em" viewBox="0 0 232.75 233">
 							<path class="primary" d="M116.5,0A116.52,116.52,0,0,0,.25,108.76l0,.08h0L62.9,134.6a31.53,31.53,0,0,1,5.46-2.88A31.9,31.9,0,0,1,82,129.31L110.51,87.9c0-.19,0-.38,0-.58a44.25,44.25,0,1,1,44.25,44.34l-1,0L113,160.79a32.3,32.3,0,0,1-63.82,7.89L5,150.48A116.51,116.51,0,1,0,116.5,0Z" transform="translate(-0.25)" />
 							<path class="secondary" d="M103.7,152.14a24.85,24.85,0,0,0-31.84-13.82l14.89,6.17a18.37,18.37,0,0,1-14.11,33.93l-14.41-6a24.86,24.86,0,0,0,45.43-1.21h0A24.84,24.84,0,0,0,103.7,152.14Z" transform="translate(-0.25)" />
@@ -95,10 +91,10 @@
 						</svg>
 						<div class="external">Subscribe</div>
 					</a>
-					<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+					<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank" rel="noopener noreferrer">
 						<div class="external">View GitHub</div>
 					</a>
-					<a class="im im-bug" title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank">
+					<a class="im im-bug" title="Report an Issue" href="https://github.com/carsakiller/Carsas-Commands/issues" target="_blank" rel="noopener noreferrer">
 						<div class="external">Report Issue</div>
 					</a>
 				</div>
@@ -107,6 +103,7 @@
 
 				<h2>Features:</h2>
 				<ul id="features">
+					<li class="im im-wifi"><a href="https://github.com/carsakiller/Carsas-Companion" target="_blank">Companion webapp</a> for interacting with Carsa's Commands externally</li>
 					<li class="im im-briefcase">Roles system that allows admins to give players certain permissions</li>
 					<li class="im im-flag"><a href="/docs/commands#banPlayer"><span class="command">?banPlayer</span></a> as well as <a href="/docs/commands#unban"><span class="command" data-tippy-content="stormworks does not have an unban">?unban</span></a></li>
 					<li class="im im-tools">Equip players with specific equipment</li>
@@ -140,7 +137,17 @@
 						<div class="accordions">
 							<div class="accordion">
 								<div class="summary" tabindex="0">
-									<div>Roles System</div>
+									<div>Companion webapp</div>
+								</div>
+								<div class="content">
+									<p>
+										<a href="https://github.com/carsakiller/Carsas-Companion" target="_blank">Carsa's Companion</a> provides a graphical interface for interacting with Carsa's Commands and your Stormworks server. Players will have access to the companion even if their own game isn't running.
+									</p>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="summary" tabindex="0">
+									<div>Roles system</div>
 								</div>
 								<div class="content">
 									<p>
@@ -326,7 +333,7 @@
 				<div class="profile">
 					<h2>Developer</h2>
 					<img src="/assets/images/profiles/pony.webp" width="150" height="150">
-					<div class="name">CrazyFluffyPony</div>
+					<div class="name"><a href="https://flaffipony.rocks/" target="_blank" rel="nofollow noreferrer">CrazyFluffyPony</a></div>
 					<blockquote>
 						The only way to not make a mistake while coding in the in-game editor is to not use it
 					</blockquote>
@@ -368,18 +375,18 @@
 	</main>
 	<footer>
 		<div id="links">
-			<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
+			<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank" rel="noopener noreferrer">
 				<svg class="logo steam" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 232.75 233">
 					<path class="primary" d="M116.5,0A116.52,116.52,0,0,0,.25,108.76l0,.08h0L62.9,134.6a31.53,31.53,0,0,1,5.46-2.88A31.9,31.9,0,0,1,82,129.31L110.51,87.9c0-.19,0-.38,0-.58a44.25,44.25,0,1,1,44.25,44.34l-1,0L113,160.79a32.3,32.3,0,0,1-63.82,7.89L5,150.48A116.51,116.51,0,1,0,116.5,0Z" transform="translate(-0.25)" />
 					<path class="secondary" d="M103.7,152.14a24.85,24.85,0,0,0-31.84-13.82l14.89,6.17a18.37,18.37,0,0,1-14.11,33.93l-14.41-6a24.86,24.86,0,0,0,45.43-1.21h0A24.84,24.84,0,0,0,103.7,152.14Z" transform="translate(-0.25)" />
 					<path class="secondary" d="M154.75,57.79a29.54,29.54,0,1,0,29.49,29.53A29.55,29.55,0,0,0,154.75,57.79Zm.05,51.67A22.19,22.19,0,1,1,177,87.28,22.16,22.16,0,0,1,154.8,109.46Z" transform="translate(-0.25)" />
 				</svg>
 			</a>
-			<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
+			<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank" rel="noopener noreferrer">
 			</a>
 		</div>
 	</footer>
-	
+
 	<script>
 		tippy('[data-tippy-content]');
 	</script>

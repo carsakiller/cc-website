@@ -1,119 +1,103 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Carsa's Commands - Home</title>
+		<title>Carsa's Commands - Changelog</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#103b77">
-        <link rel="stylesheet" href="./css/reset.css">
-		<link rel="stylesheet" href="./css/master.css">
-        <link rel="stylesheet" href="./css/changelog.css">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/changelog.css">
 
-        <script src="./js/typeStyling.js" defer></script>
+		<link rel="stylesheet" href="/assets/fonts/iconmonstr-3.1/css/iconmonstr-iconic-font.min.css">
 
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
 		<script src="https://unpkg.com/tippy.js@6"></script>
 	</head>
-    <body>
-        <header>
+	<body>
+		<header>
 			<div id="gradient">
-				<h1 class="logo"><a href="../">C²</a></h1>
+				<a href="/">
+					<span id="logo">C²</span>
+				</a>
 			</div>
 			<nav>
 				<a href="docs/commands">Commands</a>
-				<a href="code">Documentation</a>
+				<a href="https://github.com/carsakiller/Carsas-Companion" target="_blank" rel="noopener noreferrer">Carsa's Companion</a>
 			</nav>
 		</header>
 
-        <div id="header_spacer"><br></div>
+		<main>
+			<h1>Changelog</h1>
+			<section name="v2">
+				<h2>v2.0</h2>
+				<h3>Features:</h3>
+				<div class="content">
+					<ul>
+						<li>Added tp to vehicle command: <a href="docs/commands#tp2v" target="_blank"><span class="command">?tp2v</span></a></li>
+						<li>Customizable roles that give specific users specific access</li>
+						<li>Added a new command to clear radiation: <a href="docs/commands#clearRadiation" target="_blank"><span class="command">?clearRadiation</span></a>.</li>
+						<li>You can now call commands using buttons! Name your button like so: <code>?cc tpl beginner</code> (this will teleport the player pressing the button to beginner island <i>if they have permission to</i>).</li>
+						<li>Server admins can now set a <code>max_mass</code> preference that will remove all vehicles from the world that are too heavy, to help keep servers stable and performant.</li>
+					</ul>
+				</div>
+				<h3>Changes:</h3>
+				<div class="content">
+					<ul>
+						<li>Removed underscores from command names, in preference of "camel-casing" them so they can be typed easier.</li>
+						<li>Made parent tables to hold functions to make code neater (example: <code language="lua">player.kick()</code>).</li>
+						<li>More commands will assume self is target when no target player is specified. Also added "me" argumement option to many commands.</li>
+						<li>As many commands as possible can now accept a <span class="virtualType">playerID</span> instead of a <span class="virtualType">peer_id</span></li>
+						<li>Split the old tp command into many new tp commands</li>
+						<li>Renamed ?tp_vehicle to <a href="docs/commands.html#tpv" target="_blank"><span class="command">?tpv</span></a></li>
+						<li><code language="lua">server.save()</code> is called after making changes to persistent data. Unfortunately this only works for dedicated servers.</li>
+					</ul>
+				</div>
+				<h3>Fixes:</h3>
+				<div class="content">
+					<ul>
+						<li>Fixed the give command giving used/empty equipment after v1.2.5-6 update for Stormworks.</li>
+						<li>The <code>equip_on_respawn</code> preference would replace some equipment when rejoining the server.</li>
+						<li>Adjusted the telport commands so players are less likely to fall through the terrain due to the game's collisions taking too long to load.</li>
+						<li>All help info was moved into the <a href="docs/commands.html#ccHelp" target="_blank"><span class="command">?ccHelp</span></a> command in order to increase compatibility with other addons.</li>
+					</ul>
+				</div>
+			</section>
+			<section name="v1.02">
+				<h2>v1.02</h2>
+				<h3>Fixes:</h3>
+				<div class="content">
+					<ul>
+						<li>Fixed issue where dedicated server owners could not be made owners.</li>
+					</ul>
+				</div>
+			</section>
+			<section name="v1.01">
+				<h2>v1.01</h2>
+				<h3>Fixes:</h3>
+				<div class="content">
+					<ul>
+						<li>Fixed error when attempting to heal a player that is not on the server.</li>
+						<li>Corrected punctuation for ?player_perms command.</li>
+						<li>Disabling "map teleport" ("Allow Teleport" in the custom options menu) prevents non admin/owner players from teleporting.</li>
+						<li>Added ?deny_tp command that blocks another player from teleporting to you (Admins can override this).</li>
+					</ul>
+				</div>
+			</section>
+		</main>
 
-        <main>
-            <section name="v2">
-                <h1>v2.0</h1>
-                <h2>Features:</h2>
-                <div class="content">
-                    <ul>
-                        <li>Added tp to vehicle command: <a href="docs/commands#tp2v" target="_blank"><span class="command">?tp2v</span></a></li>
-                        <li>Customizable roles that give specific users specific access</li>
-                        <li>Added a new command to clear radiation: <a href="docs/commands#clearRadiation" target="_blank"><span class="command">?clearRadiation</span></a>.</li>
-                        <li>You can now call commands using buttons! Name your button like so: <code>?cc tpl beginner</code> (this will teleport the player pressing the button to beginner island <i>if they have permission to</i>).</li>
-                        <li>Server admins can now set a <code>max_mass</code> preference that will remove all vehicles from the world that are too heavy, to help keep servers stable and performant.</li>
-                    </ul>
-                </div>
-                <h2>Changes:</h2>
-                <div class="content">
-                    <ul>
-                        <li>Removed underscores from command names, in preference of "camel-casing" them so they can be typed easier.</li>
-                        <li>Made parent tables to hold functions to make code neater (example: <code language="lua">player.kick()</code>).</li>
-                        <li>More commands will assume self is target when no target player is specified. Also added "me" argumement option to many commands.</li>
-                        <li>As many commands as possible can now accept a <span class="virtualType">playerID</span> instead of a <span class="virtualType">peer_id</span></li>
-                        <li>Split the old tp command into many new tp commands</li>
-                        <li>Renamed ?tp_vehicle to <a href="docs/commands.html#tpv" target="_blank"><span class="command">?tpv</span></a></li>
-                        <li><code language="lua">server.save()</code> is called after making changes to persistent data. Unfortunately this only works for dedicated servers.</li>
-                    </ul>
-                </div>
-                <h2>Fixes:</h2>
-                <div class="content">
-                    <ul>
-                        <li>Fixed the give command giving used/empty equipment after v1.2.5-6 update for Stormworks.</li>
-                        <li>The <code>equip_on_respawn</code> preference would replace some equipment when rejoining the server.</li>
-                        <li>Adjusted the telport commands so players are less likely to fall through the terrain due to the game's collisions taking too long to load.</li>
-                        <li>All help info was moved into the <a href="docs/commands.html#ccHelp" target="_blank"><span class="command">?ccHelp</span></a> command in order to increase compatibility with other addons.</li>
-                    </ul>
-                </div>
-            </section>
-            <section name="v1.02">
-                <h1>v1.02</h1>
-                <h2>Fixes:</h2>
-                <div class="content">
-                    <ul>
-                        <li>Fixed issue where dedicated server owners could not be made owners.</li>
-                    </ul>
-                </div>
-            </section>
-            <section name="v1.01">
-                <h1>v1.01</h1>
-                <h2>Fixes:</h2>
-                <div class="content">
-                    <ul>
-                        <li>Fixed error when attempting to heal a player that is not on the server.</li>
-                        <li>Corrected punctuation for ?player_perms command.</li>
-                        <li>Disabling "map teleport" ("Allow Teleport" in the custom options menu) prevents non admin/owner players from teleporting.</li>
-                        <li>Added ?deny_tp command that blocks another player from teleporting to you (Admins can override this).</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-			<div id="external">
-				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="45" height="45" viewBox="0 0 233 233" class="steamLogo">
-						<defs>
-							<linearGradient id="a" x2="50%" x1="50%" y2="100%">
-							<stop stop-color="#FFFFFF" offset="0"/>
-							<stop stop-color="#FFFFFF" offset=".21248"/>
-							<stop stop-color="#0A1B48" offset=".40695"/>
-							<stop stop-color="#132E62" offset=".58110"/>
-							<stop stop-color="#144B7E" offset=".73760"/>
-							<stop stop-color="#136497" offset=".87279"/>
-							<stop stop-color="#1387B8" offset="1"/>
-							</linearGradient>
-						</defs>
-						<path fill="#ffffff" d="m4.8911 150.01c14.393 48.01 58.916 82.99 111.61 82.99 64.34 0 116.5-52.16 116.5-116.5 0-64.341-52.16-116.5-116.5-116.5-61.741 0-112.26 48.029-116.25 108.76 7.5391 12.66 10.481 20.49 4.6411 41.25z"/>
-						<path fill="#103b77" d="m110.5 87.322c0 0.196 0 0.392 0.01 0.576l-28.508 41.412c-4.618-0.21-9.252 0.6-13.646 2.41-1.937 0.79-3.752 1.76-5.455 2.88l-62.599-25.77c0.00049 0-1.4485 23.83 4.588 41.59l44.254 18.26c2.222 9.93 9.034 18.64 19.084 22.83 16.443 6.87 35.402-0.96 42.242-17.41 1.78-4.3 2.61-8.81 2.49-13.31l40.79-29.15c0.33 0.01 0.67 0.02 1 0.02 24.41 0 44.25-19.9 44.25-44.338 0-24.44-19.84-44.322-44.25-44.322-24.4 0-44.25 19.882-44.25 44.322zm-6.84 83.918c-5.294 12.71-19.9 18.74-32.596 13.45-5.857-2.44-10.279-6.91-12.83-12.24l14.405 5.97c9.363 3.9 20.105-0.54 23.997-9.9 3.904-9.37-0.525-20.13-9.883-24.03l-14.891-6.17c5.746-2.18 12.278-2.26 18.381 0.28 6.153 2.56 10.927 7.38 13.457 13.54s2.52 12.96-0.04 19.1m51.09-54.38c-16.25 0-29.48-13.25-29.48-29.538 0-16.275 13.23-29.529 29.48-29.529 16.26 0 29.49 13.254 29.49 29.529 0 16.288-13.23 29.538-29.49 29.538m-22.09-29.583c0-12.253 9.92-22.191 22.14-22.191 12.23 0 22.15 9.938 22.15 22.191 0 12.254-9.92 22.183-22.15 22.183-12.22 0-22.14-9.929-22.14-22.183z"/>
+		<footer>
+			<div id="links">
+				<a title="Subscribe on the Steam Workshop" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2356110139" target="_blank" rel="noopener noreferrer">
+					<svg class="logo steam" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 232.75 233">
+						<path class="primary" d="M116.5,0A116.52,116.52,0,0,0,.25,108.76l0,.08h0L62.9,134.6a31.53,31.53,0,0,1,5.46-2.88A31.9,31.9,0,0,1,82,129.31L110.51,87.9c0-.19,0-.38,0-.58a44.25,44.25,0,1,1,44.25,44.34l-1,0L113,160.79a32.3,32.3,0,0,1-63.82,7.89L5,150.48A116.51,116.51,0,1,0,116.5,0Z" transform="translate(-0.25)" />
+						<path class="secondary" d="M103.7,152.14a24.85,24.85,0,0,0-31.84-13.82l14.89,6.17a18.37,18.37,0,0,1-14.11,33.93l-14.41-6a24.86,24.86,0,0,0,45.43-1.21h0A24.84,24.84,0,0,0,103.7,152.14Z" transform="translate(-0.25)" />
+						<path class="secondary" d="M154.75,57.79a29.54,29.54,0,1,0,29.49,29.53A29.55,29.55,0,0,0,154.75,57.79Zm.05,51.67A22.19,22.19,0,1,1,177,87.28,22.16,22.16,0,0,1,154.8,109.46Z" transform="translate(-0.25)" />
 					</svg>
 				</a>
-				<a title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank">
-					<svg viewBox="0 0 16 16" version="1.1" width="45" height="45" data-view-component="true" class="githubLogo">
-						<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-					</svg>
+				<a class="im im-github" title="View on GitHub" href="https://github.com/carsakiller/Carsas-Commands" target="_blank" rel="noopener noreferrer">
 				</a>
 			</div>
 		</footer>
-    </body>
+	</body>
 </html>
