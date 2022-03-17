@@ -613,6 +613,9 @@ main .accordions .accordion .summary .description {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
+main .accordions .accordion .content {
+  overflow-x: auto;
+}
 main .accordions .accordion .content .description {
   line-height: 1.6;
 }
