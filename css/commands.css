@@ -1,0 +1,746 @@
+@charset "UTF-8";
+.bool {
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px black;
+}
+.bool.im-check-mark {
+  color: #00b500;
+}
+.bool.im-x-mark {
+  color: #db0000;
+}
+
+.dataType {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  padding: 3px 4px;
+  border-radius: 0.4em;
+  font-size: 0.9em;
+  display: inline-block;
+  margin: 1px;
+  line-height: 1em;
+  box-shadow: black 2px 3px 7px 0px;
+  word-break: keep-all;
+  text-shadow: black 1px 1px 8px;
+}
+.dataType[data-type=steamid] {
+  background: #006636;
+}
+.dataType[data-type=peerid] {
+  background: #009751;
+}
+.dataType[data-type=playerid] {
+  background: #00ad5c;
+}
+.dataType[data-type=vehicleid] {
+  background: #8f03c9;
+}
+.dataType[data-type=itemid] {
+  background: #ae8fff;
+}
+.dataType[data-type=location] {
+  background: #f74ebc;
+}
+.dataType[data-type=text] {
+  background: #1499ce;
+}
+.dataType[data-type=letter] {
+  background: #e69706;
+}
+.dataType[data-type=number] {
+  background: #9767f5;
+}
+.dataType[data-type=string] {
+  background: #009bd3;
+}
+.dataType[data-type=bool] {
+  background: #ff2828;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 100;
+  src: url("/assets/fonts/Poppins/Poppins-ThinItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 200;
+  src: url("/assets/fonts/Poppins/Poppins-ExtraLightItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 300;
+  src: url("/assets/fonts/Poppins/Poppins-LightItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/Poppins/Poppins-Italic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/assets/fonts/Poppins/Poppins-SemiBoldItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/assets/fonts/Poppins/Poppins-SemiBoldItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/Poppins/Poppins-BoldItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  src: url("/assets/fonts/Poppins/Poppins-ExtraBoldItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 900;
+  src: url("/assets/fonts/Poppins/Poppins-BlackItalic") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/assets/fonts/Poppins/Poppins-Thin") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/assets/fonts/Poppins/Poppins-ExtraLight") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/Poppins/Poppins-Light") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Poppins/Poppins-Regular") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/Poppins/Poppins-Medium") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/Poppins/Poppins-SemiBold") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Poppins/Poppins-Bold") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/fonts/Poppins/Poppins-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/Poppins/Poppins-Black.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Varela Round";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Varela_Round/VarelaRound-Regular.ttf) format("ttf");
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #031b3d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #103b77;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1651a4;
+}
+
+::-moz-selection {
+  background: orange;
+  color: white;
+}
+
+::selection {
+  background: orange;
+  color: white;
+}
+
+html {
+  scrollbar-color: green;
+  scrollbar-width: 17px;
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #2D64AE;
+  color: white;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+header {
+  width: calc(100% - 1.5vw);
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  z-index: 2;
+  background: url(/assets/images/headerBanner.jpg);
+  padding: 0px 1.5vw;
+}
+header a {
+  color: white;
+}
+header nav {
+  background: #0f376f;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header nav a {
+  margin: 0px 10px;
+}
+header #gradient {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #0f376f);
+}
+header #gradient #logo {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 4px auto 0 0;
+  font-size: 3em;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+  line-height: 1;
+}
+header + * {
+  margin-top: 100px;
+}
+
+main section {
+  max-width: 1200px;
+  width: calc(100% - 45px);
+  margin: 30px auto;
+  background: #103b77;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+main section > h1 {
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #103b77;
+}
+footer #links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  padding: 0.3em 0px;
+}
+footer #links a {
+  margin: 0px 2vw;
+  display: flex;
+  font-size: 1em;
+}
+footer #links a svg {
+  display: block;
+}
+footer #links > * {
+  color: white;
+}
+
+*:focus {
+  outline: orange 2px solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.3em 0px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2.4em;
+  color: orange;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+sub {
+  font-size: 0.8em;
+}
+
+svg.logo path {
+  fill: white;
+}
+
+blockquote {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+  line-height: 1.3;
+  font-style: italic;
+}
+blockquote:before, blockquote:after {
+  color: orange;
+  font-size: 1.5em;
+  position: relative;
+  line-height: 0.5;
+}
+blockquote:before {
+  content: "“";
+  align-self: flex-start;
+  top: -0.2em;
+}
+blockquote:after {
+  content: "„";
+  align-self: flex-end;
+  bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #21CFDF;
+}
+a.anchor {
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+a > .command {
+  color: #21CFDF;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+a > .command:hover {
+  transform: scale(1.1);
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  background: #121212;
+  padding: 2px 6px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.command {
+  display: inline-block;
+  background: #34342c;
+  border-radius: 9px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0px 8px;
+  box-shadow: #252525 3px 3px 5px 0px;
+  white-space: pre;
+}
+
+.accordion {
+  width: 100%;
+  margin: 10px auto;
+}
+.accordion:not([closing]):not([open]) > .summary {
+  border-radius: 10px 10px 10px 10px;
+}
+.accordion[open] > .summary:after {
+  transform: translate(0, -50%) rotate(90deg);
+}
+.accordion:not([open]) > .content {
+  opacity: 0;
+}
+.accordion > .content {
+  width: 100%;
+  height: 0px;
+  border-radius: 0px 0px 10px 10px;
+  text-align: left;
+  background: #031b3d;
+  overflow: hidden;
+  opacity: 1;
+  transition: height 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.accordion > .content.skipTransition {
+  transition: height 0s linear;
+}
+.accordion > .content > * {
+  margin: 0.8em 1em;
+}
+.accordion > .summary {
+  background: #0a264d;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 30px;
+  border-radius: 10px 10px 0px 0px;
+}
+.accordion > .summary:after {
+  content: "\e011";
+  display: block;
+  position: absolute;
+  font-size: 0.8em;
+  right: 10px;
+  top: 50%;
+  transform: translate(0px, -50%);
+  transition: transform 0.3s cubic-bezier(0.46, -0.4, 0.57, 1.41);
+  font-family: "iconmonstr-iconic-font";
+}
+
+.external {
+  position: relative;
+  margin-right: 0.5em;
+  display: inline-block;
+}
+.external:after {
+  content: "\e04d";
+  font-family: "iconmonstr-iconic-font";
+  font-size: 0.5em;
+  color: white;
+  position: absolute;
+  top: 0;
+  margin-left: 2px;
+}
+.external .im-external-link:after {
+  content: "\e04d";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.twa.large {
+  font-size: 1.2em;
+}
+.twa.huge {
+  font-size: 2em;
+}
+
+.im {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1360px) {
+  main section {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (max-height: 700px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    height: 40px;
+    font-size: 0.7em;
+  }
+  header + * {
+    margin-top: 70px;
+  }
+}
+#sidenav {
+  width: max(300px, 20%);
+  height: calc(100% - 70px);
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+  position: fixed;
+  top: 70px;
+  transition: transform 0.4s ease-in-out;
+}
+#sidenav:not([open]) {
+  transform: translate(calc(-100% + 30px), 0px);
+}
+#sidenav[open] #openButton > svg {
+  transform: rotateY(180deg);
+}
+#sidenav #openButton {
+  background: white;
+  color: #2D64AE;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  padding: 10px 4px;
+  align-self: center;
+}
+#sidenav #openButton svg {
+  fill: #2D64AE;
+  transform: rotate(0deg);
+  transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+#sidenav > .content {
+  width: 100%;
+  transform: scaleX(-1);
+  background: #0a264d;
+  padding: 10px 0px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+#sidenav > .content > div {
+  transform: scaleX(-1);
+  width: calc(100% - 20px);
+}
+#sidenav .accordions .accordion .summary {
+  font-family: "Varela Round", sans-serif;
+  background: #031b3d;
+  align-items: center;
+}
+#sidenav .accordions .accordion .content {
+  background: #001430;
+}
+#sidenav .accordions .accordion .content a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+#sidenav .accordions .accordion .content a:hover {
+  color: orange;
+  transform: scale(1.1);
+}
+
+main {
+  margin: 100px 0px 0px 0px;
+}
+main .accordions .accordion {
+  margin: 7px 0px;
+}
+main .accordions .accordion .summary {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+}
+main .accordions .accordion .summary .name {
+  text-align: left;
+  position: absolute;
+  left: 10px;
+  white-space: nowrap;
+  justify-self: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .accordions .accordion .summary .description {
+  font-size: 0.9em;
+  width: 25em;
+  line-height: 1.3;
+  margin: 0px 11em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+main .accordions .accordion .content .description {
+  line-height: 1.6;
+}
+main .accordions .accordion .content table {
+  width: calc(100% - 2em);
+  text-align: center;
+  font-size: 0.8em;
+}
+main .accordions .accordion .content table caption {
+  background: black;
+  padding: 7px 0px;
+  font-weight: 800;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+main .accordions .accordion .content table tbody {
+  word-break: keep-all;
+}
+main .accordions .accordion .content table tr {
+  background: #121212;
+}
+main .accordions .accordion .content table tr:nth-of-type(2n) {
+  background: #1b1b1b;
+}
+main .accordions .accordion .content table td {
+  padding: 4px 2px;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+main .accordions .accordion .content table thead td {
+  background: #050505;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 9px;
+  word-break: keep-all;
+}
+main .accordions .accordion .content table.role-access tbody tr > td {
+  background: #1b1b1b;
+}
+main .accordions .accordion .content table.role-access tbody tr > td:nth-of-type(2n) {
+  background: #121212;
+}
+main .accordions .accordion .content .arg_options {
+  text-align: center;
+}
+main .accordions .accordion .content .arg_options table {
+  width: 100%;
+}
+main .accordions .accordion .content .arg_options h2 {
+  width: 100%;
+}
+main .accordions .accordion .content .arg_options ul, main .accordions .accordion .content .arg_options ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 7px;
+  padding: 7px;
+  background: #121212;
+  list-style: auto;
+}
+main .accordions .accordion .content .arg_options ul li, main .accordions .accordion .content .arg_options ol li {
+  background: #1b1b1b;
+  padding: 6px 2px;
+}
+main .accordions .accordion .content .arg_options ul > li::marker {
+  content: "";
+}
+main .accordions .accordion[open] .summary .description {
+  opacity: 0;
+}
+
+@media (min-width: 1000px) {
+  main {
+    margin-left: max(300px, 20%);
+  }
+
+  #sidenav #openButton {
+    display: none;
+  }
+
+  footer #links {
+    margin-left: max(300px, 20%);
+  }
+}
+@media (max-width: 600px) {
+  #sidenav {
+    width: calc(100% - 10px);
+  }
+
+  section .accordion .content > .role-access {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .accordion .content > .role-access caption {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section .accordion .content > .role-access thead {
+    flex: 1;
+    background: #050505;
+  }
+  section .accordion .content > .role-access tbody {
+    flex: 1;
+  }
+  section .accordion .content > .role-access thead > tr, section .accordion .content > .role-access tbody > tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  section .accordion .content > .role-access thead > tr td, section .accordion .content > .role-access tbody > tr td {
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 100%;
+  }
+  section .accordion .content > .role-access thead > tr td:nth-child(2n), section .accordion .content > .role-access tbody > tr td:nth-child(2n) {
+    background: #121212;
+  }
+}
+@media (max-height: 700px) {
+  main {
+    margin-top: 70px;
+  }
+
+  #sidenav {
+    height: calc(100% - 40px);
+    top: 40px;
+  }
+}
