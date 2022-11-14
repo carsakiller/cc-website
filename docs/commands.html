@@ -58,7 +58,7 @@
 				</div>
 				<div class="accordion">
 					<div class="summary">Vehicles</div>
-					<div class="content"><a href="#charge">?charge</a><a href="#clearVehicle">?clearVehicle</a><a href="#fuel">?fuel</a><a href="#setEditable">?setEditable</a><a href="#transferOwner">?transferOwner</a><a href="#vehicleIDs">?vehicleIDs</a><a href="#vehicleInfo">?vehicleInfo</a><a href="#vehicleList">?vehicleList</a></div>
+					<div class="content"><a href="#charge">?charge</a><a href="#clearVehicle">?clearVehicle</a><a href="#despawn">?despawn</a><a href="#fuel">?fuel</a><a href="#setEditable">?setEditable</a><a href="#transferOwner">?transferOwner</a><a href="#vehicleIDs">?vehicleIDs</a><a href="#vehicleInfo">?vehicleInfo</a><a href="#vehicleList">?vehicleList</a></div>
 				</div>
 				<div class="accordion">
 					<div class="summary">Players</div>
@@ -3187,6 +3187,57 @@
 									<td><span class="bool im im-check-mark"></span></td>
 									<td><span class="bool im im-x-mark"></span></td>
 									<td><span class="bool im im-x-mark"></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="accordion" id="despawn">
+					<div class="summary" tabindex="0"><span class="name">?despawn</span>
+						<div class="description">Removes your vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div>
+					</div>
+					<div class="content">
+						<div class="description">Removes your vehicles by their id. If no ids are given, it will remove your nearest vehicle.</div><code language="command" class="syntax">?despawn [vehicleID...]</code>
+						<table class="args">
+							<thead>
+								<tr>
+									<td>Argument</td>
+									<td>Type</td>
+									<td>Required</td>
+									<td>Repeatable</td>
+									<td>Description</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>vehicleID</td>
+									<td><span class="dataType" data-tippy-content="A unique number given to each vehicle on spawn by Stormworks. There is no way to view these in vanilla Stormworks." data-type="vehicleid">vehicleID</span></td>
+									<td><span class="bool im im-x-mark"></span></td>
+									<td><span class="bool im im-check-mark"></span></td>
+									<td>The vehicle to despawn</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="role-access">
+							<caption>Default Role Access</caption>
+							<thead>
+								<tr>
+									<td>Owner</td>
+									<td>Supervisor</td>
+									<td>Admin</td>
+									<td>Moderator</td>
+									<td>Auth</td>
+									<td>Everyone</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="bool im im-check-mark"></span></td>
+									<td><span class="bool im im-x-mark"></span></td>
+									<td><span class="bool im im-check-mark"></span></td>
+									<td><span class="bool im im-check-mark"></span></td>
+									<td><span class="bool im im-check-mark"></span></td>
+									<td><span class="bool im im-check-mark"></span></td>
 								</tr>
 							</tbody>
 						</table>
